@@ -14,8 +14,7 @@ namespace Mist122_Fancy
     {
         public Form1()
         {
-            InitializeComponent();/*123456*/
-            //jacy
+            InitializeComponent();
 
         }
     }
