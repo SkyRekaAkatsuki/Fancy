@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2CA44FAB-CEC4-4FA9-83DE-F982302E21DE}</ProjectGuid>
+    <ProjectGuid>{A2C5B8B5-4DA9-4D3C-B411-C954FBEBDFFC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DB_Fancy</RootNamespace>
@@ -50,18 +50,116 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryL.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryM.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Color.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountMethod.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluationSample.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="FancyEntity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FancyEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FancyEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="FancyEntity.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FancyEntity.edmx</DependentUpon>
     </Compile>
+    <Compile Include="KeyWord.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyFavorite.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="News.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatu.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayMethod.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Photo.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductColor.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductEvaluation.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPhoto.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSize.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductStock.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductWashing.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Size.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Washing.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="FancyEntity.edmx">
@@ -80,6 +178,12 @@
     <Content Include="FancyEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>FancyEntity.Context.cs</LastGenOutput>
+      <DependentUpon>FancyEntity.edmx</DependentUpon>
+    </Content>
+    <Content Include="FancyEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FancyEntity.edmx</DependentUpon>
+      <LastGenOutput>FancyEntity.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
