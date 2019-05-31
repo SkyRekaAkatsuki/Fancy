@@ -67,12 +67,12 @@ namespace Cls_Utility
         {
             NetworkCredential login;
             MailMessage msg = new MailMessage();
-            login = new NetworkCredential("stepmania002", "F129455352");//登入寄件者
+            login = new NetworkCredential("fancydayevery", "msit12201");//登入寄件者
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
             SmtpServer.Port = 587;
             SmtpServer.EnableSsl = true;
             SmtpServer.Credentials = login;
-            msg.From = new MailAddress("stepmania002@gmail.com","Fancy");//寄件者
+            msg.From = new MailAddress("fancydayevery@gmail.com", "Fancy");//寄件者
             msg.To.Add(Email);//可多個
             msg.Subject = "會員註冊確認信"; //設定信件主旨
             msg.IsBodyHtml = true;//設定信件內容為HTML格式 
