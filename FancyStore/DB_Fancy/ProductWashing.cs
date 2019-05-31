@@ -19,7 +19,7 @@ namespace DB_Fancy
         public int WashingID { get; set; }
         public Nullable<System.DateTime> CreateDate { get; set; }
     
-        public virtual Product Product { get; set; }
         public virtual Washing Washing { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

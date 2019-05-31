@@ -41,7 +41,6 @@ namespace DB_Fancy
         public virtual DbSet<OrderStatusList> OrderStatusLists { get; set; }
         public virtual DbSet<PayMethod> PayMethods { get; set; }
         public virtual DbSet<Photo> Photos { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductColor> ProductColors { get; set; }
         public virtual DbSet<ProductEvaluation> ProductEvaluations { get; set; }
         public virtual DbSet<ProductPhoto> ProductPhotoes { get; set; }
@@ -57,5 +56,6 @@ namespace DB_Fancy
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Washing> Washings { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
     }
 }
