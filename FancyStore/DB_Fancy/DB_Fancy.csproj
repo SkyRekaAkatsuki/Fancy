@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2C5B8B5-4DA9-4D3C-B411-C954FBEBDFFC}</ProjectGuid>
+    <ProjectGuid>{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DB_Fancy</RootNamespace>
@@ -50,13 +50,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs">
+    <Compile Include="CategoryLarge.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="CategoryL.cs">
+    <Compile Include="CategoryMiddle.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="CategoryM.cs">
+    <Compile Include="CategorySmall.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="City.cs">
@@ -96,16 +96,16 @@
     <Compile Include="MyFavorite.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="News.cs">
-      <DependentUpon>FancyEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order.cs">
+    <Compile Include="NewsList.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="OrderDetail.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
-    <Compile Include="OrderStatu.cs">
+    <Compile Include="OrderHeader.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatusList.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="PayMethod.cs">
@@ -140,6 +140,9 @@
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Region.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Shipping.cs">
