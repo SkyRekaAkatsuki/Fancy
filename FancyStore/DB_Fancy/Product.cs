@@ -30,7 +30,6 @@ namespace DB_Fancy
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public string Desctiption { get; set; }
-        public int ProductWashingID { get; set; }
         public int CategorySID { get; set; }
         public int UnitPrice { get; set; }
         public Nullable<int> SupplierID { get; set; }

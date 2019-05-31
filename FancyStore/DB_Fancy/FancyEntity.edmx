@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FancyStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FancyStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CategoryLarge">
           <Key>
             <PropertyRef Name="CategoryLID" />
@@ -169,7 +169,6 @@
           <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Desctiption" Type="nvarchar" MaxLength="250" />
-          <Property Name="ProductWashingID" Type="int" Nullable="false" />
           <Property Name="CategorySID" Type="int" Nullable="false" />
           <Property Name="UnitPrice" Type="int" Nullable="false" />
           <Property Name="SupplierID" Type="int" />
@@ -941,8 +940,7 @@
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FancyStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -972,7 +970,7 @@
           <Property Name="CategorySName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="CategoryMID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CategoryMiddle" Relationship="Self.FK_CategoryS_CategoryM" FromRole="CategorySmall" ToRole="CategoryMiddle" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_Products_CategoryS" FromRole="CategorySmall" ToRole="Product" />
+          <NavigationProperty Name="Products" Relationship="FancyStoreModel.FK_Products_CategoryS" FromRole="CategorySmall" ToRole="Product" />
         </EntityType>
         <EntityType Name="City">
           <Key>
@@ -1052,8 +1050,8 @@
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_MyFavorite_Products" FromRole="MyFavorite" ToRole="Product" />
           <NavigationProperty Name="User" Relationship="Self.FK_MyFavorite_Users" FromRole="MyFavorite" ToRole="User" />
+          <NavigationProperty Name="Product" Relationship="FancyStoreModel.FK_MyFavorite_Products" FromRole="MyFavorite" ToRole="Product" />
         </EntityType>
         <EntityType Name="NewsList">
           <Key>
@@ -1081,7 +1079,7 @@
           <NavigationProperty Name="ProductColor" Relationship="Self.FK_OrderDetail_ProductColor" FromRole="OrderDetail" ToRole="ProductColor" />
           <NavigationProperty Name="ProductSize" Relationship="Self.FK_OrderDetail_ProductSize" FromRole="OrderDetail" ToRole="ProductSize" />
           <NavigationProperty Name="OrderHeader" Relationship="Self.FK_OrderDetails_Orders" FromRole="OrderDetail" ToRole="OrderHeader" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_OrderDetails_Products" FromRole="OrderDetail" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="FancyStoreModel.FK_OrderDetails_Products" FromRole="OrderDetail" ToRole="Product" />
         </EntityType>
         <EntityType Name="OrderHeader">
           <Key>
@@ -1134,31 +1132,6 @@
           <NavigationProperty Name="ProductPhotoes" Relationship="Self.FK_ProductPhoto_Photo" FromRole="Photo" ToRole="ProductPhoto" />
           <NavigationProperty Name="Users" Relationship="Self.FK_User_Photo" FromRole="Photo" ToRole="User" />
         </EntityType>
-        <EntityType Name="Product">
-          <Key>
-            <PropertyRef Name="ProductID" />
-          </Key>
-          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Desctiption" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="ProductWashingID" Type="Int32" Nullable="false" />
-          <Property Name="CategorySID" Type="Int32" Nullable="false" />
-          <Property Name="UnitPrice" Type="Int32" Nullable="false" />
-          <Property Name="SupplierID" Type="Int32" />
-          <Property Name="ProductInDate" Type="DateTime" Precision="3" />
-          <Property Name="ProductOutDate" Type="DateTime" Precision="3" />
-          <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="CategorySmall" Relationship="Self.FK_Products_CategoryS" FromRole="Product" ToRole="CategorySmall" />
-          <NavigationProperty Name="MyFavorites" Relationship="Self.FK_MyFavorite_Products" FromRole="Product" ToRole="MyFavorite" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetails_Products" FromRole="Product" ToRole="OrderDetail" />
-          <NavigationProperty Name="ProductEvaluations" Relationship="Self.FK_ProductEvaluation_Products" FromRole="Product" ToRole="ProductEvaluation" />
-          <NavigationProperty Name="ProductColors" Relationship="Self.FK_ProductPhoto_Products" FromRole="Product" ToRole="ProductColor" />
-          <NavigationProperty Name="ProductPhotoes" Relationship="Self.FK_ProductPhoto_Products1" FromRole="Product" ToRole="ProductPhoto" />
-          <NavigationProperty Name="Supplier" Relationship="Self.FK_Products_Supplier" FromRole="Product" ToRole="Supplier" />
-          <NavigationProperty Name="ProductSizes" Relationship="Self.FK_ProductSize_Products" FromRole="Product" ToRole="ProductSize" />
-          <NavigationProperty Name="ProductStocks" Relationship="Self.FK_ProductStock_Products" FromRole="Product" ToRole="ProductStock" />
-          <NavigationProperty Name="ProductWashings" Relationship="Self.FK_ProductWashing_Products" FromRole="Product" ToRole="ProductWashing" />
-        </EntityType>
         <EntityType Name="ProductColor">
           <Key>
             <PropertyRef Name="ProductColorID" />
@@ -1170,8 +1143,8 @@
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Color" Relationship="Self.FK_ProductColor_Color" FromRole="ProductColor" ToRole="Color" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_ProductColor" FromRole="ProductColor" ToRole="OrderDetail" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductPhoto_Products" FromRole="ProductColor" ToRole="Product" />
           <NavigationProperty Name="ProductStocks" Relationship="Self.FK_ProductStock_ProductColor" FromRole="ProductColor" ToRole="ProductStock" />
+          <NavigationProperty Name="Product" Relationship="FancyStoreModel.FK_ProductPhoto_Products" FromRole="ProductColor" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductEvaluation">
           <Key>
@@ -1182,7 +1155,7 @@
           <Property Name="EvaluationDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Grade" Type="Int32" Nullable="false" />
           <Property Name="Comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductEvaluation_Products" FromRole="ProductEvaluation" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="FancyStoreModel.FK_ProductEvaluation_Products" FromRole="ProductEvaluation" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductPhoto">
           <Key>
@@ -1193,7 +1166,7 @@
           <Property Name="PhotoID" Type="Int32" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Photo" Relationship="Self.FK_ProductPhoto_Photo" FromRole="ProductPhoto" ToRole="Photo" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductPhoto_Products1" FromRole="ProductPhoto" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="FancyStoreModel.FK_ProductPhoto_Products1" FromRole="ProductPhoto" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductSize">
           <Key>
@@ -1204,9 +1177,9 @@
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_ProductSize" FromRole="ProductSize" ToRole="OrderDetail" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductSize_Products" FromRole="ProductSize" ToRole="Product" />
           <NavigationProperty Name="Size" Relationship="Self.FK_ProductSize_Size" FromRole="ProductSize" ToRole="Size" />
           <NavigationProperty Name="ProductStocks" Relationship="Self.FK_ProductStock_ProductSize" FromRole="ProductSize" ToRole="ProductStock" />
+          <NavigationProperty Name="Product" Relationship="FancyStoreModel.FK_ProductSize_Products" FromRole="ProductSize" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductStock">
           <Key>
@@ -1219,9 +1192,9 @@
           <Property Name="StockQTY" Type="Int32" Nullable="false" />
           <Property Name="MinStock" Type="Int32" Nullable="false" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductStock_Products" FromRole="ProductStock" ToRole="Product" />
           <NavigationProperty Name="ProductColor" Relationship="Self.FK_ProductStock_ProductColor" FromRole="ProductStock" ToRole="ProductColor" />
           <NavigationProperty Name="ProductSize" Relationship="Self.FK_ProductStock_ProductSize" FromRole="ProductStock" ToRole="ProductSize" />
+          <NavigationProperty Name="Product" Relationship="FancyStoreModel.FK_ProductStock_Products" FromRole="ProductStock" ToRole="Product" />
         </EntityType>
         <EntityType Name="ProductWashing">
           <Key>
@@ -1231,8 +1204,8 @@
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="WashingID" Type="Int32" Nullable="false" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Product" Relationship="Self.FK_ProductWashing_Products" FromRole="ProductWashing" ToRole="Product" />
           <NavigationProperty Name="Washing" Relationship="Self.FK_ProductWashing_Washing" FromRole="ProductWashing" ToRole="Washing" />
+          <NavigationProperty Name="Product" Relationship="FancyStoreModel.FK_ProductWashing_Products" FromRole="ProductWashing" ToRole="Product" />
         </EntityType>
         <EntityType Name="Question">
           <Key>
@@ -1299,7 +1272,7 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Products" Relationship="Self.FK_Products_Supplier" FromRole="Supplier" ToRole="Product" />
+          <NavigationProperty Name="Products" Relationship="FancyStoreModel.FK_Products_Supplier" FromRole="Supplier" ToRole="Product" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -1365,18 +1338,6 @@
             </Principal>
             <Dependent Role="CategorySmall">
               <PropertyRef Name="CategoryMID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Products_CategoryS">
-          <End Role="CategorySmall" Type="Self.CategorySmall" Multiplicity="1" />
-          <End Role="Product" Type="Self.Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CategorySmall">
-              <PropertyRef Name="CategorySID" />
-            </Principal>
-            <Dependent Role="Product">
-              <PropertyRef Name="CategorySID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1452,18 +1413,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_MyFavorite_Products">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="MyFavorite" Type="Self.MyFavorite" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="MyFavorite">
-              <PropertyRef Name="ProductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_MyFavorite_Users">
           <End Role="User" Type="Self.User" Multiplicity="1" />
           <End Role="MyFavorite" Type="Self.MyFavorite" Multiplicity="*" />
@@ -1521,18 +1470,6 @@
             </Principal>
             <Dependent Role="OrderDetail">
               <PropertyRef Name="OrderID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrderDetails_Products">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="OrderDetail">
-              <PropertyRef Name="ProductID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1617,90 +1554,6 @@
             </Principal>
             <Dependent Role="User">
               <PropertyRef Name="PhotoID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductEvaluation_Products">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductEvaluation" Type="Self.ProductEvaluation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="ProductEvaluation">
-              <PropertyRef Name="ProductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductPhoto_Products">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductColor" Type="Self.ProductColor" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="ProductColor">
-              <PropertyRef Name="ProductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductPhoto_Products1">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductPhoto" Type="Self.ProductPhoto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="ProductPhoto">
-              <PropertyRef Name="ProductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Products_Supplier">
-          <End Role="Supplier" Type="Self.Supplier" Multiplicity="0..1" />
-          <End Role="Product" Type="Self.Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Supplier">
-              <PropertyRef Name="SupplierID" />
-            </Principal>
-            <Dependent Role="Product">
-              <PropertyRef Name="SupplierID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductSize_Products">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductSize" Type="Self.ProductSize" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="ProductSize">
-              <PropertyRef Name="ProductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductStock_Products">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductStock" Type="Self.ProductStock" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="ProductStock">
-              <PropertyRef Name="ProductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ProductWashing_Products">
-          <End Role="Product" Type="Self.Product" Multiplicity="1" />
-          <End Role="ProductWashing" Type="Self.ProductWashing" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="ProductWashing">
-              <PropertyRef Name="ProductID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1793,7 +1646,6 @@
           <EntitySet Name="OrderStatusLists" EntityType="Self.OrderStatusList" />
           <EntitySet Name="PayMethods" EntityType="Self.PayMethod" />
           <EntitySet Name="Photos" EntityType="Self.Photo" />
-          <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="ProductColors" EntityType="Self.ProductColor" />
           <EntitySet Name="ProductEvaluations" EntityType="Self.ProductEvaluation" />
           <EntitySet Name="ProductPhotoes" EntityType="Self.ProductPhoto" />
@@ -1816,10 +1668,6 @@
           <AssociationSet Name="FK_CategoryS_CategoryM" Association="Self.FK_CategoryS_CategoryM">
             <End Role="CategoryMiddle" EntitySet="CategoryMiddles" />
             <End Role="CategorySmall" EntitySet="CategorySmalls" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Products_CategoryS" Association="Self.FK_Products_CategoryS">
-            <End Role="CategorySmall" EntitySet="CategorySmalls" />
-            <End Role="Product" EntitySet="Products" />
           </AssociationSet>
           <AssociationSet Name="FK_Region_City" Association="Self.FK_Region_City">
             <End Role="City" EntitySet="Cities" />
@@ -1845,10 +1693,6 @@
             <End Role="Region" EntitySet="Regions" />
             <End Role="Employee" EntitySet="Employees" />
           </AssociationSet>
-          <AssociationSet Name="FK_MyFavorite_Products" Association="Self.FK_MyFavorite_Products">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="MyFavorite" EntitySet="MyFavorites" />
-          </AssociationSet>
           <AssociationSet Name="FK_MyFavorite_Users" Association="Self.FK_MyFavorite_Users">
             <End Role="User" EntitySet="Users" />
             <End Role="MyFavorite" EntitySet="MyFavorites" />
@@ -1867,10 +1711,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_OrderDetails_Orders" Association="Self.FK_OrderDetails_Orders">
             <End Role="OrderHeader" EntitySet="OrderHeaders" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderDetails_Products" Association="Self.FK_OrderDetails_Products">
-            <End Role="Product" EntitySet="Products" />
             <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
           <AssociationSet Name="FK_Orders_PayMethod" Association="Self.FK_Orders_PayMethod">
@@ -1901,34 +1741,6 @@
             <End Role="Photo" EntitySet="Photos" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
-          <AssociationSet Name="FK_ProductEvaluation_Products" Association="Self.FK_ProductEvaluation_Products">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="ProductEvaluation" EntitySet="ProductEvaluations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductPhoto_Products" Association="Self.FK_ProductPhoto_Products">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="ProductColor" EntitySet="ProductColors" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductPhoto_Products1" Association="Self.FK_ProductPhoto_Products1">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="ProductPhoto" EntitySet="ProductPhotoes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Products_Supplier" Association="Self.FK_Products_Supplier">
-            <End Role="Supplier" EntitySet="Suppliers" />
-            <End Role="Product" EntitySet="Products" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductSize_Products" Association="Self.FK_ProductSize_Products">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="ProductSize" EntitySet="ProductSizes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductStock_Products" Association="Self.FK_ProductStock_Products">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="ProductStock" EntitySet="ProductStocks" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ProductWashing_Products" Association="Self.FK_ProductWashing_Products">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="ProductWashing" EntitySet="ProductWashings" />
-          </AssociationSet>
           <AssociationSet Name="FK_ProductStock_ProductColor" Association="Self.FK_ProductStock_ProductColor">
             <End Role="ProductColor" EntitySet="ProductColors" />
             <End Role="ProductStock" EntitySet="ProductStocks" />
@@ -1953,7 +1765,192 @@
             <End Role="Region" EntitySet="Regions" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="Products" EntityType="FancyStoreModel.Product" />
+          <AssociationSet Name="FK_Products_CategoryS" Association="FancyStoreModel.FK_Products_CategoryS">
+            <End Role="CategorySmall" EntitySet="CategorySmalls" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyFavorite_Products" Association="FancyStoreModel.FK_MyFavorite_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="MyFavorite" EntitySet="MyFavorites" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetails_Products" Association="FancyStoreModel.FK_OrderDetails_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductEvaluation_Products" Association="FancyStoreModel.FK_ProductEvaluation_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductEvaluation" EntitySet="ProductEvaluations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPhoto_Products" Association="FancyStoreModel.FK_ProductPhoto_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductColor" EntitySet="ProductColors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPhoto_Products1" Association="FancyStoreModel.FK_ProductPhoto_Products1">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductPhoto" EntitySet="ProductPhotoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Supplier" Association="FancyStoreModel.FK_Products_Supplier">
+            <End Role="Supplier" EntitySet="Suppliers" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSize_Products" Association="FancyStoreModel.FK_ProductSize_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductSize" EntitySet="ProductSizes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductStock_Products" Association="FancyStoreModel.FK_ProductStock_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductStock" EntitySet="ProductStocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductWashing_Products" Association="FancyStoreModel.FK_ProductWashing_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductWashing" EntitySet="ProductWashings" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Desctiption" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CategorySID" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Int32" Nullable="false" />
+          <Property Name="SupplierID" Type="Int32" />
+          <Property Name="ProductInDate" Type="DateTime" Precision="3" />
+          <Property Name="ProductOutDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CategorySmall" Relationship="FancyStoreModel.FK_Products_CategoryS" FromRole="Product" ToRole="CategorySmall" />
+          <NavigationProperty Name="MyFavorites" Relationship="FancyStoreModel.FK_MyFavorite_Products" FromRole="Product" ToRole="MyFavorite" />
+          <NavigationProperty Name="OrderDetails" Relationship="FancyStoreModel.FK_OrderDetails_Products" FromRole="Product" ToRole="OrderDetail" />
+          <NavigationProperty Name="ProductEvaluations" Relationship="FancyStoreModel.FK_ProductEvaluation_Products" FromRole="Product" ToRole="ProductEvaluation" />
+          <NavigationProperty Name="ProductColors" Relationship="FancyStoreModel.FK_ProductPhoto_Products" FromRole="Product" ToRole="ProductColor" />
+          <NavigationProperty Name="ProductPhotoes" Relationship="FancyStoreModel.FK_ProductPhoto_Products1" FromRole="Product" ToRole="ProductPhoto" />
+          <NavigationProperty Name="Supplier" Relationship="FancyStoreModel.FK_Products_Supplier" FromRole="Product" ToRole="Supplier" />
+          <NavigationProperty Name="ProductSizes" Relationship="FancyStoreModel.FK_ProductSize_Products" FromRole="Product" ToRole="ProductSize" />
+          <NavigationProperty Name="ProductStocks" Relationship="FancyStoreModel.FK_ProductStock_Products" FromRole="Product" ToRole="ProductStock" />
+          <NavigationProperty Name="ProductWashings" Relationship="FancyStoreModel.FK_ProductWashing_Products" FromRole="Product" ToRole="ProductWashing" />
+        </EntityType>
+        <Association Name="FK_Products_CategoryS">
+          <End Type="FancyStoreModel.CategorySmall" Role="CategorySmall" Multiplicity="1" />
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategorySmall">
+              <PropertyRef Name="CategorySID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategorySID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyFavorite_Products">
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="FancyStoreModel.MyFavorite" Role="MyFavorite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="MyFavorite">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetails_Products">
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="FancyStoreModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductEvaluation_Products">
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="FancyStoreModel.ProductEvaluation" Role="ProductEvaluation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductEvaluation">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductPhoto_Products">
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="FancyStoreModel.ProductColor" Role="ProductColor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductColor">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductPhoto_Products1">
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="FancyStoreModel.ProductPhoto" Role="ProductPhoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductPhoto">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Supplier">
+          <End Type="FancyStoreModel.Supplier" Role="Supplier" Multiplicity="0..1" />
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="SupplierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSize_Products">
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="FancyStoreModel.ProductSize" Role="ProductSize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductSize">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductStock_Products">
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="FancyStoreModel.ProductStock" Role="ProductStock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductStock">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductWashing_Products">
+          <End Type="FancyStoreModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="FancyStoreModel.ProductWashing" Role="ProductWashing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductWashing">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2133,22 +2130,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="FancyStoreModel.Product">
-              <MappingFragment StoreEntitySet="Product">
-                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
-                <ScalarProperty Name="Desctiption" ColumnName="Desctiption" />
-                <ScalarProperty Name="ProductWashingID" ColumnName="ProductWashingID" />
-                <ScalarProperty Name="CategorySID" ColumnName="CategorySID" />
-                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
-                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
-                <ScalarProperty Name="ProductInDate" ColumnName="ProductInDate" />
-                <ScalarProperty Name="ProductOutDate" ColumnName="ProductOutDate" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ProductColors">
             <EntityTypeMapping TypeName="FancyStoreModel.ProductColor">
               <MappingFragment StoreEntitySet="ProductColor">
@@ -2315,6 +2296,21 @@
               <MappingFragment StoreEntitySet="Washing">
                 <ScalarProperty Name="WashingID" ColumnName="WashingID" />
                 <ScalarProperty Name="WashingName" ColumnName="WashingName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="FancyStoreModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ProductOutDate" ColumnName="ProductOutDate" />
+                <ScalarProperty Name="ProductInDate" ColumnName="ProductInDate" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="CategorySID" ColumnName="CategorySID" />
+                <ScalarProperty Name="Desctiption" ColumnName="Desctiption" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
