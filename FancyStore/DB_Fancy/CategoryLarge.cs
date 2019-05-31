@@ -12,23 +12,18 @@ namespace DB_Fancy
     using System;
     using System.Collections.Generic;
     
-    public partial class Shipping
+    public partial class CategoryLarge
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Shipping()
+        public CategoryLarge()
         {
-            this.OrderHeaders = new HashSet<OrderHeader>();
+            this.CategoryMiddles = new HashSet<CategoryMiddle>();
         }
     
-        public int ShippingID { get; set; }
-        public string ShippingName { get; set; }
-        public string Phone { get; set; }
-        public string Fax { get; set; }
-        public string Email { get; set; }
-        public string Address { get; set; }
-        public Nullable<System.DateTime> CreateDate { get; set; }
+        public int CategoryLID { get; set; }
+        public string CategoryLName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderHeader> OrderHeaders { get; set; }
+        public virtual ICollection<CategoryMiddle> CategoryMiddles { get; set; }
     }
 }

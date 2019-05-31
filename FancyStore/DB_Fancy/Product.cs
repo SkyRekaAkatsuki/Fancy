@@ -19,8 +19,8 @@ namespace DB_Fancy
         {
             this.MyFavorites = new HashSet<MyFavorite>();
             this.OrderDetails = new HashSet<OrderDetail>();
-            this.ProductColors = new HashSet<ProductColor>();
             this.ProductEvaluations = new HashSet<ProductEvaluation>();
+            this.ProductColors = new HashSet<ProductColor>();
             this.ProductPhotoes = new HashSet<ProductPhoto>();
             this.ProductSizes = new HashSet<ProductSize>();
             this.ProductStocks = new HashSet<ProductStock>();
@@ -38,15 +38,15 @@ namespace DB_Fancy
         public Nullable<System.DateTime> ProductOutDate { get; set; }
         public Nullable<System.DateTime> CreateDate { get; set; }
     
-        public virtual Category Category { get; set; }
+        public virtual CategorySmall CategorySmall { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MyFavorite> MyFavorites { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductColor> ProductColors { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductEvaluation> ProductEvaluations { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductColor> ProductColors { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductPhoto> ProductPhotoes { get; set; }
         public virtual Supplier Supplier { get; set; }

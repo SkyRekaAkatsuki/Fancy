@@ -12,10 +12,10 @@ namespace DB_Fancy
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class OrderHeader
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Order()
+        public OrderHeader()
         {
             this.OrderDetails = new HashSet<OrderDetail>();
             this.Questions = new HashSet<Question>();
@@ -38,7 +38,7 @@ namespace DB_Fancy
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual PayMethod PayMethod { get; set; }
         public virtual Shipping Shipping { get; set; }
-        public virtual OrderStatu OrderStatu { get; set; }
+        public virtual OrderStatusList OrderStatusList { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Question> Questions { get; set; }

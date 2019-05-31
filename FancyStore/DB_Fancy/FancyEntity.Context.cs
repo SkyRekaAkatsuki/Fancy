@@ -25,9 +25,9 @@ namespace DB_Fancy
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CategoryL> CategoryLs { get; set; }
-        public virtual DbSet<CategoryM> CategoryMs { get; set; }
-        public virtual DbSet<Category> CategoryS { get; set; }
+        public virtual DbSet<CategoryLarge> CategoryLarges { get; set; }
+        public virtual DbSet<CategoryMiddle> CategoryMiddles { get; set; }
+        public virtual DbSet<CategorySmall> CategorySmalls { get; set; }
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Color> Colors { get; set; }
         public virtual DbSet<DiscountMethod> DiscountMethods { get; set; }
@@ -35,21 +35,22 @@ namespace DB_Fancy
         public virtual DbSet<EvaluationSample> EvaluationSamples { get; set; }
         public virtual DbSet<KeyWord> KeyWords { get; set; }
         public virtual DbSet<MyFavorite> MyFavorites { get; set; }
-        public virtual DbSet<News> News { get; set; }
+        public virtual DbSet<NewsList> NewsLists { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<OrderStatu> OrderStatus { get; set; }
+        public virtual DbSet<OrderHeader> OrderHeaders { get; set; }
+        public virtual DbSet<OrderStatusList> OrderStatusLists { get; set; }
         public virtual DbSet<PayMethod> PayMethods { get; set; }
         public virtual DbSet<Photo> Photos { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductColor> ProductColors { get; set; }
         public virtual DbSet<ProductEvaluation> ProductEvaluations { get; set; }
         public virtual DbSet<ProductPhoto> ProductPhotoes { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductSize> ProductSizes { get; set; }
         public virtual DbSet<ProductStock> ProductStocks { get; set; }
         public virtual DbSet<ProductWashing> ProductWashings { get; set; }
         public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<Region> Regions { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Shipping> Shippings { get; set; }
         public virtual DbSet<Size> Sizes { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }

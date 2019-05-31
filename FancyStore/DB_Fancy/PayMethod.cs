@@ -17,13 +17,13 @@ namespace DB_Fancy
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PayMethod()
         {
-            this.Orders = new HashSet<Order>();
+            this.OrderHeaders = new HashSet<OrderHeader>();
         }
     
         public int PayMethodID { get; set; }
         public string PayMethodName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<OrderHeader> OrderHeaders { get; set; }
     }
 }

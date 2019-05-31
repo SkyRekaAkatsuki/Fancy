@@ -22,7 +22,7 @@ namespace DB_Fancy
         public bool IsRead { get; set; }
         public Nullable<System.DateTime> CreateDate { get; set; }
     
-        public virtual Order Order { get; set; }
+        public virtual OrderHeader OrderHeader { get; set; }
         public virtual User User { get; set; }
     }
 }

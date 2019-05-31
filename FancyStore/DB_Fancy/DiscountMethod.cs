@@ -17,7 +17,7 @@ namespace DB_Fancy
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DiscountMethod()
         {
-            this.Orders = new HashSet<Order>();
+            this.OrderHeaders = new HashSet<OrderHeader>();
         }
     
         public int DiscountID { get; set; }
@@ -25,8 +25,9 @@ namespace DB_Fancy
         public int RangeAmountFrom { get; set; }
         public int RangeAmountTo { get; set; }
         public decimal Discount { get; set; }
+        public string Code { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<OrderHeader> OrderHeaders { get; set; }
     }
 }

@@ -12,20 +12,18 @@ namespace DB_Fancy
     using System;
     using System.Collections.Generic;
     
-    public partial class Category
+    public partial class OrderStatusList
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Category()
+        public OrderStatusList()
         {
-            this.Products = new HashSet<Product>();
+            this.OrderHeaders = new HashSet<OrderHeader>();
         }
     
-        public int CategorySID { get; set; }
-        public string CategorySName { get; set; }
-        public int CategoryMID { get; set; }
+        public int OrderStatusID { get; set; }
+        public string OrderStatusName { get; set; }
     
-        public virtual CategoryM CategoryM { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<OrderHeader> OrderHeaders { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace DB_Fancy
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProductColor()
         {
+            this.OrderDetails = new HashSet<OrderDetail>();
             this.ProductStocks = new HashSet<ProductStock>();
         }
     
@@ -27,6 +28,8 @@ namespace DB_Fancy
         public Nullable<System.DateTime> CreateDate { get; set; }
     
         public virtual Color Color { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual Product Product { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductStock> ProductStocks { get; set; }

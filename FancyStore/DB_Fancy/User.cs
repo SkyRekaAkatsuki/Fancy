@@ -18,7 +18,7 @@ namespace DB_Fancy
         public User()
         {
             this.MyFavorites = new HashSet<MyFavorite>();
-            this.Orders = new HashSet<Order>();
+            this.OrderHeaders = new HashSet<OrderHeader>();
             this.Questions = new HashSet<Question>();
         }
     
@@ -41,7 +41,8 @@ namespace DB_Fancy
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MyFavorite> MyFavorites { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<OrderHeader> OrderHeaders { get; set; }
+        public virtual Photo Photo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Question> Questions { get; set; }
         public virtual Region Region { get; set; }

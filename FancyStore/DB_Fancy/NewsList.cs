@@ -12,7 +12,7 @@ namespace DB_Fancy
     using System;
     using System.Collections.Generic;
     
-    public partial class News
+    public partial class NewsList
     {
         public int NewsID { get; set; }
         public string Title { get; set; }

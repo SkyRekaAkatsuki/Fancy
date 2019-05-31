@@ -22,8 +22,8 @@ namespace DB_Fancy
         public int MinStock { get; set; }
         public Nullable<System.DateTime> CreateDate { get; set; }
     
-        public virtual ProductColor ProductColor { get; set; }
         public virtual Product Product { get; set; }
+        public virtual ProductColor ProductColor { get; set; }
         public virtual ProductSize ProductSize { get; set; }
     }
 }

@@ -29,7 +29,10 @@ namespace DB_Fancy
         public bool Admin { get; set; }
         public Nullable<int> PhotoID { get; set; }
         public bool Enabled { get; set; }
+        public int RoleID { get; set; }
     
+        public virtual Photo Photo { get; set; }
+        public virtual Role Role { get; set; }
         public virtual Region Region { get; set; }
     }
 }

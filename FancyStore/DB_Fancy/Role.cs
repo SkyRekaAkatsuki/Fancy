@@ -12,20 +12,18 @@ namespace DB_Fancy
     using System;
     using System.Collections.Generic;
     
-    public partial class CategoryM
+    public partial class Role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CategoryM()
+        public Role()
         {
-            this.CategoryS = new HashSet<Category>();
+            this.Employees = new HashSet<Employee>();
         }
     
-        public int CategoryMID { get; set; }
-        public string CategoryMName { get; set; }
-        public int CategoryLID { get; set; }
+        public int RoleID { get; set; }
+        public string RoleName { get; set; }
     
-        public virtual CategoryL CategoryL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Category> CategoryS { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }
