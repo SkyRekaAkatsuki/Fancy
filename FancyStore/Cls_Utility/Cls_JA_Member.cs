@@ -12,6 +12,7 @@ namespace Cls_Utility
     {
 
         static FancyStoreEntities db = new FancyStoreEntities();
+        public static string UserID { get; set; }
         #region 註冊
         public static bool Register(User NewUser)
         {
@@ -43,6 +44,7 @@ namespace Cls_Utility
                 byte[] p = Cls_JA_IDo.HashPw(Password, userdata.GUID);
                 if (BitConverter.ToString(p) == BitConverter.ToString(userdata.UserPassword))
                 {
+                    UserID = userdata.UserID.ToString();
                     return true;
                 }
                 else { return false; }

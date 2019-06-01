@@ -181,4 +181,7 @@
   <data name="user_5_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\user-5-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="success_400x300" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\success_400x300.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

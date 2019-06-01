@@ -1,4 +1,5 @@
-﻿using Microsoft.SqlServer.Server;
+﻿using Cls_Utility;
+using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,9 +7,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
+using Timer = System.Windows.Forms.Timer;
 
 namespace UI_JA_Main
 {
@@ -19,7 +22,16 @@ namespace UI_JA_Main
         int a = 0;
         public FancyMain()
         {
+
+            Thread t = new Thread(new ThreadStart(delegate
+           {
+               Application.Run(new Loading());
+
+           }));
+            t.Start();
+            Thread.Sleep(3000);
             InitializeComponent();
+            MessageBox.Show(Cls_JA_Member.UserID);
             colors.Add(Color.FromArgb(3, 169, 244));
             colors.Add(Color.FromArgb(33, 150, 243));
             colors.Add(Color.FromArgb(0, 150, 136));
@@ -28,6 +40,7 @@ namespace UI_JA_Main
             colors.Add(Color.FromArgb(255, 87, 34));
             colors.Add(Color.FromArgb(255, 193, 7));
             colors.Add(Color.FromArgb(205, 220, 57));
+            t.Abort();
         }
 
 
@@ -59,7 +72,6 @@ namespace UI_JA_Main
 
         private void FancyMain_Load(object sender, EventArgs e)
         {
-
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -104,10 +116,35 @@ namespace UI_JA_Main
             NowY = e.Y;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel4.Left = ((Button)sender).Left;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel4.Left = ((Button)sender).Left;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel4.Left = ((Button)sender).Left;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panel4.Left = ((Button)sender).Left;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
             IfMdown = false;
         }
     }
-    }
+}
 

@@ -9,31 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI_JA_Main;
 
 namespace UI_JA_Members
 {
-    public partial class Form2 : Form
+    public partial class UserMain : Form
     {
-        public Form2()
+        public UserMain()
         {
             InitializeComponent();
             this.Gender.SelectedIndex = 0;
         }
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            IfMdown = false;
-        }
-
-        bool IfMdown = false;
-        int NowX, NowY;
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (IfMdown)
-            {
-                this.Location = new Point(this.Left += e.X - NowX, this.Top += e.Y - NowY);
-            }
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             this.jA_Input1.輸入塊字串 = "Jay";
@@ -42,7 +28,7 @@ namespace UI_JA_Members
             this.jA_Input4.輸入塊字串 = "0979325992";
             Gender.SelectedIndex = 1;
         }
-
+        //註冊
         private void button8_Click(object sender, EventArgs e)
         {
 
@@ -57,7 +43,16 @@ namespace UI_JA_Members
                     }
                 }
             }
-
+            if (!Cls_JA_IDo.IsValidEmail(this.jA_Input3.輸入塊字串))
+            {
+                this.jA_Input3.警告 = System.Drawing.Color.FromArgb(244, 67, 54);
+                return;
+            }
+            if (!Cls_JA_IDo.IsValidPhone(this.jA_Input4.輸入塊字串))
+            {
+                this.jA_Input4.警告 = System.Drawing.Color.FromArgb(244, 67, 54);
+                return;
+            }
             string guid = Guid.NewGuid().ToString("N");
             User newuser = new User
             {
@@ -67,7 +62,7 @@ namespace UI_JA_Members
                 Email = this.jA_Input3.輸入塊字串,
                 Phone = this.jA_Input4.輸入塊字串,
                 RegionID = 1,
-                Address = "abc",
+                Address = "",
                 RegistrationDate = DateTime.Now,
                 Enabled = true,
                 Gender = this.Gender.SelectedItem.ToString().Equals("男")
@@ -86,16 +81,23 @@ namespace UI_JA_Members
             }
 
         }
-
+        //登入
         private void button3_Click(object sender, EventArgs e)
         {
             try
             {
                 if (Cls_JA_Member.VaildateUser(this.textBox1.Text, this.textBox2.Text))
                 {
+                    this.Hide();
                     MessageBox.Show("成功");
+                    FancyMain fancyMain = new FancyMain();
+                    fancyMain.FormClosing += (s, ee) =>
+                    {
+                        this.Show();
+                    };
+                    fancyMain.ShowDialog();
                 }
-                else { MessageBox.Show("失敗"); }
+                else { MessageBox.Show("帳號密碼錯誤"); }
             }
             catch (Exception)
             {
@@ -186,7 +188,7 @@ namespace UI_JA_Members
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            Action r = new Action(() => 
+            Action r = new Action(() =>
             {
                 if (Login_panel.Left < 1000)
                 {
@@ -216,13 +218,10 @@ namespace UI_JA_Members
             else { MessageBox.Show("資料錯誤"); }
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void UserMain_Load(object sender, EventArgs e)
         {
-            IfMdown = true;
-            NowX = e.X;
-            NowY = e.Y;
+            bunifuFormFadeTransition1.ShowAsyc(this);
         }
-
     }
 }
 ;

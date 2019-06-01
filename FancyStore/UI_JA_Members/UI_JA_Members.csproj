@@ -59,11 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form2.cs">
+    <Compile Include="UserMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="UserMain.Designer.cs">
+      <DependentUpon>UserMain.cs</DependentUpon>
     </Compile>
     <Compile Include="img.Designer.cs">
       <DependentUpon>img.resx</DependentUpon>
@@ -72,8 +72,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="UserMain.resx">
+      <DependentUpon>UserMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="img.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +116,10 @@
     <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
       <Project>{5392d1d7-99dd-4ba6-9965-f1c02c0b51cb}</Project>
       <Name>DB_Fancy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI_JA_Main\UI_JA_Main.csproj">
+      <Project>{DED328B2-FB80-487D-A0F6-2E37889402D0}</Project>
+      <Name>UI_JA_Main</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

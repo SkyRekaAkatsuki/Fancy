@@ -1,6 +1,6 @@
 ﻿namespace UI_JA_Members
 {
-    partial class Form2
+    partial class UserMain
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserMain));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Login_panel = new System.Windows.Forms.Panel();
@@ -80,6 +80,7 @@
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Login_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -316,7 +317,7 @@
             this.SingUp_panel.Controls.Add(this.label6);
             this.SingUp_panel.Controls.Add(this.button6);
             this.SingUp_panel.Controls.Add(this.button8);
-            this.SingUp_panel.Location = new System.Drawing.Point(1000, 58);
+            this.SingUp_panel.Location = new System.Drawing.Point(490, 58);
             this.SingUp_panel.Name = "SingUp_panel";
             this.SingUp_panel.Size = new System.Drawing.Size(344, 470);
             this.SingUp_panel.TabIndex = 5;
@@ -470,7 +471,7 @@
             this.fg_panel.Controls.Add(this.textBox4);
             this.fg_panel.Controls.Add(this.bunifuSeparator3);
             this.fg_panel.Controls.Add(this.bunifuSeparator4);
-            this.fg_panel.Location = new System.Drawing.Point(490, 96);
+            this.fg_panel.Location = new System.Drawing.Point(1000, 96);
             this.fg_panel.Name = "fg_panel";
             this.fg_panel.Size = new System.Drawing.Size(322, 386);
             this.fg_panel.TabIndex = 6;
@@ -624,7 +625,11 @@
             this.timer4.Interval = 10;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
-            // Form2
+            // bunifuFormFadeTransition1
+            // 
+            this.bunifuFormFadeTransition1.Delay = 1;
+            // 
+            // UserMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -637,9 +642,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "UserMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.UserMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Login_panel.ResumeLayout(false);
             this.Login_panel.PerformLayout();
@@ -709,6 +715,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
+        private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
     }
 }
 
