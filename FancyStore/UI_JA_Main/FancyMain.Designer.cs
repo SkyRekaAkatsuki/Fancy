@@ -32,12 +32,14 @@
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FancyMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button12 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,14 +48,17 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.button13 = new System.Windows.Forms.Button();
+            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -62,13 +67,16 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(171)))), ((int)(((byte)(143)))));
+            this.panel1.Controls.Add(this.bunifuCircleProgressbar1);
+            this.panel1.Controls.Add(this.button14);
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.bunifuTransition1.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(746, 0);
@@ -76,65 +84,43 @@
             this.panel1.Size = new System.Drawing.Size(200, 736);
             this.panel1.TabIndex = 0;
             // 
+            // button14
+            // 
+            this.bunifuTransition1.SetDecoration(this.button14, BunifuAnimatorNS.DecorationType.None);
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Image = global::UI_JA_Main.IconPIc.icons8_cameras_24;
+            this.button14.Location = new System.Drawing.Point(156, 133);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(32, 23);
+            this.button14.TabIndex = 11;
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.bunifuTransition1.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(59, 34);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(85, 94);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.button12, BunifuAnimatorNS.DecorationType.None);
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(0, 379);
+            this.button12.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button12.Image = global::UI_JA_Main.IconPIc.iconfinder_logout;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.Location = new System.Drawing.Point(0, 362);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(199, 23);
+            this.button12.Size = new System.Drawing.Size(200, 40);
             this.button12.TabIndex = 9;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.bunifuTransition1.SetDecoration(this.button11, BunifuAnimatorNS.DecorationType.None);
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(0, 340);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(199, 23);
-            this.button11.TabIndex = 8;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.bunifuTransition1.SetDecoration(this.button10, BunifuAnimatorNS.DecorationType.None);
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(0, 301);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(199, 23);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.bunifuTransition1.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 262);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(199, 23);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.bunifuTransition1.SetDecoration(this.button8, BunifuAnimatorNS.DecorationType.None);
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(0, 223);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(199, 23);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button12.Text = "登出";
+            this.button12.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -147,6 +133,66 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.button8, BunifuAnimatorNS.DecorationType.None);
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button8.Image = global::UI_JA_Main.IconPIc.iconfinder_profile_male;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(0, 206);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(200, 40);
+            this.button8.TabIndex = 5;
+            this.button8.Text = "會員資料";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.button11, BunifuAnimatorNS.DecorationType.None);
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button11.Location = new System.Drawing.Point(0, 323);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(200, 40);
+            this.button11.TabIndex = 8;
+            this.button11.Text = "訂單查詢";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.button10, BunifuAnimatorNS.DecorationType.None);
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button10.Location = new System.Drawing.Point(0, 284);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(200, 40);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "系統管理";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.button9, BunifuAnimatorNS.DecorationType.None);
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button9.Image = global::UI_JA_Main.IconPIc.iconfinder_like;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(0, 245);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(200, 40);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "我的最愛";
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -254,6 +300,20 @@
             this.panel4.Size = new System.Drawing.Size(75, 5);
             this.panel4.TabIndex = 3;
             // 
+            // button13
+            // 
+            this.bunifuTransition1.SetDecoration(this.button13, BunifuAnimatorNS.DecorationType.None);
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(669, 0);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 40);
+            this.button13.TabIndex = 4;
+            this.button13.Text = "button7";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
             // button7
             // 
             this.bunifuTransition1.SetDecoration(this.button7, BunifuAnimatorNS.DecorationType.None);
@@ -345,19 +405,33 @@
             animation2.TransparencyCoeff = 0F;
             this.bunifuTransition1.DefaultAnimation = animation2;
             // 
-            // button13
+            // bunifuCircleProgressbar1
             // 
-            this.bunifuTransition1.SetDecoration(this.button13, BunifuAnimatorNS.DecorationType.None);
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(669, 0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 40);
-            this.button13.TabIndex = 4;
-            this.button13.Text = "button7";
-            this.button13.UseVisualStyleBackColor = true;
+            this.bunifuCircleProgressbar1.animated = true;
+            this.bunifuCircleProgressbar1.animationIterval = 10;
+            this.bunifuCircleProgressbar1.animationSpeed = 1;
+            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.White;
+            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
+            this.bunifuTransition1.SetDecoration(this.bunifuCircleProgressbar1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCircleProgressbar1.LabelVisible = false;
+            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
+            this.bunifuCircleProgressbar1.LineThickness = 5;
+            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(59, 457);
+            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.bunifuCircleProgressbar1.MaxValue = 100;
+            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
+            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.Gainsboro;
+            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(69, 69);
+            this.bunifuCircleProgressbar1.TabIndex = 3;
+            this.bunifuCircleProgressbar1.Value = 30;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 30;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // FancyMain
             // 
@@ -372,9 +446,11 @@
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FancyMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FancyMain";
             this.Load += new System.EventHandler(this.FancyMain_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -406,5 +482,9 @@
         private System.Windows.Forms.Button button8;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
         private System.Windows.Forms.Button button13;
+        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button14;
     }
 }

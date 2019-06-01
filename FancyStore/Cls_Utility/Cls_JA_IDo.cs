@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Cls_Utility
 {
-    class Cls_JA_IDo
+    public class Cls_JA_IDo
     {
         //產生新密碼
         /// <summary>
@@ -90,7 +90,7 @@ namespace Cls_Utility
         /// <param name="UserName"></param>
         /// <param name="NewPW"></param>
         /// <returns></returns>
-        public static string GetMailBody(string TempString, string UserName, string NewPW)
+        private static string GetMailBody(string TempString, string UserName, string NewPW)
         {
             //將使用者資料填入
             TempString = TempString.Replace("{{UserName}}", UserName);
