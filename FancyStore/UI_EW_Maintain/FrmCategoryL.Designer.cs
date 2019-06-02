@@ -47,10 +47,10 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.categoryLargeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryLargeDataGridView)).BeginInit();
@@ -69,10 +69,10 @@
             this.categoryLargeDataGridView.AutoGenerateColumns = false;
             this.categoryLargeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.categoryLargeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnSave,
-            this.btnDelete,
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
+            this.btnSave,
+            this.dataGridViewTextBoxColumn1,
+            this.btnDelete,
             this.dataGridViewTextBoxColumn3});
             this.categoryLargeDataGridView.DataSource = this.categoryLargeBindingSource;
             this.categoryLargeDataGridView.Location = new System.Drawing.Point(12, 42);
@@ -210,6 +210,13 @@
             this.tsbSave.Size = new System.Drawing.Size(24, 24);
             this.tsbSave.Text = "toolStripButton1";
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CategoryLName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "名稱";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
             // btnSave
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -221,6 +228,13 @@
             this.btnSave.Text = "存檔";
             this.btnSave.UseColumnTextForButtonValue = true;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CategoryLID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "CategoryLID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // btnDelete
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -231,20 +245,6 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseColumnTextForButtonValue = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CategoryLID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "CategoryLID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "CategoryLName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "名稱";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -291,10 +291,10 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton tsbSave;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSave;
-        private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

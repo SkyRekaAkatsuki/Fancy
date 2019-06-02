@@ -65,6 +65,12 @@
     <Compile Include="FrmCategoryL.Designer.cs">
       <DependentUpon>FrmCategoryL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmColor.Designer.cs">
+      <DependentUpon>FrmColor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSize.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoryL.resx">
       <DependentUpon>FrmCategoryL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmColor.resx">
+      <DependentUpon>FrmColor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSize.resx">
       <DependentUpon>FrmSize.cs</DependentUpon>

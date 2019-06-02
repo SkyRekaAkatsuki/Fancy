@@ -1,6 +1,6 @@
 ﻿namespace UI_EW_Maintain
 {
-    partial class FrmSize
+    partial class FrmColor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,47 +29,46 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSize));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmColor));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.sizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sizeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.colorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.sizeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.sizeDataGridView = new System.Windows.Forms.DataGridView();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.colorBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.colorDataGridView = new System.Windows.Forms.DataGridView();
+            this.colorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingNavigator)).BeginInit();
-            this.sizeBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeDataGridView)).BeginInit();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.colorBindingNavigator)).BeginInit();
+            this.colorBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.colorDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // sizeBindingSource
+            // colorBindingNavigator
             // 
-            this.sizeBindingSource.DataSource = typeof(DB_Fancy.Size);
-            // 
-            // sizeBindingNavigator
-            // 
-            this.sizeBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.sizeBindingNavigator.BindingSource = this.sizeBindingSource;
-            this.sizeBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.sizeBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.sizeBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.sizeBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.colorBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.colorBindingNavigator.BindingSource = this.colorBindingSource;
+            this.colorBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.colorBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.colorBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.colorBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -81,44 +80,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.sizeBindingNavigatorSaveItem});
-            this.sizeBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.sizeBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.sizeBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.sizeBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.sizeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.sizeBindingNavigator.Name = "sizeBindingNavigator";
-            this.sizeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.sizeBindingNavigator.Size = new System.Drawing.Size(631, 27);
-            this.sizeBindingNavigator.TabIndex = 0;
-            this.sizeBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Enabled = false;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "加入新的";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(34, 24);
-            this.bindingNavigatorCountItem.Text = "/{0}";
-            this.bindingNavigatorCountItem.ToolTipText = "項目總數";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Enabled = false;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "刪除";
+            this.colorBindingNavigatorSaveItem});
+            this.colorBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.colorBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.colorBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.colorBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.colorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.colorBindingNavigator.Name = "colorBindingNavigator";
+            this.colorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.colorBindingNavigator.Size = new System.Drawing.Size(821, 27);
+            this.colorBindingNavigator.TabIndex = 0;
+            this.colorBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -152,9 +124,16 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "目前的位置";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(34, 24);
+            this.bindingNavigatorCountItem.Text = "/{0}";
+            this.bindingNavigatorCountItem.ToolTipText = "項目總數";
+            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -177,41 +156,89 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // sizeBindingNavigatorSaveItem
+            // bindingNavigatorAddNewItem
             // 
-            this.sizeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.sizeBindingNavigatorSaveItem.Enabled = false;
-            this.sizeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("sizeBindingNavigatorSaveItem.Image")));
-            this.sizeBindingNavigatorSaveItem.Name = "sizeBindingNavigatorSaveItem";
-            this.sizeBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
-            this.sizeBindingNavigatorSaveItem.Text = "儲存資料";
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Enabled = false;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "加入新的";
             // 
-            // sizeDataGridView
+            // bindingNavigatorDeleteItem
             // 
-            this.sizeDataGridView.AutoGenerateColumns = false;
-            this.sizeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sizeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Enabled = false;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "刪除";
+            // 
+            // colorBindingNavigatorSaveItem
+            // 
+            this.colorBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.colorBindingNavigatorSaveItem.Enabled = false;
+            this.colorBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("colorBindingNavigatorSaveItem.Image")));
+            this.colorBindingNavigatorSaveItem.Name = "colorBindingNavigatorSaveItem";
+            this.colorBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.colorBindingNavigatorSaveItem.Text = "儲存資料";
+            // 
+            // colorDataGridView
+            // 
+            this.colorDataGridView.AutoGenerateColumns = false;
+            this.colorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.colorDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
             this.btnSave,
             this.dataGridViewTextBoxColumn1,
             this.btnDelete,
-            this.dataGridViewTextBoxColumn3});
-            this.sizeDataGridView.DataSource = this.sizeBindingSource;
-            this.sizeDataGridView.Location = new System.Drawing.Point(12, 41);
-            this.sizeDataGridView.Name = "sizeDataGridView";
-            this.sizeDataGridView.RowTemplate.Height = 27;
-            this.sizeDataGridView.Size = new System.Drawing.Size(583, 370);
-            this.sizeDataGridView.TabIndex = 1;
-            this.sizeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sizeDataGridView_CellClick);
+            this.dataGridViewTextBoxColumn6});
+            this.colorDataGridView.DataSource = this.colorBindingSource;
+            this.colorDataGridView.Location = new System.Drawing.Point(11, 42);
+            this.colorDataGridView.Name = "colorDataGridView";
+            this.colorDataGridView.RowTemplate.Height = 27;
+            this.colorDataGridView.Size = new System.Drawing.Size(793, 469);
+            this.colorDataGridView.TabIndex = 1;
+            this.colorDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.colorDataGridView_CellContentClick);
+            // 
+            // colorBindingSource
+            // 
+            this.colorBindingSource.DataSource = typeof(DB_Fancy.Color);
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "SizeName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "名稱";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ColorName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "顏色";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "R";
+            this.dataGridViewTextBoxColumn3.HeaderText = "R";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "G";
+            this.dataGridViewTextBoxColumn4.HeaderText = "G";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "B";
+            this.dataGridViewTextBoxColumn5.HeaderText = "B";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 50;
             // 
             // btnSave
             // 
@@ -226,10 +253,11 @@
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "SizeID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "SizeID";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ColorID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ColorID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 60;
             // 
             // btnDelete
             // 
@@ -242,29 +270,29 @@
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseColumnTextForButtonValue = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ProductSizes";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ProductSizes";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Visible = false;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ProductColors";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ProductColors";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
             // 
-            // FrmSize
+            // FrmColor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 432);
-            this.Controls.Add(this.sizeDataGridView);
-            this.Controls.Add(this.sizeBindingNavigator);
-            this.Name = "FrmSize";
+            this.ClientSize = new System.Drawing.Size(821, 522);
+            this.Controls.Add(this.colorDataGridView);
+            this.Controls.Add(this.colorBindingNavigator);
+            this.Name = "FrmColor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "尺吋大小維護 - FrmSize";
-            this.Load += new System.EventHandler(this.FrmSize_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingNavigator)).EndInit();
-            this.sizeBindingNavigator.ResumeLayout(false);
-            this.sizeBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeDataGridView)).EndInit();
+            this.Text = "顏色 - FrmColor";
+            this.Load += new System.EventHandler(this.FrmColor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.colorBindingNavigator)).EndInit();
+            this.colorBindingNavigator.ResumeLayout(false);
+            this.colorBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.colorDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,8 +300,8 @@
 
         #endregion
 
-        private System.Windows.Forms.BindingSource sizeBindingSource;
-        private System.Windows.Forms.BindingNavigator sizeBindingNavigator;
+        private System.Windows.Forms.BindingSource colorBindingSource;
+        private System.Windows.Forms.BindingNavigator colorBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -285,12 +313,15 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton sizeBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView sizeDataGridView;
+        private System.Windows.Forms.ToolStripButton colorBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView colorDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewButtonColumn btnSave;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

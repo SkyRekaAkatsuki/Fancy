@@ -25,6 +25,8 @@ namespace UI_EW_Maintain
 
         private void button4_Click(object sender, EventArgs e)
         {
+            FrmColor f = new FrmColor();
+            f.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)

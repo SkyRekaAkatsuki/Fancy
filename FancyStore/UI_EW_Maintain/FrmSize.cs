@@ -20,12 +20,12 @@ namespace UI_EW_Maintain
             InitializeComponent();
         }
 
-        FancyStoreEntities dbContext = new FancyStoreEntities();
-
         private void FrmSize_Load(object sender, EventArgs e)
         {
             ResetData();
         }
+
+        FancyStoreEntities dbContext = new FancyStoreEntities();
 
         void ResetData()
         {
@@ -46,7 +46,7 @@ namespace UI_EW_Maintain
 
             switch (e.ColumnIndex)
             {
-                case 0:  //存檔
+                case 1:  //存檔
                     try
                     {
                         clsSize.sizeName = ((DB_Fancy.Size)sizeBindingSource.Current).SizeName;
@@ -74,7 +74,7 @@ namespace UI_EW_Maintain
                         Debug.WriteLine(ex);
                     }
                     break;
-                case 1: //刪除
+                case 3: //刪除
                     if (clsSize.sizeID == 0)
                     {
                         MessageBox.Show("尚未存檔, 無法刪除 !");
