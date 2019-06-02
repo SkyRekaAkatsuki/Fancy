@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{409A237E-FEAA-44DA-ABE3-20AD071ABFA5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI_EW_Maintain</RootNamespace>
+    <AssemblyName>UI_EW_Maintain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmBackMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBackMain.Designer.cs">
+      <DependentUpon>FrmBackMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoryL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoryL.Designer.cs">
+      <DependentUpon>FrmCategoryL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmColor.Designer.cs">
+      <DependentUpon>FrmColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSize.Designer.cs">
+      <DependentUpon>FrmSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBackMain.resx">
+      <DependentUpon>FrmBackMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoryL.resx">
+      <DependentUpon>FrmCategoryL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmColor.resx">
+      <DependentUpon>FrmColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSize.resx">
+      <DependentUpon>FrmSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\DataSources\DB_Fancy.CategoryLarge.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.CategoryMiddle.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.CategorySmall.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Color.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Photo.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Product.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductColor.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductPhoto.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductSize.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductStock.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductWashing.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Shipping.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Size.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Supplier.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Washing.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
+      <Project>{5392d1d7-99dd-4ba6-9965-f1c02c0b51cb}</Project>
+      <Name>DB_Fancy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
