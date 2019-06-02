@@ -43,7 +43,8 @@ namespace UI_EW_Maintain
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            FrmCategoryS f = new FrmCategoryS();
+            f.Show();
         }
     }
 }

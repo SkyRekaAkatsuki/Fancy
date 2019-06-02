@@ -40,8 +40,6 @@ namespace UI_EW_Maintain
         //讀取大分類目前所在位置的值
         private void categoryLargeBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-            CategoryMiddle cm = new CategoryMiddle();
-
             cl.CategoryLID = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLID;
             cl.CategoryLName = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLName;
 
