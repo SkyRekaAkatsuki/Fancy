@@ -3,71 +3,67 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using Size = DB_Fancy.Size;
 
 namespace UI_EW_Maintain
 {
-    public partial class FrmCategoryL : Form
+    public partial class FrmSize : Form
     {
-        public FrmCategoryL()
+        public FrmSize()
         {
             InitializeComponent();
         }
 
         FancyStoreEntities dbContext = new FancyStoreEntities();
 
-        private void FrmCategoryL_Load(object sender, EventArgs e)
+        private void FrmSize_Load(object sender, EventArgs e)
         {
             ResetData();
         }
 
         void ResetData()
         {
-            this.categoryLargeBindingSource.DataSource = dbContext.CategoryLarges.ToList();
-            this.categoryLargeDataGridView.DataSource = categoryLargeBindingSource;
+            this.sizeBindingSource.DataSource = dbContext.Sizes.ToList();
+            this.sizeDataGridView.DataSource = sizeBindingSource;
         }
 
-        internal static class categoryL
+        internal static class clsSize
         {
-            internal static int categoryID { get; set; }
-            internal static string categoryLName { get; set; }
+            internal static int sizeID { get; set; }
+            internal static string sizeName { get; set; }
         }
 
-        private void categoryLargeBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void sizeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //categoryL.categoryID = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLID;
-        }
-
-        private void categoryLargeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int currentIdx = categoryLargeBindingSource.Position;
-            categoryL.categoryID = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLID;
+            int currentIdx = sizeBindingSource.Position;
+            clsSize.sizeID = ((DB_Fancy.Size)sizeBindingSource.Current).SizeID;
 
             switch (e.ColumnIndex)
             {
                 case 0:  //存檔
                     try
                     {
-                        categoryL.categoryLName = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLName;
+                        clsSize.sizeName = ((DB_Fancy.Size)sizeBindingSource.Current).SizeName;
 
                         //新增
-                        if (categoryL.categoryID == 0)
+                        if (clsSize.sizeID == 0)
                         {
-                            dbContext.CategoryLarges.Add(
-                                new CategoryLarge
+                            dbContext.Sizes.Add(
+                                new Size
                                 {
-                                    CategoryLName = categoryL.categoryLName
+                                    SizeName = clsSize.sizeName
                                 });
                         }
                         else  //修改
                         {
-                            var q = dbContext.CategoryLarges.Where(x => x.CategoryLID == categoryL.categoryID).FirstOrDefault();
-                            q.CategoryLName = categoryL.categoryLName;
+                            var q = dbContext.Sizes.Where(x => x.SizeID == clsSize.sizeID).FirstOrDefault();
+                            q.SizeName = clsSize.sizeName;
                         }
 
                         this.dbContext.SaveChanges();
@@ -79,7 +75,7 @@ namespace UI_EW_Maintain
                     }
                     break;
                 case 1: //刪除
-                    if (categoryL.categoryID == 0)
+                    if (clsSize.sizeID == 0)
                     {
                         MessageBox.Show("尚未存檔, 無法刪除 !");
                         return;
@@ -90,8 +86,9 @@ namespace UI_EW_Maintain
 
                     try
                     {
-                        var q = dbContext.CategoryLarges.Where(x => x.CategoryLID == categoryL.categoryID).FirstOrDefault();
-                        dbContext.CategoryLarges.Remove(q);
+                        var q = dbContext.Sizes.Where(x => x.SizeID == clsSize.sizeID).FirstOrDefault();
+
+                        dbContext.Sizes.Remove(q);
                         this.dbContext.SaveChanges();
                         ResetData();
                     }

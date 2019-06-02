@@ -16,7 +16,8 @@ namespace UI_EW_Maintain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCategoryL());
+            Application.Run(new FrmBackMain());
+            //Application.Run(new FrmCategoryL());
         }
     }
 }

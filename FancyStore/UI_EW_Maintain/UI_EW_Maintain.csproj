@@ -53,16 +53,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBackMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBackMain.Designer.cs">
+      <DependentUpon>FrmBackMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCategoryL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCategoryL.Designer.cs">
       <DependentUpon>FrmCategoryL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSize.Designer.cs">
+      <DependentUpon>FrmSize.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBackMain.resx">
+      <DependentUpon>FrmBackMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoryL.resx">
       <DependentUpon>FrmCategoryL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSize.resx">
+      <DependentUpon>FrmSize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +92,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\DB_Fancy.CategoryLarge.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.CategoryMiddle.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.CategorySmall.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Color.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Photo.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Product.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductColor.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductPhoto.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductSize.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductStock.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.ProductWashing.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Shipping.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Size.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Supplier.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.Washing.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

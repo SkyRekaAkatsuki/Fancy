@@ -226,7 +226,6 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red;
             this.btnDelete.DefaultCellStyle = dataGridViewCellStyle2;
             this.btnDelete.HeaderText = "Delete";
             this.btnDelete.Name = "btnDelete";
@@ -236,14 +235,14 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "CategoryLID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "大分類ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "CategoryLID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "CategoryLName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "大分類名稱";
+            this.dataGridViewTextBoxColumn2.HeaderText = "名稱";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 150;
             // 
