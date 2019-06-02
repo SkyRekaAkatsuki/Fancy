@@ -142,6 +142,8 @@ namespace UI_JA_Members
         private void button5_Click(object sender, EventArgs e)
         {
             this.timer2.Enabled = true;
+            this.textBox1.Text = "";
+            this.textBox2.Text = "";
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -163,11 +165,15 @@ namespace UI_JA_Members
         private void button4_Click(object sender, EventArgs e)
         {
             this.timer4.Enabled = true;
+            this.textBox1.Text = "";
+            this.textBox2.Text = "";
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             this.timer3.Enabled = true;
+            this.textBox3.Text = "";
+            this.textBox4.Text = "";
         }
 
         private void timer3_Tick(object sender, EventArgs e)
@@ -221,6 +227,22 @@ namespace UI_JA_Members
         private void UserMain_Load(object sender, EventArgs e)
         {
             bunifuFormFadeTransition1.ShowAsyc(this);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Text = "Jay";
+            this.textBox2.Text = "fYWjHUNa";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

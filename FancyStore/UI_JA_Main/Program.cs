@@ -16,7 +16,7 @@ namespace UI_JA_Main
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FancyMain());
+            Application.Run(new AllMemberList());
         }
     }
 }

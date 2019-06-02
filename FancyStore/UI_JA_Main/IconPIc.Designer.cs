@@ -93,6 +93,16 @@ namespace UI_JA_Main {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_icon_ios7_arrow_left_211689 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_icon_ios7_arrow_left_211689", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_like {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_like", resourceCulture);
@@ -146,6 +156,16 @@ namespace UI_JA_Main {
         internal static System.Drawing.Bitmap icons8_address_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8_address_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_admin_settings_male_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_admin_settings_male_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +233,39 @@ namespace UI_JA_Main {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_forgot_password_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_forgot_password_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_reset_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_password_reset_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_phone_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8_phone_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_purchase_order_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_purchase_order_26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

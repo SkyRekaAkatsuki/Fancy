@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Cls_JA_Admin.cs" />
     <Compile Include="Cls_JA_IDo.cs" />
     <Compile Include="Cls_JA_Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

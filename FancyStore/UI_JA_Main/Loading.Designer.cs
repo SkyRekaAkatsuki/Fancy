@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label_loading = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label_loading
@@ -40,6 +42,12 @@
             this.label_loading.Size = new System.Drawing.Size(119, 35);
             this.label_loading.TabIndex = 0;
             this.label_loading.Text = "Loading";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Loading
             // 
@@ -59,5 +67,6 @@
         #endregion
 
         private System.Windows.Forms.Label label_loading;
+        private System.Windows.Forms.Timer timer1;
     }
 }

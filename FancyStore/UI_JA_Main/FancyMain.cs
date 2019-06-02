@@ -1,4 +1,5 @@
 ﻿using Cls_Utility;
+using DB_Fancy;
 using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
@@ -17,30 +18,24 @@ namespace UI_JA_Main
 {
     public partial class FancyMain : Form
     {
-        List<Color> colors = new List<Color>();
-        int currentColor = 0;
-        int a = 0;
         public FancyMain()
         {
-
+            User data = Cls_JA_Member.UserDetail();
             Thread t = new Thread(new ThreadStart(delegate
            {
-               Application.Run(new Loading());
+               Loading loading = new Loading();
+
+               Application.Run(loading);
 
            }));
             t.Start();
+           
             Thread.Sleep(3000);
             InitializeComponent();
-            MessageBox.Show(Cls_JA_Member.UserID);
-            colors.Add(Color.FromArgb(3, 169, 244));
-            colors.Add(Color.FromArgb(33, 150, 243));
-            colors.Add(Color.FromArgb(0, 150, 136));
-            colors.Add(Color.FromArgb(103, 58, 183));
-            colors.Add(Color.FromArgb(156, 39, 176));
-            colors.Add(Color.FromArgb(255, 87, 34));
-            colors.Add(Color.FromArgb(255, 193, 7));
-            colors.Add(Color.FromArgb(205, 220, 57));
-            t.Abort();
+
+            if (data.Admin) { button10.Visible = true; }
+            MessageBox.Show(Cls_JA_Member.UserID.ToString());
+            
         }
 
 
@@ -51,23 +46,7 @@ namespace UI_JA_Main
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Enabled = false;
 
-            if (currentColor < colors.Count - 1)
-            {
-                this.BackColor = Bunifu.Framework.UI.BunifuColorTransition.getColorScale(a, colors[currentColor], colors[currentColor + 1]);
-
-                if (a < 100)
-                {
-                    a++;
-                }
-                else
-                {
-                    a = 0;
-                    currentColor++;
-                }
-                timer1.Enabled = true;
-            }
         }
 
         private void FancyMain_Load(object sender, EventArgs e)
@@ -139,6 +118,62 @@ namespace UI_JA_Main
         private void button12_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        bool df = true;
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (df)
+            {
+                UserDetail detail = new UserDetail();
+                detail.Shown += (s, ee) =>
+                {
+                    detail.Left = (this.Left + this.Width) - detail.Width;
+                    detail.Top = this.Top;
+                    TopMost = false;
+                    Timer t = new Timer();
+                    t.Interval = 10;
+                    t.Start();
+                    int dl = 0;
+                    t.Tick += delegate
+                    {
+                        if (dl <= 450)
+                        {
+                            detail.Left += 25;
+                            dl += 25;
+                        }
+                        else { t.Stop(); dl = detail.Left; df = false; }
+                    };
+                };
+                detail.關閉了 += delegate
+                {
+                    df = true;
+                    this.TopMost = true;
+                };
+                detail.Show();
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            ChangPW changPW = new ChangPW();
+            changPW.密碼更改成功 += delegate
+            {
+                this.Close();
+            };
+            this.TopMost = false;
+            changPW.ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AllMemberList allMemberList = new AllMemberList();
+            allMemberList.TopMost = true;
+            allMemberList.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)

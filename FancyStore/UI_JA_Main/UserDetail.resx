@@ -117,7 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFlSURBVChTBcFbb9JgAIDh76964YUmmqhxGucB3ZywE4eN
+        Ah2UUk4tpXTQlQIFymEDwgiSObeZxQt/yevziIOPT4h/e4YUeUU2+h5NCqHnwjSKMZxamu65SuDpiGjo
+        Kcm9F8hHb1FPPlGRv1MvHNGqJvEaOQYXJaZ+HZHYfU56/zVK/AOl1FcMJYJdjuOaGfxWgXHHYBY0EVL4
+        JdnjLbTkZ/SzPSztGMeQ6NoKQbvCVd9iOXUR8uEb1MQ25cwOZn6fZiWBZ8kMHI1Jr8Zi1GI97yGU2DtK
+        0heM3A/sYhS3lsJv5hl7VWZDm9Vlm5vrIUI73UaXd7AKBzjVE7qNMwK3yJVvspw4bBY97n5OEOV0CFMJ
+        0yzH8MwU/VaeSbfKIrBZzzxuVwF/fs0RRnYXWzvENU7x7SyjdonZoM5qesHNss/DZsrf+2uEpUZwKnE6
+        Voaho3LZ01mOz9nMO/xej3i8XfDvccN/gYcpLT3ILsEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="label2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAKZJREFUSEvtjVkKAjEUBHMMzyAuV/UYIqK388+lCyZvHjMhJmPGrxQUNFm6Q6eE
+        98omD1s6hsb8f+AkNxz8CB10zQbwIZcOxWI6fKeFu3wNuWZoWkwHXbF3DOIob7JkKFXMXzrAei04DvIq
+        n5I7PzQt5g1v+eOxXgsJ9vIi/ZAv5o43KazXQoadPEtKkcxZjqqByHawhEUDNfSBr8wG1jJ52NJOjhA+
+        EuzD5+4yW9sAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 21</value>
+  </metadata>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>341, 21</value>
   </metadata>
 </root>

@@ -184,4 +184,19 @@
   <data name="success_400x300" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\success_400x300.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconfinder_icon_ios7_arrow_left_211689" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\iconfinder_icon-ios7-arrow-left_211689.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_admin_settings_male_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-admin-settings-male-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_purchase_order_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-purchase-order-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_forgot_password_50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-forgot-password-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_password_reset_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-password-reset-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

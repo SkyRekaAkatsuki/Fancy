@@ -40,6 +40,18 @@ namespace UI_JA_Main
                 }
             };
             tim.Start();
+
+        }
+
+
+        public void Close_this()
+        {
+            this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Application.ExitThread();
         }
     }
 }
