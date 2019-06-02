@@ -34,5 +34,16 @@ namespace UI_EW_Maintain
             FrmSize f = new FrmSize();
             f.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmCategoryM f = new FrmCategoryM();
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

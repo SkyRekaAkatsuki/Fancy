@@ -26,6 +26,7 @@ namespace UI_EW_Maintain
         }
 
         FancyStoreEntities dbContext = new FancyStoreEntities();
+        Size sz = new Size();
 
         void ResetData()
         {
@@ -33,37 +34,32 @@ namespace UI_EW_Maintain
             this.sizeDataGridView.DataSource = sizeBindingSource;
         }
 
-        internal static class clsSize
-        {
-            internal static int sizeID { get; set; }
-            internal static string sizeName { get; set; }
-        }
-
         private void sizeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int currentIdx = sizeBindingSource.Position;
-            clsSize.sizeID = ((DB_Fancy.Size)sizeBindingSource.Current).SizeID;
+
+            sz.SizeID = ((Size)sizeBindingSource.Current).SizeID;
 
             switch (e.ColumnIndex)
             {
                 case 1:  //存檔
                     try
                     {
-                        clsSize.sizeName = ((DB_Fancy.Size)sizeBindingSource.Current).SizeName;
+                        sz.SizeName = ((Size)sizeBindingSource.Current).SizeName;
 
                         //新增
-                        if (clsSize.sizeID == 0)
+                        if (sz.SizeID == 0)
                         {
                             dbContext.Sizes.Add(
                                 new Size
                                 {
-                                    SizeName = clsSize.sizeName
+                                    SizeName = sz.SizeName
                                 });
                         }
                         else  //修改
                         {
-                            var q = dbContext.Sizes.Where(x => x.SizeID == clsSize.sizeID).FirstOrDefault();
-                            q.SizeName = clsSize.sizeName;
+                            var q = dbContext.Sizes.Find(sz.SizeID);
+                            q.SizeName = sz.SizeName;
                         }
 
                         this.dbContext.SaveChanges();
@@ -75,7 +71,7 @@ namespace UI_EW_Maintain
                     }
                     break;
                 case 3: //刪除
-                    if (clsSize.sizeID == 0)
+                    if (sz.SizeID == 0)
                     {
                         MessageBox.Show("尚未存檔, 無法刪除 !");
                         return;
@@ -86,7 +82,7 @@ namespace UI_EW_Maintain
 
                     try
                     {
-                        var q = dbContext.Sizes.Where(x => x.SizeID == clsSize.sizeID).FirstOrDefault();
+                        var q = dbContext.Sizes.Find(sz.SizeID);
 
                         dbContext.Sizes.Remove(q);
                         this.dbContext.SaveChanges();
