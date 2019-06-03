@@ -163,7 +163,7 @@ namespace UI_JA_Main
         private void button10_Click(object sender, EventArgs e)
         {
             AllMemberList allMemberList = new AllMemberList();
-            allMemberList.TopMost = true;
+            this.TopMost = false;
             allMemberList.Show();
         }
 
@@ -175,6 +175,7 @@ namespace UI_JA_Main
         private void button9_Click(object sender, EventArgs e)
         {
             Favorite favorite = new Favorite();
+            this.TopMost = false;
             favorite.ShowDialog();
         }
 
