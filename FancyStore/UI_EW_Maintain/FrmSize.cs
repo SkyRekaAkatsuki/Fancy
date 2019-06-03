@@ -26,7 +26,6 @@ namespace UI_EW_Maintain
         }
 
         FancyStoreEntities dbContext = new FancyStoreEntities();
-        Size sz = new Size();
 
         void ResetData()
         {
@@ -36,8 +35,8 @@ namespace UI_EW_Maintain
 
         private void sizeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Size sz = new Size();
             int currentIdx = sizeBindingSource.Position;
-
             sz.SizeID = ((Size)sizeBindingSource.Current).SizeID;
 
             switch (e.ColumnIndex)
@@ -50,11 +49,7 @@ namespace UI_EW_Maintain
                         //新增
                         if (sz.SizeID == 0)
                         {
-                            dbContext.Sizes.Add(
-                                new Size
-                                {
-                                    SizeName = sz.SizeName
-                                });
+                            dbContext.Sizes.Add(sz);
                         }
                         else  //修改
                         {

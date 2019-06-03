@@ -83,6 +83,18 @@
     <Compile Include="FrmColor.Designer.cs">
       <DependentUpon>FrmColor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductMaintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductMaintain.designer.cs">
+      <DependentUpon>FrmProductMaintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducts.designer.cs">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSize.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmColor.resx">
       <DependentUpon>FrmColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductMaintain.resx">
+      <DependentUpon>FrmProductMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProducts.resx">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSize.resx">
       <DependentUpon>FrmSize.cs</DependentUpon>
@@ -147,6 +165,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Cls_Utility\Cls_Utility.csproj">
+      <Project>{62b747da-82e1-492f-bb41-bbe8fc2ea683}</Project>
+      <Name>Cls_Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ctr_Customs\Ctr_Customs.csproj">
+      <Project>{a9dccdd6-aed2-451a-8cc6-9ea7f627cec3}</Project>
+      <Name>Ctr_Customs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
       <Project>{5392d1d7-99dd-4ba6-9965-f1c02c0b51cb}</Project>
       <Name>DB_Fancy</Name>

@@ -25,7 +25,6 @@ namespace UI_EW_Maintain
         }
 
         FancyStoreEntities dbContext = new FancyStoreEntities();
-        DB_Fancy.Color co = new DB_Fancy.Color();
 
         void ResetData()
         {
@@ -36,6 +35,7 @@ namespace UI_EW_Maintain
 
         private void colorDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DB_Fancy.Color co = new DB_Fancy.Color();
             int currentIdx = colorBindingSource.Position;
             co.ColorID = ((DB_Fancy.Color)colorBindingSource.Current).ColorID;
 
@@ -52,14 +52,7 @@ namespace UI_EW_Maintain
                         //新增
                         if (co.ColorID == 0)
                         {
-                            dbContext.Colors.Add(
-                                new DB_Fancy.Color
-                                {
-                                    ColorName = co.ColorName,
-                                    R = co.R,
-                                    G = co.G,
-                                    B = co.B
-                                });
+                            dbContext.Colors.Add(co);
                         }
                         else  //修改
                         {

@@ -29,7 +29,6 @@ namespace UI_EW_Maintain
 
         FancyStoreEntities dbContext = new FancyStoreEntities();
         CategoryLarge cl = new CategoryLarge();
-        CategoryMiddle cm = new CategoryMiddle();
 
         void ResetData(int catL)
         {
@@ -48,6 +47,7 @@ namespace UI_EW_Maintain
 
         private void categoryMiddleDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            CategoryMiddle cm = new CategoryMiddle();
             int currentIdx = categoryMiddleBindingSource.Position;
             cm.CategoryMID = ((CategoryMiddle)categoryMiddleBindingSource.Current).CategoryMID;
 
@@ -57,17 +57,12 @@ namespace UI_EW_Maintain
                     try
                     {
                         cm.CategoryMName = ((CategoryMiddle)categoryMiddleBindingSource.Current).CategoryMName;
-                        cm.CategoryLID = ((CategoryMiddle)categoryMiddleBindingSource.Current).CategoryLID;
+                        cm.CategoryLID = cl.CategoryLID;
 
                         //新增
                         if (cm.CategoryMID == 0)
                         {
-                            dbContext.CategoryMiddles.Add(
-                                new CategoryMiddle
-                                {
-                                    CategoryMName = cm.CategoryMName,
-                                    CategoryLID = cl.CategoryLID
-                                });
+                            dbContext.CategoryMiddles.Add(cm);
                         }
                         else  //修改
                         {

@@ -17,6 +17,11 @@ namespace UI_EW_Maintain
         public FrmCategoryL()
         {
             InitializeComponent();
+            //Console.WriteLine("===============start===================");
+
+            //Console.WriteLine(dbContext.Database.Connection.ConnectionString);//app.config
+
+            //dbContext.Database.Log = Console.Write;
         }
 
         private void FrmCategoryL_Load(object sender, EventArgs e)
@@ -25,7 +30,6 @@ namespace UI_EW_Maintain
         }
 
         FancyStoreEntities dbContext = new FancyStoreEntities();
-        CategoryLarge cl = new CategoryLarge();
 
         void ResetData()
         {
@@ -35,11 +39,13 @@ namespace UI_EW_Maintain
 
         private void categoryLargeBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-            //categoryL.categoryID = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLID;
+            //cl.CategoryLID = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLID;
+            //cl.CategoryLName = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLName;
         }
 
         private void categoryLargeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            CategoryLarge cl = new CategoryLarge();
             int currentIdx = categoryLargeBindingSource.Position;
             cl.CategoryLID = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLID;
 
@@ -49,15 +55,10 @@ namespace UI_EW_Maintain
                     try
                     {
                         cl.CategoryLName = ((CategoryLarge)categoryLargeBindingSource.Current).CategoryLName;
-
                         //新增
                         if (cl.CategoryLID == 0)
                         {
-                            dbContext.CategoryLarges.Add(
-                                new CategoryLarge
-                                {
-                                    CategoryLName = cl.CategoryLName
-                                });
+                            dbContext.CategoryLarges.Add(cl);
                         }
                         else  //修改
                         {
@@ -68,6 +69,10 @@ namespace UI_EW_Maintain
                         }
 
                         this.dbContext.SaveChanges();
+
+                        //int id = cl.CategoryLID;
+                        //MessageBox.Show($"id={id}");
+
                         ResetData();
                     }
                     catch (Exception ex)
