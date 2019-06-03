@@ -153,6 +153,7 @@
           </Key>
           <Property Name="PayMethodID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PayMethodName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Freight" Type="int" />
         </EntityType>
         <EntityType Name="Photo">
           <Key>
@@ -1119,6 +1120,7 @@
           <Property Name="PayMethodID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="PayMethodName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="OrderHeaders" Relationship="Self.FK_Orders_PayMethod" FromRole="PayMethod" ToRole="OrderHeader" />
+          <Property Name="Freight" Type="Int32" />
         </EntityType>
         <EntityType Name="Photo">
           <Key>
@@ -2116,6 +2118,7 @@
           <EntitySetMapping Name="PayMethods">
             <EntityTypeMapping TypeName="FancyStoreModel.PayMethod">
               <MappingFragment StoreEntitySet="PayMethod">
+                <ScalarProperty Name="Freight" ColumnName="Freight" />
                 <ScalarProperty Name="PayMethodID" ColumnName="PayMethodID" />
                 <ScalarProperty Name="PayMethodName" ColumnName="PayMethodName" />
               </MappingFragment>

@@ -37,10 +37,10 @@
       <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
-      <HintPath>..\..\..\..\Fancy\FancyStore\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\..\..\Fancy\FancyStore\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -108,7 +108,7 @@
       <Name>Cls_Utility</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ctr_Customs\Ctr_Customs.csproj">
-      <Project>{A9DCCDD6-AED2-451A-8CC6-9EA7F627CEC3}</Project>
+      <Project>{a9dccdd6-aed2-451a-8cc6-9ea7f627cec3}</Project>
       <Name>Ctr_Customs</Name>
     </ProjectReference>
     <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
