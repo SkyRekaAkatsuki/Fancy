@@ -53,6 +53,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>img.resx</DependentUpon>
     </Compile>
+    <Compile Include="JA_FavoriteLlis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JA_FavoriteLlis.designer.cs">
+      <DependentUpon>JA_FavoriteLlis.cs</DependentUpon>
+    </Compile>
     <Compile Include="JA_Input.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +83,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>img.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JA_FavoriteLlis.resx">
+      <DependentUpon>JA_FavoriteLlis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JA_Input.resx">
       <DependentUpon>JA_Input.cs</DependentUpon>

@@ -58,6 +58,8 @@ namespace Cls_Utility
                 return false;
             }
         }
+
+
         #endregion
 
         #region 忘記密碼
@@ -134,6 +136,7 @@ namespace Cls_Utility
             return true;
         }
         #endregion
+
         #region 上傳圖片
         public static bool UpLoadPic(string FileName)
         {
@@ -169,6 +172,7 @@ namespace Cls_Utility
 
         }
         #endregion
+
         #region 會員更新頭像
         public static bool UserUppic(string FileName)
         {
@@ -193,6 +197,7 @@ namespace Cls_Utility
             }
         }
         #endregion
+
         #region 更新密碼
         public static void UpdatePassword(string NewPw, string Account)
         {
@@ -215,6 +220,27 @@ namespace Cls_Utility
         }
         #endregion
 
+        #region 移除我的最愛
+        public static bool RemoveFavorite(int tag)
+        {
+            try
+            {
+                //MyFavorite data = db.MyFavorites.Where(n => n.FavoriteID == tag).FirstOrDefault();
+                //db.MyFavorites.Remove(data);
+                //db.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
+        #endregion
+
+
+
         #region 驗證驗證碼
         public static bool CheckAuthCode(string code)
         {
@@ -228,7 +254,6 @@ namespace Cls_Utility
             else { return false; }
         }
         #endregion
-
 
         #region 寄送驗證碼
         public static void SendAuthCode(string Newpw, string Account)

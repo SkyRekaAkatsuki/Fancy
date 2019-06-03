@@ -44,10 +44,6 @@ namespace UI_JA_Main
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
 
         private void FancyMain_Load(object sender, EventArgs e)
         {
@@ -174,6 +170,12 @@ namespace UI_JA_Main
         private void button11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Favorite favorite = new Favorite();
+            favorite.ShowDialog();
         }
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)

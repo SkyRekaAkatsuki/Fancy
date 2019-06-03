@@ -95,5 +95,10 @@ namespace UI_JA_Main
         {
             this.Close();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
