@@ -60,6 +60,12 @@ namespace UI_JA_Main
             this.flowLayoutPanel1.Controls.Clear();
             foreach (var item in data)
             {
+                byte[] q;
+                if (item.PhotoID == null)
+                { q = Cls_JA_Member.db.Photos.Where(n => n.PhotoID == 1).Select(n => n.Photo1).First(); }
+                else
+                { q = item.Photo.Photo1; }
+
                 JA_MemberList list = new JA_MemberList
                 {
                     _ID = item.UserID.ToString(),
@@ -72,7 +78,7 @@ namespace UI_JA_Main
                     _權限 = item.Admin,
                     _Enabled = item.Enabled,
                     _PColor = System.Drawing.Color.FromArgb(188, 171, 143),
-                    _相片 = item.Photo.Photo1,
+                    _相片 = q,
                     Height = 60
                 };
 

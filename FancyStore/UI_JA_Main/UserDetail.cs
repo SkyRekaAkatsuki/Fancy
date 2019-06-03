@@ -35,30 +35,19 @@ namespace UI_JA_Main
             this.Phone.Text = data.Phone;
             this.Address.Text = data.Address;
             this.日期.Text = data.RegistrationDate.ToShortDateString();
-            //this.金額.Text = 0;
-
-            if (data.PhotoID==null)
-            {
-                byte[] q = Cls_JA_Member.db.Photos.Where(n => n.PhotoID == 1).Select(n => n.Photo1).First();
-                using (MemoryStream ms = new MemoryStream(q))
-                {
-                    this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                    this.pictureBox1.Width = 100;
-                    this.pictureBox1.Height = 100;
-                    pictureBox1.Image = Image.FromStream(ms);
-                }
-            }
+            this.金額.Text = "99999";
+            byte[] q;
+            if (data.PhotoID == null)
+            { q = Cls_JA_Member.db.Photos.Where(n => n.PhotoID == 1).Select(n => n.Photo1).First(); }
             else
+            { q = data.Photo.Photo1; }
+            using (MemoryStream ms = new MemoryStream(q))
             {
-                using (MemoryStream ms = new MemoryStream(data.Photo.Photo1))
-                {
-                    this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                    this.pictureBox1.Width = 100;
-                    this.pictureBox1.Height = 100;
-                    pictureBox1.Image = Image.FromStream(ms);
-                }
+                this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                this.pictureBox1.Width = 100;
+                this.pictureBox1.Height = 100;
+                pictureBox1.Image = Image.FromStream(ms);
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,10 +84,10 @@ namespace UI_JA_Main
         {
             if (FileName != null)
             {
-                if (data.PhotoID!=null)
+                if (data.PhotoID != null)
                 {
                     if (Cls_JA_Member.UserUppic(FileName))
-                    { MessageBox.Show("上傳成功"); }
+                    { MessageBox.Show("上傳成功"); FileName = ""; }
                     else
                     { MessageBox.Show("上傳失敗"); }
                 }
@@ -179,7 +168,7 @@ namespace UI_JA_Main
             {
                 string R = this.MYRegion.SelectedValue.ToString();
                 string A = this.Address.Text;
-                if (Cls_JA_Member.UpdateAddress(R,A))
+                if (Cls_JA_Member.UpdateAddress(R, A))
                 {
                     MessageBox.Show("修改成功");
                     this.修改地址.Text = "修改";

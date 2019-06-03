@@ -147,7 +147,8 @@ namespace Cls_Utility
                     Photo newp = new Photo
                     {
                         Photo1 = data,
-                        CreateDate = DateTime.Now,
+                        CreateDate = DateTime.Now,      
+                        
                     };
                     
                     db.Photos.Add(newp);
