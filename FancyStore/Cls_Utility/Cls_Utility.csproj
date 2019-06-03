@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -50,12 +51,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Cls_JA_Admin.cs" />
     <Compile Include="Cls_JA_IDo.cs" />
-    <Compile Include="EW_Library.cs" />
+    <Compile Include="Cls_JA_Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
+      <Project>{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}</Project>
+      <Name>DB_Fancy</Name>
+    </ProjectReference>
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
