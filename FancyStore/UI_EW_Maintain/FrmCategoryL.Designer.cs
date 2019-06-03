@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoryL));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.categoryLargeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoryLargeDataGridView = new System.Windows.Forms.DataGridView();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -47,21 +46,17 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
+            this.categoryLargeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryLargeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryLargeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryLargeBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // categoryLargeBindingSource
-            // 
-            this.categoryLargeBindingSource.DataSource = typeof(DB_Fancy.CategoryLarge);
-            this.categoryLargeBindingSource.CurrentChanged += new System.EventHandler(this.categoryLargeBindingSource_CurrentChanged);
             // 
             // categoryLargeDataGridView
             // 
@@ -210,10 +205,15 @@
             this.tsbSave.Size = new System.Drawing.Size(24, 24);
             this.tsbSave.Text = "toolStripButton1";
             // 
+            // categoryLargeBindingSource
+            // 
+            this.categoryLargeBindingSource.DataSource = typeof(DB_Fancy.CategoryLarge);
+            this.categoryLargeBindingSource.CurrentChanged += new System.EventHandler(this.categoryLargeBindingSource_CurrentChanged);
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "CategoryLName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "名稱";
+            this.dataGridViewTextBoxColumn2.HeaderText = "大分類";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 150;
             // 
@@ -265,11 +265,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "大分類維護 - FrmCategoryL";
             this.Load += new System.EventHandler(this.FrmCategoryL_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.categoryLargeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryLargeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryLargeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
