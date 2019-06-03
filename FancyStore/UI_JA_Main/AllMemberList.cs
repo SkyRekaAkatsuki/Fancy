@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI_EW_Maintain;
 
 namespace UI_JA_Main
 {
@@ -99,6 +100,12 @@ namespace UI_JA_Main
         private void button7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            FrmBackMain frmBackMain = new FrmBackMain();
+            frmBackMain.Show();
         }
     }
 }

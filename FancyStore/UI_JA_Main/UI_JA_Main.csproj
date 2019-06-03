@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\..\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -230,6 +230,10 @@
     <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
       <Project>{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}</Project>
       <Name>DB_Fancy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI_EW_Maintain\UI_EW_Maintain.csproj">
+      <Project>{409A237E-FEAA-44DA-ABE3-20AD071ABFA5}</Project>
+      <Name>UI_EW_Maintain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
