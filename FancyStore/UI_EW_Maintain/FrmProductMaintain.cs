@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DB_Fancy;
+using Cls_Utility;
 
 namespace UI_EW_Maintain
 {
@@ -58,6 +59,7 @@ namespace UI_EW_Maintain
         string FormStatus;  //狀態 : C 新增 / U 修改
         Product cProd = new Product(); //接收前一個Form傳來的product資料
 
+
         private void FrmProductMaintain_Load(object sender, EventArgs e)
         {
 
@@ -91,7 +93,7 @@ namespace UI_EW_Maintain
             }
         }
 
-        //產品新增
+        //存檔
         private void btnInsert_Click(object sender, EventArgs e)
         {
 
@@ -101,7 +103,7 @@ namespace UI_EW_Maintain
             cProd.Desctiption = this.txtDescription.Text;
             cProd.ProductName = this.txtProductName.Text;
             cProd.UnitPrice = int.Parse(this.txtUnitPrice.Text);
-            cProd.CategorySID = int.Parse(this.cbCategoryS.SelectedValue.ToString());
+            cProd.CategorySID = _clsProd._CategorySID = int.Parse(this.cbCategoryS.SelectedValue.ToString());
             cProd.SupplierID = int.Parse(this.cbSupplier.SelectedValue.ToString());
             cProd.ProductInDate = DateTime.Parse(this.dateTimePicker1.Text);
             cProd.ProductOutDate = DateTime.Parse(this.dateTimePicker2.Text);
@@ -138,11 +140,18 @@ namespace UI_EW_Maintain
             {
                 try
                 {
-                    dbContext.Products.Find(cProd.ProductID);
+                    var q = dbContext.Products.Find(cProd.ProductID);
+
+                    q.ProductName = cProd.ProductName;
+                    q.Desctiption = cProd.Desctiption;
+                    q.CategorySID = _clsProd._CategorySID = cProd.CategorySID;
+                    q.SupplierID = cProd.SupplierID;
+                    q.UnitPrice = cProd.UnitPrice;
+                    q.ProductInDate = cProd.ProductInDate;
+                    q.ProductOutDate = cProd.ProductOutDate;
+
                     this.dbContext.SaveChanges();
-                    {
-                        MessageBox.Show($"產品: {cProd.ProductID}  [修改] 資料成功 !");
-                    }
+                    MessageBox.Show($"產品: {cProd.ProductID}  [修改] 資料成功 !");
                 }
                 catch (Exception ex)
                 {

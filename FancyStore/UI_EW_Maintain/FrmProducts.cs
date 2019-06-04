@@ -34,19 +34,17 @@ namespace UI_EW_Maintain
 
         FancyStoreEntities dbContext = new FancyStoreEntities();
         Product prod = new Product();
-
-        string whereStr;  //where條件式
         int currentIndex; //目前位置
 
         //動態產生products資料
         void ResetData()
         {
-            var q = dbContext.Products.Select(x=> x);
+            var q = dbContext.Products.Select(x => x);
 
             int pID;
-            if (int.TryParse( txtProductID.Text ,out pID))
-            {               
-                q = q.Where(x => x.ProductID == pID).Select(x=>x);
+            if (int.TryParse(txtProductID.Text, out pID))
+            {
+                q = q.Where(x => x.ProductID == pID).Select(x => x);
             }
             else
             {
@@ -67,7 +65,7 @@ namespace UI_EW_Maintain
             {
                 Debug.WriteLine(ex);
             }
-            productBindingSource.DataSource =q.ToList();
+            productBindingSource.DataSource = q.ToList();
             productDataGridView.DataSource = productBindingSource;
         }
 
@@ -94,6 +92,8 @@ namespace UI_EW_Maintain
             }
             FrmProductMaintain f = new FrmProductMaintain("C", prod);
             f.ShowDialog();
+            cbCategory.SelectedValue = _clsProd._CategorySID;  //查詢條件中的Category的ComboBox, 重新指向存檔資料的分類
+            ResetData();
         }
 
         //移動指標
@@ -112,9 +112,89 @@ namespace UI_EW_Maintain
                 prod.SupplierID = ((Product)productBindingSource.Current).SupplierID;
                 prod.CreateDate = ((Product)productBindingSource.Current).CreateDate;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex);
+            }
+        }
+
+        private void productDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            currentIndex = productBindingSource.Position;
+            try
+            {
+                prod.ProductID = ((Product)productBindingSource.Current).ProductID;
+                prod.ProductName = ((Product)productBindingSource.Current).ProductName;
+                prod.Desctiption = ((Product)productBindingSource.Current).Desctiption;
+                prod.CategorySID = ((Product)productBindingSource.Current).CategorySID;
+                prod.UnitPrice = ((Product)productBindingSource.Current).UnitPrice;
+                prod.ProductInDate = ((Product)productBindingSource.Current).ProductInDate;
+                prod.ProductOutDate = ((Product)productBindingSource.Current).ProductOutDate;
+                prod.SupplierID = ((Product)productBindingSource.Current).SupplierID;
+                prod.CreateDate = ((Product)productBindingSource.Current).CreateDate;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return;
+            }
+
+            switch (e.ColumnIndex)
+            {
+                case 0:      //Click 修改
+                    FrmProductMaintain f = new FrmProductMaintain("U", prod);
+                    f.ShowDialog();
+                    cbCategory.SelectedValue = _clsProd._CategorySID;  //查詢條件中的Category的ComboBox, 重新指向存檔資料的分類
+                    ResetData();
+                    break;
+
+                case 1:      //Click 刪除
+                    if (MessageBox.Show("確定要刪除嗎?", "刪除作業", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        if (HasProductDetails()) //有Details資料
+                        {
+                            if (MessageBox.Show($"ProductID:{prod.ProductID} ({prod.ProductName})有存在 [顏色 / 尺吋大小 / 庫存量] 等資料, 確定要一起刪除嗎?", "刪除作業", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                            {
+                                return;
+                            }
+                        }
+                        try
+                        {
+                            var n = dbContext.Products.Find(prod.ProductID);
+
+                            dbContext.Products.Remove(n);
+                            this.dbContext.SaveChanges();
+                            { MessageBox.Show("產品 [刪除] 資料成功 !"); }
+                            ResetData();
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine(ex);
+                            MessageBox.Show("產品 [刪除] 資料失敗, 請檢查欄位資料後再試一下, 或找系統管理員協助處理 !");
+                        }
+                    }
+                    break;
+            }
+
+            //判斷Product是否有其他Details資料
+            bool HasProductDetails()
+            {
+                int n = this.dbContext.ProductColors.Where(x => x.ProductID == prod.ProductID).Count();
+
+                if (n > 0)  //有ProductColor
+                { return true; }
+
+                n = this.dbContext.ProductSizes.Where(x => x.ProductID == prod.ProductID).Count();
+
+                if (n > 0)  //有ProductSize
+                { return true; }
+
+                n = this.dbContext.ProductStocks.Where(x => x.ProductID == prod.ProductID).Count();
+
+                if (n > 0)  //有ProductStock
+                { return true; }
+
+                return false;  //無任何Details資料
             }
         }
     }
