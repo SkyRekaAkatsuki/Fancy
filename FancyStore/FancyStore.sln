@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_Fancy", "DB_Fancy\DB_Fan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_AL_ProductDisplay", "UI_AL_ProductDisplay\UI_AL_ProductDisplay.csproj", "{67E81C3C-F93C-43D1-8DAB-7F6C9443298D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_AL_ProductDetail", "UI_AL_ProductDetail\UI_AL_ProductDetail.csproj", "{1C1D682B-9D4F-411A-80FE-9479947D40D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{67E81C3C-F93C-43D1-8DAB-7F6C9443298D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67E81C3C-F93C-43D1-8DAB-7F6C9443298D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67E81C3C-F93C-43D1-8DAB-7F6C9443298D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C1D682B-9D4F-411A-80FE-9479947D40D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1D682B-9D4F-411A-80FE-9479947D40D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1D682B-9D4F-411A-80FE-9479947D40D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1D682B-9D4F-411A-80FE-9479947D40D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

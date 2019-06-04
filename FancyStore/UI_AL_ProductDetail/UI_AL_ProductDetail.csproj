@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{67E81C3C-F93C-43D1-8DAB-7F6C9443298D}</ProjectGuid>
+    <ProjectGuid>{1C1D682B-9D4F-411A-80FE-9479947D40D7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UI_AL_ProductDisplay</RootNamespace>
-    <AssemblyName>UI_AL_ProductDisplay</AssemblyName>
+    <RootNamespace>UI_AL_ProductDetail</RootNamespace>
+    <AssemblyName>UI_AL_ProductDetail</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -55,16 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProductDisplay.cs">
+    <Compile Include="ProductDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductDisplay.Designer.cs">
-      <DependentUpon>ProductDisplay.cs</DependentUpon>
+    <Compile Include="ProductDetail.Designer.cs">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ProductDisplay.resx">
-      <DependentUpon>ProductDisplay.cs</DependentUpon>
+    <EmbeddedResource Include="ProductDetail.resx">
+      <DependentUpon>ProductDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,16 +86,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cls_Utility\Cls_Utility.csproj">
-      <Project>{62b747da-82e1-492f-bb41-bbe8fc2ea683}</Project>
-      <Name>Cls_Utility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ctr_Customs\Ctr_Customs.csproj">
-      <Project>{a9dccdd6-aed2-451a-8cc6-9ea7f627cec3}</Project>
-      <Name>Ctr_Customs</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
-      <Project>{5392d1d7-99dd-4ba6-9965-f1c02c0b51cb}</Project>
+      <Project>{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}</Project>
       <Name>DB_Fancy</Name>
     </ProjectReference>
   </ItemGroup>

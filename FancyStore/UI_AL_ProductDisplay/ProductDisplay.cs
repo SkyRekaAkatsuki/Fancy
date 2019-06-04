@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DB_Fancy;
+using Ctr_Customs;
 
 namespace UI_AL_ProductDisplay
 {
@@ -16,32 +17,36 @@ namespace UI_AL_ProductDisplay
         public ProductDisplay()
         {
             InitializeComponent();
-            LoadL();
+            LoadM(1);
+            LoadS(1);
+            LoadProduct(1);
+            panel2.Left = flowLayoutPanel1.Left + 3;
         }
 
         FancyStoreEntities et = new FancyStoreEntities();
 
-        void LoadL()
-        {
-            var q = et.CategoryLarges.ToList();
-            Button btn_L;
-            foreach (var n in q)
-            {
-                btn_L = new Button
-                {
-                    Name = n.CategoryLID.ToString(),
-                    Text = n.CategoryLName
-                };
-                btn_L.Click += Btn_L_Click;
-            }
-        }
+        //void LoadL()
+        //{
+        //    var q = et.CategoryLarges.ToList();
+        //    Button btn_L;
+        //    foreach (var n in q)
+        //    {
+        //        btn_L = new Button
+        //        {
+        //            Name = n.CategoryLID.ToString(),
+        //            Text = n.CategoryLName,
+        //        };
+        //        btn_L.Click += Btn_L_Click;
+        //        flowLayoutPanel1.Controls.Add(btn_L);
+        //    }
+        //}
 
-        private void Btn_L_Click(object sender, EventArgs e)
-        {
-            LoadM(int.Parse(((Button)sender).Name));
-        }
+        //private void Btn_L_Click(object sender, EventArgs e)
+        //{
+        //    LoadM(int.Parse(((Button)sender).Name));
+        //}
 
-        void LoadM(int lid)
+        void LoadM(int lid)//產生中分類
         {
             var q = et.CategoryMiddles.Where(n => n.CategoryLID == lid);
             Button btn_M;
@@ -50,54 +55,145 @@ namespace UI_AL_ProductDisplay
                 btn_M = new Button
                 {
                     Name = n.CategoryMID.ToString(),
-                    Text = n.CategoryMName
+                    Text = n.CategoryMName,
+                    Height = flowLayoutPanel1.Height,
+                    FlatStyle = FlatStyle.Flat,
+                    Font = new Font("微軟正黑體", 12F, FontStyle.Bold),
+                    Tag = n.CategoryMID
                 };
+                btn_M.FlatAppearance.BorderSize = 0;
                 btn_M.Click += Btn_M_Click;
+                flowLayoutPanel1.Controls.Add(btn_M);
+                panel2.Top = btn_M.Height + flowLayoutPanel1.Top - 2;
             }
         }
 
         private void Btn_M_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel2.Controls.Clear();
+            flowLayoutPanel3.Controls.Clear();
             LoadS(int.Parse(((Button)sender).Name));
+            LoadProduct(first);
+            panel2.Left = flowLayoutPanel1.Left + ((Button)sender).Left;
         }
 
-        void LoadS(int mid)
+        int count;//紀錄次數
+        int first;//紀錄預設顯示的商品
+
+        void LoadS(int mid)//產生小分類
         {
+            count += 1;
             var q = et.CategorySmalls.Where(n => n.CategoryMID == mid);
+            Button btn_S;
             foreach (var n in q)
             {
-                Button btn_S = new Button
+                btn_S = new Button
                 {
                     Name = n.CategorySID.ToString(),
-                    Text = n.CategorySName
+                    Text = n.CategorySName,
+                    Width = flowLayoutPanel2.Width,
+                    FlatStyle = FlatStyle.Flat,
+                    Font = new Font("微軟正黑體", 10F, FontStyle.Bold),
+                    Tag = n.CategorySID,
                 };
+                if (count == 2)
+                {
+                    btn_S.BackColor = System.Drawing.Color.Orange;
+                    first = n.CategorySID;//第一筆小分類的ID
+                    count = 1;
+                }
+                btn_S.FlatAppearance.BorderSize = 0;
                 btn_S.Click += Btn_S_Click;
-
+                flowLayoutPanel2.Controls.Add(btn_S);
             }
+            count = 1;
         }
 
         private void Btn_S_Click(object sender, EventArgs e)
         {
+            foreach (Button b in flowLayoutPanel2.Controls)//點擊的那項改變顏色
+            {
+                b.BackColor = flowLayoutPanel2.BackColor;
+            }
+            ((Button)sender).BackColor = System.Drawing.Color.Orange;
+            flowLayoutPanel3.Controls.Clear();
+            LoadProduct(int.Parse(((Button)sender).Name));
+        }
+
+        void LoadProduct(int sid)//產生商品
+        {
+            var q = et.Products.Where(n => n.CategorySID == sid);
+            AL_ProductInfo info;
+            foreach (var n in q)
+            {
+                var q1 = et.ProductPhotoes.Where(m => m.ProductID == n.ProductID);
+                var q2 = et.MyFavorites.Any(o => o.ProductID == n.ProductID);
+                info = new AL_ProductInfo
+                {
+                    PName = n.ProductName,
+                    PPrice = n.UnitPrice,
+                    ProductID = n.ProductID,
+                    Picturebyte = q1.First().Photo.Photo1
+                };
+                info.add += (a, b) =>//委派加入我的最愛
+                  {
+                      et.MyFavorites.Add(new MyFavorite { UserID = Cls_Utility.Class1.UserID, ProductID = n.ProductID });
+                      et.SaveChanges();
+                  };
+                info.remove += (a, b) =>//委派刪除我的最愛
+                 {
+                     var q3 = et.MyFavorites.Where(p => p.UserID == Cls_Utility.Class1.UserID && p.ProductID == n.ProductID).First();
+                     et.MyFavorites.Remove(q3);
+                     et.SaveChanges();
+                 };
+                if (q2)
+                    info.like = true;
+                else
+                    info.like = false;
+                flowLayoutPanel3.Controls.Add(info);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (click)
-            {
-                do { flowLayoutPanel1.Height -= 1; }
-                while (flowLayoutPanel1.Height >0);
-            }
-            else
-            {
-                do { flowLayoutPanel1.Height += 1; }
-                while (flowLayoutPanel1.Height <100);
-            }
+            //if (!click)
+            //{
+            //    do
+            //    {
+            //        tableLayoutPanel1.RowStyles[0].Height -= 1;
+            //    }
+            //    while (tableLayoutPanel1.RowStyles[0].Height >1);
+            //}
+            //else
+            //{
+            //    do
+            //    {
+            //        tableLayoutPanel1.RowStyles[0].Height += 1;
+            //    }
+            //    while (tableLayoutPanel1.RowStyles[0].Height <= 50);
+            //}
+            //timer1.Enabled = false;
         }
-        bool click;
-        private void button1_Click(object sender, EventArgs e)
+
+        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
-            click = !click;
-            timer1.Enabled = true;
+
         }
+        //bool click;
+        //FlowLayoutPanel a;
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    click = !click;
+        //    timer1.Enabled = true;
+        //    if (click)
+        //    {
+        //        //a = new FlowLayoutPanel { BackColor = System.Drawing.Color.Wheat, Dock = DockStyle.Fill };
+        //        //this.tableLayoutPanel1.Controls.Add(a, 0, 0);
+        //        //LoadL();
+        //    }
+        //    else
+        //        flowLayoutPanel1.Controls.Clear();
+        //        //this.tableLayoutPanel1.Controls.Remove(a);
+        //}
     }
 }
