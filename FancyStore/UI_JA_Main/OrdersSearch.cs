@@ -18,25 +18,31 @@ namespace UI_JA_Main
         {
             InitializeComponent();
 
-            for(int i =0;i<10;i++)
-            //foreach (var item in Cls_JA_Member.db.OrderHeaders)
+            //for(int i =0;i<10;i++)
+            foreach (var item in Cls_JA_Member.db.OrderHeaders)
             {
                 JA_OrdersList ordersList = new JA_OrdersList
                 {
-                    //_OrderNum = item.OrderNum,
-                    //_Orderdate = item.OrderDate,
-                    //_Shipdate = item.ShipDate,
-                    //_PayMethod =item.PayMethod.PayMethodName,
-                    //_Shipping = item.Shipping.ShippingName,
-                    //_Discount = item.DiscountMethod.DiscountName,
-                    //_OrderStatus = item.OrderStatusList.OrderStatusName,
-                    //Tag = item.OrderID
+                    _OrderNum = item.OrderNum,
+                    _Orderdate = DateTime.Now,
+                    _Shipdate = DateTime.Now,
+                    _PayMethod = item.PayMethod.PayMethodName,
+                    _Shipping = item.Shipping.ShippingName,
+                    _Discount = item.DiscountMethod.DiscountName,
+                    _OrderStatus = item.OrderStatusList.OrderStatusName,
+                    Tag = item.OrderID
                 };
                 this.flowLayoutPanel1.Controls.Add(ordersList);
                 Application.DoEvents();
             }
 
 
+
+        }
+
+        private void checkBox1_CheckStateChanged(object sender, EventArgs e)
+        {
+            
 
         }
     }

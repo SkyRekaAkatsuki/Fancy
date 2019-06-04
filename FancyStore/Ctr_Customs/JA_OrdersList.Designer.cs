@@ -29,23 +29,21 @@
         private void InitializeComponent()
         {
             this.ssss = new System.Windows.Forms.Panel();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.OrderNum = new System.Windows.Forms.Label();
-            this.aa = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ss = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.OrderStatus = new System.Windows.Forms.Label();
             this.Discount = new System.Windows.Forms.Label();
             this.Shipping = new System.Windows.Forms.Label();
             this.PayMethod = new System.Windows.Forms.Label();
             this.Shipdate = new System.Windows.Forms.Label();
             this.Orderdate = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ss = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.aa = new System.Windows.Forms.Label();
+            this.OrderNum = new System.Windows.Forms.Label();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.ssss.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ssss
@@ -66,88 +64,10 @@
             this.ssss.Controls.Add(this.OrderNum);
             this.ssss.Controls.Add(this.bunifuSeparator1);
             this.ssss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ssss.Location = new System.Drawing.Point(5, 5);
+            this.ssss.Location = new System.Drawing.Point(2, 2);
             this.ssss.Name = "ssss";
-            this.ssss.Size = new System.Drawing.Size(150, 206);
+            this.ssss.Size = new System.Drawing.Size(156, 212);
             this.ssss.TabIndex = 0;
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
-            this.bunifuSeparator1.LineThickness = 2;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 19);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(152, 11);
-            this.bunifuSeparator1.TabIndex = 0;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
-            // OrderNum
-            // 
-            this.OrderNum.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.OrderNum.Location = new System.Drawing.Point(3, 5);
-            this.OrderNum.Name = "OrderNum";
-            this.OrderNum.Size = new System.Drawing.Size(144, 15);
-            this.OrderNum.TabIndex = 1;
-            this.OrderNum.Text = "No.122222222";
-            this.OrderNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // aa
-            // 
-            this.aa.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.aa.Location = new System.Drawing.Point(3, 33);
-            this.aa.Name = "aa";
-            this.aa.Size = new System.Drawing.Size(62, 15);
-            this.aa.TabIndex = 2;
-            this.aa.Text = "下單日期:";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(3, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "出貨日期:";
-            // 
-            // ss
-            // 
-            this.ss.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.ss.Location = new System.Drawing.Point(3, 93);
-            this.ss.Name = "ss";
-            this.ss.Size = new System.Drawing.Size(62, 15);
-            this.ss.TabIndex = 4;
-            this.ss.Text = "付款方式:";
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(3, 123);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 15);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "運送方式:";
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(3, 153);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 15);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "折扣:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(3, 183);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 15);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "訂單狀態:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // OrderStatus
             // 
@@ -210,26 +130,94 @@
             this.Orderdate.Text = "2019/06/08";
             this.Orderdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // label8
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.ssss);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(160, 216);
-            this.panel1.TabIndex = 18;
+            this.label8.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.Location = new System.Drawing.Point(3, 183);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 15);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "訂單狀態:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // OrdersList
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.Location = new System.Drawing.Point(3, 153);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 15);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "折扣:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Location = new System.Drawing.Point(3, 123);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 15);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "運送方式:";
+            // 
+            // ss
+            // 
+            this.ss.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ss.Location = new System.Drawing.Point(3, 93);
+            this.ss.Name = "ss";
+            this.ss.Size = new System.Drawing.Size(62, 15);
+            this.ss.TabIndex = 4;
+            this.ss.Text = "付款方式:";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(3, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 15);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "出貨日期:";
+            // 
+            // aa
+            // 
+            this.aa.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.aa.Location = new System.Drawing.Point(3, 33);
+            this.aa.Name = "aa";
+            this.aa.Size = new System.Drawing.Size(62, 15);
+            this.aa.TabIndex = 2;
+            this.aa.Text = "下單日期:";
+            // 
+            // OrderNum
+            // 
+            this.OrderNum.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.OrderNum.Location = new System.Drawing.Point(3, 5);
+            this.OrderNum.Name = "OrderNum";
+            this.OrderNum.Size = new System.Drawing.Size(144, 15);
+            this.OrderNum.TabIndex = 1;
+            this.OrderNum.Text = "No.122222222";
+            this.OrderNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator1.LineThickness = 2;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(-2, 19);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(160, 11);
+            this.bunifuSeparator1.TabIndex = 0;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // JA_OrdersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
-            this.Name = "OrdersList";
+            this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.ssss);
+            this.Name = "JA_OrdersList";
+            this.Padding = new System.Windows.Forms.Padding(2);
             this.Size = new System.Drawing.Size(160, 216);
             this.ssss.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -251,6 +239,5 @@
         private System.Windows.Forms.Label PayMethod;
         private System.Windows.Forms.Label Shipdate;
         private System.Windows.Forms.Label Orderdate;
-        private System.Windows.Forms.Panel panel1;
     }
 }
