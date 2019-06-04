@@ -31,7 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -52,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="JA_EmailWindows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JA_EmailWindows.Designer.cs">
+      <DependentUpon>JA_EmailWindows.cs</DependentUpon>
+    </Compile>
     <Compile Include="img.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,6 +84,12 @@
     <Compile Include="JA_MemberList.designer.cs">
       <DependentUpon>JA_MemberList.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdersList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrdersList.Designer.cs">
+      <DependentUpon>OrdersList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -83,6 +98,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="JA_EmailWindows.resx">
+      <DependentUpon>JA_EmailWindows.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="img.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -96,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JA_MemberList.resx">
       <DependentUpon>JA_MemberList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersList.resx">
+      <DependentUpon>OrdersList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

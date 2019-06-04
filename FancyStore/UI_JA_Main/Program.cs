@@ -16,7 +16,7 @@ namespace UI_JA_Main
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Favorite());
+            Application.Run(new 統計());
         }
     }
 }

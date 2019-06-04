@@ -18,12 +18,13 @@ namespace UI_JA_Main
     public partial class UserDetail : Form
     {
         public event Action 關閉了;
-
         DbSet<DB_Fancy.Region> allregion = Cls_JA_Member.db.Regions;
         User data = Cls_JA_Member.UserDetail();
         public UserDetail()
         {
+
             InitializeComponent();
+
             this.City.DataSource = Cls_JA_Member.db.Cities.Select(n => n.CityName).ToList();
             this.City.SelectedItem = data.Region.City.CityName;
             this.MYRegion.DataSource = allregion
@@ -37,7 +38,7 @@ namespace UI_JA_Main
             this.日期.Text = data.RegistrationDate.ToShortDateString();
             this.金額.Text = "99999";
             byte[] q;
-            if (data.PhotoID == null)
+            if (data.PhotoID == 1)
             { q = Cls_JA_Member.db.Photos.Where(n => n.PhotoID == 1).Select(n => n.Photo1).First(); }
             else
             { q = data.Photo.Photo1; }
@@ -72,7 +73,6 @@ namespace UI_JA_Main
             };
 
         }
-
         private void City_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.MYRegion.DataSource = allregion
@@ -82,9 +82,11 @@ namespace UI_JA_Main
 
         private void button3_Click(object sender, EventArgs e)
         {
+            User data = Cls_JA_Member.UserDetail();
+
             if (FileName != null)
             {
-                if (data.PhotoID != null)
+                if (data.PhotoID != 1)
                 {
                     if (Cls_JA_Member.UserUppic(FileName))
                     { MessageBox.Show("上傳成功"); FileName = ""; }

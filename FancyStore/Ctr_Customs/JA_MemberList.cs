@@ -69,7 +69,13 @@ namespace Ctr_Customs
             { return this.開通用驗證碼.輸入塊字串; }
             set { this.開通用驗證碼.輸入塊字串 = value; }
         }
-
+        private string Email ;
+        public string _Email
+        {
+            get
+            { return _Email; }
+            set { Email = value; }
+        }
         public bool _權限
         {
             get
@@ -282,6 +288,12 @@ namespace Ctr_Customs
                 }
                 else { MessageBox.Show("失敗"); }
             }
+        }
+
+        private void SEmail_Click(object sender, EventArgs e)
+        {
+            JA_EmailWindows jA_EmailWindows = new JA_EmailWindows();
+            jA_EmailWindows.ShowDialog();
         }
     }
 }

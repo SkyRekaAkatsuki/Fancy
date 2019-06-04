@@ -19,6 +19,7 @@ namespace Cls_Utility
         #region 註冊
         public static bool Register(User NewUser)
         {
+
             if (AccountCheck(NewUser.UserName))
             { throw new Exception("帳號重複"); }
             if (EmailCheck(NewUser.Email))
@@ -28,7 +29,7 @@ namespace Cls_Utility
             {
                 db.Users.Add(NewUser);
                 db.SaveChanges();
-                
+
                 return true;
             }
             catch (DbUpdateException x)
@@ -86,6 +87,7 @@ namespace Cls_Utility
         #region 載入會員基本資料
         public static User UserDetail()
         {
+            FancyStoreEntities db = new FancyStoreEntities();
             return db.Users.Where(n => n.UserID == UserID).First();
         }
         #endregion
@@ -150,10 +152,10 @@ namespace Cls_Utility
                     Photo newp = new Photo
                     {
                         Photo1 = data,
-                        CreateDate = DateTime.Now,      
-                        
+                        CreateDate = DateTime.Now,
+
                     };
-                    
+
                     db.Photos.Add(newp);
                     db.SaveChanges();
 

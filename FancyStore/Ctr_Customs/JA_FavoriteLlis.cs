@@ -26,7 +26,7 @@ namespace Ctr_Customs
             }
         }
         public string _PName { set { this.label1.Text = value; } }
-        public string _PDesction { set { this.label2.Text = value; } }
+       // public string _PDesction { set { this.label2.Text = value; } }
         public string _PPrice { set { this.label3.Text = value; } }
 
         public JA_FavoriteLlis()
