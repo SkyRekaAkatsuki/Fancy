@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ctr_Customs
 {
-    public partial class OrdersList : UserControl
+    public partial class JA_OrdersList : UserControl
     {
 
         public string _OrderNum { get; set; }
@@ -21,9 +21,18 @@ namespace Ctr_Customs
         public string _Discount { get; set; }
         public string _OrderStatus { get; set; }
         public string _OrderAmount { get; set; }
-        public OrdersList()
+        public JA_OrdersList()
         {
             InitializeComponent();
+
+            foreach (Control item in this.Controls)
+            {
+                item.Click += (s, ee) =>
+                {
+                    JA_OrderDetail orderDetail = new JA_OrderDetail();
+                    orderDetail.Show();
+                };
+            }
 
         }
     }

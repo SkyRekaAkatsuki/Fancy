@@ -84,11 +84,17 @@
     <Compile Include="JA_MemberList.designer.cs">
       <DependentUpon>JA_MemberList.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrdersList.cs">
+    <Compile Include="JA_OrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JA_OrderDetail.Designer.cs">
+      <DependentUpon>JA_OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JA_OrdersList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OrdersList.Designer.cs">
-      <DependentUpon>OrdersList.cs</DependentUpon>
+    <Compile Include="JA_OrdersList.Designer.cs">
+      <DependentUpon>JA_OrdersList.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -115,8 +121,11 @@
     <EmbeddedResource Include="JA_MemberList.resx">
       <DependentUpon>JA_MemberList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrdersList.resx">
-      <DependentUpon>OrdersList.cs</DependentUpon>
+    <EmbeddedResource Include="JA_OrderDetail.resx">
+      <DependentUpon>JA_OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JA_OrdersList.resx">
+      <DependentUpon>JA_OrdersList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

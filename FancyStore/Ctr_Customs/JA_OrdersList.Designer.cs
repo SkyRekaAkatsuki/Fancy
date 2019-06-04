@@ -1,6 +1,6 @@
 ﻿namespace Ctr_Customs
 {
-    partial class OrdersList
+    partial class JA_OrdersList
     {
         /// <summary> 
         /// 設計工具所需的變數。

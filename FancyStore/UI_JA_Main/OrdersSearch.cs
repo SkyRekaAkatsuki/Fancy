@@ -21,7 +21,7 @@ namespace UI_JA_Main
             for(int i =0;i<10;i++)
             //foreach (var item in Cls_JA_Member.db.OrderHeaders)
             {
-                OrdersList ordersList = new OrdersList
+                JA_OrdersList ordersList = new JA_OrdersList
                 {
                     //_OrderNum = item.OrderNum,
                     //_Orderdate = item.OrderDate,
@@ -31,11 +31,6 @@ namespace UI_JA_Main
                     //_Discount = item.DiscountMethod.DiscountName,
                     //_OrderStatus = item.OrderStatusList.OrderStatusName,
                     //Tag = item.OrderID
-                };
-                ordersList.Click += (s, ee) =>
-                {
-                    OrderDetailList orderDetailList = new OrderDetailList();
-                    orderDetailList.Show();
                 };
                 this.flowLayoutPanel1.Controls.Add(ordersList);
                 Application.DoEvents();
