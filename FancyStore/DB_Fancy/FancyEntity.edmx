@@ -331,6 +331,15 @@
           <Property Name="WashingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="WashingName" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'FancyStore.dbo.VW_EW_CategorySML' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="VW_EW_CategorySML">
+          <Key>
+            <PropertyRef Name="CategorySID" />
+          </Key>
+          <Property Name="CategorySID" Type="int" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="62" />
+        </EntityType>
         <Association Name="FK_CategoryM_CategoryL">
           <End Role="CategoryLarge" Type="Self.CategoryLarge" Multiplicity="1" />
           <End Role="CategoryMiddle" Type="Self.CategoryMiddle" Multiplicity="*" />
@@ -796,6 +805,12 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Washing" EntityType="Self.Washing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VW_EW_CategorySML" EntityType="Self.VW_EW_CategorySML" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_EW_CategorySML].[CategorySID] AS [CategorySID], 
+    [VW_EW_CategorySML].[CategoryName] AS [CategoryName]
+    FROM [dbo].[VW_EW_CategorySML] AS [VW_EW_CategorySML]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_CategoryM_CategoryL" Association="Self.FK_CategoryM_CategoryL">
             <End Role="CategoryLarge" EntitySet="CategoryLarge" />
             <End Role="CategoryMiddle" EntitySet="CategoryMiddle" />
@@ -1808,6 +1823,7 @@
             <End Role="Product" EntitySet="Products" />
             <End Role="ProductWashing" EntitySet="ProductWashings" />
           </AssociationSet>
+          <EntitySet Name="VW_EW_CategorySML" EntityType="FancyStoreModel.VW_EW_CategorySML" />
         </EntityContainer>
         <EntityType Name="Product">
           <Key>
@@ -1953,6 +1969,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="VW_EW_CategorySML">
+          <Key>
+            <PropertyRef Name="CategorySID" />
+          </Key>
+          <Property Name="CategorySID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="62" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2314,6 +2337,14 @@
                 <ScalarProperty Name="Desctiption" ColumnName="Desctiption" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_EW_CategorySML">
+            <EntityTypeMapping TypeName="FancyStoreModel.VW_EW_CategorySML">
+              <MappingFragment StoreEntitySet="VW_EW_CategorySML">
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategorySID" ColumnName="CategorySID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

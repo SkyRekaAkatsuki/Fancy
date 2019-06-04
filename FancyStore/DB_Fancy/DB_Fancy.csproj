@@ -160,6 +160,9 @@
     <Compile Include="User.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="VW_EW_CategorySML.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Washing.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>

@@ -150,6 +150,7 @@
     <None Include="Properties\DataSources\DB_Fancy.Shipping.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Size.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Supplier.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.VW_EW_CategorySML.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Washing.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
