@@ -86,6 +86,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Cls_Utility\Cls_Utility.csproj">
+      <Project>{62b747da-82e1-492f-bb41-bbe8fc2ea683}</Project>
+      <Name>Cls_Utility</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
       <Project>{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}</Project>
       <Name>DB_Fancy</Name>

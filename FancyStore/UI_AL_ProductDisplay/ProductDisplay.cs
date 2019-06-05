@@ -16,11 +16,18 @@ namespace UI_AL_ProductDisplay
     {
         public ProductDisplay()
         {
+            int CategoryLargeID = 1;
             InitializeComponent();
-            LoadM(1);
-            LoadS(1);
-            LoadProduct(1);
+            LoadAll(CategoryLargeID);
             panel2.Left = flowLayoutPanel1.Left + 3;
+        }
+
+        void LoadAll(int CategoryLargeID)
+        {
+            var q = et.Products.Where(n => n.CategorySmall.CategoryMiddle.CategoryLarge.CategoryLID == CategoryLargeID).First();
+            LoadM(CategoryLargeID);
+            LoadS(q.CategorySmall.CategoryMiddle.CategoryMID);
+            LoadProduct(q.CategorySID);
         }
 
         FancyStoreEntities et = new FancyStoreEntities();
@@ -79,6 +86,7 @@ namespace UI_AL_ProductDisplay
 
         int count;//紀錄次數
         int first;//紀錄預設顯示的商品
+        int set;
 
         void LoadS(int mid)//產生小分類
         {
@@ -96,6 +104,11 @@ namespace UI_AL_ProductDisplay
                     Font = new Font("微軟正黑體", 10F, FontStyle.Bold),
                     Tag = n.CategorySID,
                 };
+                if (set == 0)
+                {
+                    btn_S.BackColor = System.Drawing.Color.Orange;
+                    set = 1;
+                }
                 if (count == 2)
                 {
                     btn_S.BackColor = System.Drawing.Color.Orange;
@@ -135,12 +148,12 @@ namespace UI_AL_ProductDisplay
                     ProductID = n.ProductID,
                     Picturebyte = q1.First().Photo.Photo1
                 };
-                info.add += (a, b) =>//委派加入我的最愛
+                info.AddFav += (a, b) =>//委派加入我的最愛
                   {
                       et.MyFavorites.Add(new MyFavorite { UserID = Cls_Utility.Class1.UserID, ProductID = n.ProductID });
                       et.SaveChanges();
                   };
-                info.remove += (a, b) =>//委派刪除我的最愛
+                info.RemoveFav += (a, b) =>//委派刪除我的最愛
                  {
                      var q3 = et.MyFavorites.Where(p => p.UserID == Cls_Utility.Class1.UserID && p.ProductID == n.ProductID).First();
                      et.MyFavorites.Remove(q3);
@@ -153,47 +166,5 @@ namespace UI_AL_ProductDisplay
                 flowLayoutPanel3.Controls.Add(info);
             }
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //if (!click)
-            //{
-            //    do
-            //    {
-            //        tableLayoutPanel1.RowStyles[0].Height -= 1;
-            //    }
-            //    while (tableLayoutPanel1.RowStyles[0].Height >1);
-            //}
-            //else
-            //{
-            //    do
-            //    {
-            //        tableLayoutPanel1.RowStyles[0].Height += 1;
-            //    }
-            //    while (tableLayoutPanel1.RowStyles[0].Height <= 50);
-            //}
-            //timer1.Enabled = false;
-        }
-
-        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        //bool click;
-        //FlowLayoutPanel a;
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    click = !click;
-        //    timer1.Enabled = true;
-        //    if (click)
-        //    {
-        //        //a = new FlowLayoutPanel { BackColor = System.Drawing.Color.Wheat, Dock = DockStyle.Fill };
-        //        //this.tableLayoutPanel1.Controls.Add(a, 0, 0);
-        //        //LoadL();
-        //    }
-        //    else
-        //        flowLayoutPanel1.Controls.Clear();
-        //        //this.tableLayoutPanel1.Controls.Remove(a);
-        //}
     }
 }

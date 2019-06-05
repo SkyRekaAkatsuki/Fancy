@@ -1,4 +1,5 @@
-﻿using DB_Fancy;
+﻿using Cls_Utility;
+using DB_Fancy;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace UI_AL_ProductDetail
 {
     public partial class ProductDetail : Form
@@ -18,36 +20,129 @@ namespace UI_AL_ProductDetail
         public ProductDetail(int ProductID)
         {
             InitializeComponent();
+            LoadDetail(ProductID);
+            LoadWash(ProductID);
+            LoadColor(ProductID);
+            LoadSize(ProductID);
+            LoadImage(ProductID);
+            panel1.Left = flowLayoutPanel2.Left + 3;
+            panel2.Left = flowLayoutPanel3.Left + 3;
+        }
+
+        int userID;
+        int colordefault;//記預設點選顏色
+        int sizedefault;//記預設點選尺寸
+        int itemID;//記購買產品ID
+        string itemName;
+        int itemCategorySID;//記購買產品S分類
+        int itemSizeID;//記購買產品尺寸
+        string itemSizeName;
+        int itemColorID;//記購買產品顏色
+        string itemColorName;
+        decimal itemUnitPrice;
+
+        FancyStoreEntities et = new FancyStoreEntities();
+        int count;
+
+        void LoadDetail(int ProductID)
+        {
             var q = et.Products.Where(n => n.ProductID == ProductID).First();
             label1.Text = q.ProductName;//商品名
             label2.Text = q.Desctiption;//商品敘述
-            label3.Text = q.UnitPrice.ToString();//商品價錢
+            label3.Text = q.UnitPrice.ToString("C2");//商品價錢
+
+            itemID = q.ProductID;
+            itemName = q.ProductName;
+            itemCategorySID = q.CategorySID;
+            itemUnitPrice = q.UnitPrice;
+        }
+
+        void LoadWash(int ProductID)
+        {
             var q2 = et.ProductWashings.Where(m => m.ProductID == ProductID);
             foreach (var n in q2)//產生洗滌資訊
             {
                 Label w = new Label();
                 w.AutoSize = false;
                 w.Width = flowLayoutPanel1.Width;
-                //w.AutoEllipsis = true;
+                w.Font = new Font("微軟正黑體", 10F);
                 w.Text = n.Washing.WashingName;
                 flowLayoutPanel1.Controls.Add(w);
             }
+        }
+
+        void LoadColor(int ProductID)
+        {
             var q3 = et.ProductColors.Where(m => m.ProductID == ProductID);
             foreach (var n in q3)//產生商品顏色
             {
                 Button c = new Button();
+                c.Name = n.Color.ColorName;
                 c.BackColor = System.Drawing.Color.FromArgb((int)n.Color.R, (int)n.Color.G, (int)n.Color.B);
                 c.Tag = n.PhotoID;
+                c.FlatStyle = FlatStyle.Flat;
+                c.FlatAppearance.BorderSize = 0;
+                toolTip1.SetToolTip(c, n.Color.ColorName);
                 c.MouseEnter += C_Enter;
+                c.Click += C_Click;
                 flowLayoutPanel2.Controls.Add(c);
+                panel1.Top = flowLayoutPanel2.Top+ c.Height +c.Top - 4;
+                if (colordefault == 0)//預設顏色
+                {
+                    itemColorID = (int)c.Tag;
+                    itemColorName = c.Name;
+                    colordefault = 1;
+                }   
             }
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+            panel1.Left = ((Button)sender).Left + flowLayoutPanel2.Left;
+            panel1.Top = ((Button)sender).Top + ((Button)sender).Height + flowLayoutPanel2.Top -4;
+            itemColorID = (int)((Button)sender).Tag;
+            itemColorName = ((Button)sender).Name;
+        }
+
+        private void C_Enter(object sender, EventArgs e)//觸碰顏色改照片
+        {
+            var q = et.Photos.Where(m => m.PhotoID == (int)((Button)sender).Tag).Select(m => m.Photo1);
+            GetPicture(pictureBox1, q.First());
+        }
+
+        void LoadSize(int ProductID)
+        {
             var q4 = et.ProductSizes.Where(m => m.ProductID == ProductID);
             foreach (var n in q4)//產生商品尺寸
             {
                 Button s = new Button();
+                s.Name = n.Size.SizeName;
                 s.Text = n.Size.SizeName;
+                s.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
+                s.Tag = n.SizeID;
+                s.FlatStyle = FlatStyle.Flat;
+                s.FlatAppearance.BorderSize = 0;
+                s.Click += S_Click;
                 flowLayoutPanel3.Controls.Add(s);
+                panel2.Top = flowLayoutPanel3.Top + s.Height +s.Top- 4;
+                if (sizedefault == 0)//預設尺寸
+                {
+                    itemSizeID = (int)s.Tag;
+                    itemSizeName = s.Name;
+                    sizedefault = 1;
+                }
             }
+        }
+
+        private void S_Click(object sender, EventArgs e)
+        {
+            panel2.Left = ((Button)sender).Left + flowLayoutPanel3.Left;
+            itemSizeID = (int)((Button)sender).Tag;
+            itemSizeName = ((Button)sender).Name;
+        }
+
+        void LoadImage(int ProductID)
+        {
             var q5 = et.ProductPhotoes.Where(m => m.ProductID == ProductID);
             foreach (var n in q5)//產生商品照片
             {
@@ -67,12 +162,11 @@ namespace UI_AL_ProductDetail
             }
         }
 
-        int count;
-
         private void P_MouseEnter(object sender, EventArgs e)//觸碰圖片改照片
         {
             GetPicture(pictureBox1, (byte[])((PictureBox)sender).Tag);
         }
+
 
         void GetPicture(PictureBox p, byte[] photo)//讀取圖片
         {
@@ -81,12 +175,22 @@ namespace UI_AL_ProductDetail
             ms.Dispose();
         }
 
-        private void C_Enter(object sender, EventArgs e)//觸碰顏色改照片
+        private void button1_Click(object sender, EventArgs e)
         {
-            var q = et.Photos.Where(m => m.PhotoID == (int)((Button)sender).Tag).Select(m => m.Photo1);
-            GetPicture(pictureBox1, q.First());
+            CartItem item = new CartItem();
+            item.UserID = Cls_Utility.Class1.UserID/*userID*/;
+            item.ProductID = itemID;
+            item.ProductName = itemName;
+            item.CategorySID = itemCategorySID;
+            item.ProductSizeID = itemSizeID;
+            item.ProductSizeName = itemSizeName;
+            item.ProductColorID = itemColorID;
+            item.ProductColorName = itemColorName;
+            item.Qty = (int)numericUpDown1.Value;
+            item.UnitPrice = itemUnitPrice;
+            Cls_Utility.Class1.CartList.Add(item);
+            MessageBox.Show("加入成功");
+            //addcart.Invoke();//觸發委派的方法
         }
-
-        FancyStoreEntities et = new FancyStoreEntities();
     }
 }

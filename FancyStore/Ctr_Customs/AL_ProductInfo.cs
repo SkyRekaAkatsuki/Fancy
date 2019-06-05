@@ -20,8 +20,8 @@ namespace Ctr_Customs
             InitializeComponent();
         }
 
-        public EventHandler add;
-        public EventHandler remove;
+        public EventHandler AddFav;
+        public EventHandler RemoveFav;
 
         public string PName { set { label1.Text = value; } }
         public int PPrice { set { label2.Text = value.ToString(); } }
@@ -42,12 +42,12 @@ namespace Ctr_Customs
             if (like)
             {
                 button1.Image = imageList1.Images[0];
-                remove(sender, e);
+                RemoveFav(sender, e);
             }
             else
             {
                 button1.Image = imageList1.Images[1];
-                add(sender, e);
+                AddFav(sender, e);
             }
             like = !like;
         }
@@ -58,6 +58,7 @@ namespace Ctr_Customs
                 button1.Image = imageList1.Images[1];
             else
                 button1.Image = imageList1.Images[0];
+            pictureBox2.Image = imageList1.Images[2];
 
             foreach (Control c in panel1.Controls)//設定元件的enter&leave
             {
