@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnWashing = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnSize = new System.Windows.Forms.Button();
             this.btnColot = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnPhoto = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vWEWCategorySMLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
@@ -65,48 +66,49 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnPhoto);
+            this.groupBox1.Controls.Add(this.btnWashing);
             this.groupBox1.Controls.Add(this.btnStock);
             this.groupBox1.Controls.Add(this.btnSize);
             this.groupBox1.Controls.Add(this.btnColot);
-            this.groupBox1.Location = new System.Drawing.Point(322, 276);
+            this.groupBox1.Location = new System.Drawing.Point(413, 210);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(283, 237);
+            this.groupBox1.Size = new System.Drawing.Size(244, 303);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "其他資料維護";
             // 
-            // button1
+            // btnWashing
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(68, 25);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 44);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "洗滌方式";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnWashing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnWashing.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnWashing.Location = new System.Drawing.Point(53, 82);
+            this.btnWashing.Margin = new System.Windows.Forms.Padding(2);
+            this.btnWashing.Name = "btnWashing";
+            this.btnWashing.Size = new System.Drawing.Size(144, 44);
+            this.btnWashing.TabIndex = 3;
+            this.btnWashing.Text = "洗滌方式";
+            this.btnWashing.UseVisualStyleBackColor = false;
             // 
             // btnStock
             // 
             this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnStock.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnStock.Location = new System.Drawing.Point(68, 174);
+            this.btnStock.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnStock.Location = new System.Drawing.Point(53, 231);
             this.btnStock.Margin = new System.Windows.Forms.Padding(2);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(144, 46);
             this.btnStock.TabIndex = 2;
-            this.btnStock.Text = "庫存量 (含圖片)";
+            this.btnStock.Text = "庫存量";
             this.btnStock.UseVisualStyleBackColor = false;
             // 
             // btnSize
             // 
             this.btnSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSize.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnSize.Location = new System.Drawing.Point(68, 125);
+            this.btnSize.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnSize.Location = new System.Drawing.Point(53, 134);
             this.btnSize.Margin = new System.Windows.Forms.Padding(2);
             this.btnSize.Name = "btnSize";
             this.btnSize.Size = new System.Drawing.Size(144, 41);
@@ -117,8 +119,8 @@
             // btnColot
             // 
             this.btnColot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnColot.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnColot.Location = new System.Drawing.Point(68, 77);
+            this.btnColot.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnColot.Location = new System.Drawing.Point(53, 183);
             this.btnColot.Margin = new System.Windows.Forms.Padding(2);
             this.btnColot.Name = "btnColot";
             this.btnColot.Size = new System.Drawing.Size(144, 40);
@@ -168,9 +170,9 @@
             // btnInsert
             // 
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnInsert.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnInsert.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(111, 396);
+            this.btnInsert.Location = new System.Drawing.Point(151, 406);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(142, 63);
             this.btnInsert.TabIndex = 31;
@@ -198,19 +200,19 @@
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(111, 355);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(143, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(182, 22);
             this.dateTimePicker2.TabIndex = 29;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(111, 323);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(143, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(182, 22);
             this.dateTimePicker1.TabIndex = 28;
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(111, 276);
+            this.txtUnitPrice.Location = new System.Drawing.Point(111, 281);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(143, 22);
             this.txtUnitPrice.TabIndex = 27;
@@ -246,7 +248,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(62, 281);
+            this.label5.Location = new System.Drawing.Point(62, 286);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 23;
@@ -317,11 +319,23 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnPhoto
+            // 
+            this.btnPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPhoto.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnPhoto.Location = new System.Drawing.Point(53, 30);
+            this.btnPhoto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPhoto.Name = "btnPhoto";
+            this.btnPhoto.Size = new System.Drawing.Size(144, 44);
+            this.btnPhoto.TabIndex = 4;
+            this.btnPhoto.Text = "產品圖片";
+            this.btnPhoto.UseVisualStyleBackColor = false;
+            // 
             // FrmProductMaintain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 530);
+            this.ClientSize = new System.Drawing.Size(702, 522);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cbSupplier);
             this.Controls.Add(this.groupBox1);
@@ -360,7 +374,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnWashing;
         private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Button btnSize;
         private System.Windows.Forms.Button btnColot;
@@ -386,5 +400,6 @@
         private System.Windows.Forms.BindingSource supplierBindingSource;
         private System.Windows.Forms.BindingSource vWEWCategorySMLBindingSource;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnPhoto;
     }
 }

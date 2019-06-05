@@ -39,6 +39,8 @@ namespace UI_EW_Maintain
         //動態產生products資料
         void ResetData()
         {
+            dbContext = new FancyStoreEntities(); //為了能刷新資料
+
             var q = dbContext.Products.Select(x => x);
 
             int pID;
