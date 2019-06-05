@@ -36,77 +36,123 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(34, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 26);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(323, 343);
+            this.pictureBox1.Size = new System.Drawing.Size(242, 274);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(462, 32);
+            this.label1.Location = new System.Drawing.Point(349, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
+            this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 1;
             this.label1.Text = "商品名稱";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(465, 72);
+            this.label2.Location = new System.Drawing.Point(349, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 2;
             this.label2.Text = "說明";
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(468, 115);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(351, 124);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(508, 205);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(381, 104);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(468, 354);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(351, 249);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(508, 100);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 80);
             this.flowLayoutPanel2.TabIndex = 5;
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(468, 460);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(351, 350);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(508, 100);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(381, 80);
             this.flowLayoutPanel3.TabIndex = 6;
             // 
             // flowLayoutPanel4
             // 
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(34, 416);
+            this.flowLayoutPanel4.AutoScroll = true;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(26, 350);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(405, 122);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(284, 157);
             this.flowLayoutPanel4.TabIndex = 7;
+            this.flowLayoutPanel4.WrapContents = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(788, 32);
+            this.label3.Location = new System.Drawing.Point(636, 26);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 8;
             this.label3.Text = "價錢";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Info;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(598, 448);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 37);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "加入購物車";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(351, 460);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 12);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "數量";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(396, 458);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(54, 22);
+            this.numericUpDown1.TabIndex = 11;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ProductDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 572);
+            this.ClientSize = new System.Drawing.Size(832, 530);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel3);
@@ -115,9 +161,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ProductDetail";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +181,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

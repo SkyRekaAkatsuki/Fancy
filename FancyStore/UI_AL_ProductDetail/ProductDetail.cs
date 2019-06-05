@@ -59,8 +59,15 @@ namespace UI_AL_ProductDetail
                 GetPicture(p, n.Photo.Photo1);
                 p.MouseEnter += P_MouseEnter;
                 flowLayoutPanel4.Controls.Add(p);
+                if (count == 0)
+                {
+                    GetPicture(pictureBox1, n.Photo.Photo1);
+                    count = 1;
+                }
             }
         }
+
+        int count;
 
         private void P_MouseEnter(object sender, EventArgs e)//觸碰圖片改照片
         {
