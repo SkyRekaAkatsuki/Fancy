@@ -96,6 +96,12 @@
     <Compile Include="JA_OrdersList.Designer.cs">
       <DependentUpon>JA_OrdersList.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderDetailList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderDetailList.Designer.cs">
+      <DependentUpon>OrderDetailList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JA_OrdersList.resx">
       <DependentUpon>JA_OrdersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetailList.resx">
+      <DependentUpon>OrderDetailList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

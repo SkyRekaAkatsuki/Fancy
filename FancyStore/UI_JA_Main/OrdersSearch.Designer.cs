@@ -42,7 +42,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 99);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 298);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(473, 298);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // dateTimePicker1
@@ -62,7 +62,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(50, 77);
+            this.checkBox1.Location = new System.Drawing.Point(131, 77);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(60, 16);
             this.checkBox1.TabIndex = 5;
@@ -73,7 +73,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(133, 77);
+            this.checkBox2.Location = new System.Drawing.Point(214, 77);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(60, 16);
             this.checkBox2.TabIndex = 6;
@@ -84,7 +84,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(218, 77);
+            this.checkBox3.Location = new System.Drawing.Point(299, 77);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(60, 16);
             this.checkBox3.TabIndex = 7;
@@ -96,8 +96,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(502, 450);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -105,6 +106,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "OrdersSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "OrdersSearch";
             this.ResumeLayout(false);
             this.PerformLayout();

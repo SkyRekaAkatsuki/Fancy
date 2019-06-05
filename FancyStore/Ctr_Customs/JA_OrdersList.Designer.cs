@@ -43,12 +43,16 @@
             this.aa = new System.Windows.Forms.Label();
             this.OrderNum = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.Amount = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.ssss.SuspendLayout();
             this.SuspendLayout();
             // 
             // ssss
             // 
             this.ssss.BackColor = System.Drawing.Color.White;
+            this.ssss.Controls.Add(this.Amount);
+            this.ssss.Controls.Add(this.label2);
             this.ssss.Controls.Add(this.OrderStatus);
             this.ssss.Controls.Add(this.Discount);
             this.ssss.Controls.Add(this.Shipping);
@@ -66,12 +70,12 @@
             this.ssss.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ssss.Location = new System.Drawing.Point(2, 2);
             this.ssss.Name = "ssss";
-            this.ssss.Size = new System.Drawing.Size(156, 212);
+            this.ssss.Size = new System.Drawing.Size(156, 235);
             this.ssss.TabIndex = 0;
             // 
             // OrderStatus
             // 
-            this.OrderStatus.BackColor = System.Drawing.Color.Red;
+            this.OrderStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.OrderStatus.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.OrderStatus.Location = new System.Drawing.Point(72, 183);
             this.OrderStatus.Name = "OrderStatus";
@@ -189,9 +193,9 @@
             // OrderNum
             // 
             this.OrderNum.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.OrderNum.Location = new System.Drawing.Point(3, 5);
+            this.OrderNum.Location = new System.Drawing.Point(-2, 5);
             this.OrderNum.Name = "OrderNum";
-            this.OrderNum.Size = new System.Drawing.Size(144, 15);
+            this.OrderNum.Size = new System.Drawing.Size(160, 15);
             this.OrderNum.TabIndex = 1;
             this.OrderNum.Text = "No.122222222";
             this.OrderNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,6 +212,27 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
+            // Amount
+            // 
+            this.Amount.BackColor = System.Drawing.Color.Transparent;
+            this.Amount.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Amount.Location = new System.Drawing.Point(72, 209);
+            this.Amount.Name = "Amount";
+            this.Amount.Size = new System.Drawing.Size(75, 15);
+            this.Amount.TabIndex = 18;
+            this.Amount.Text = "金額";
+            this.Amount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(3, 209);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 15);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "總金額:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // JA_OrdersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -216,7 +241,8 @@
             this.Controls.Add(this.ssss);
             this.Name = "JA_OrdersList";
             this.Padding = new System.Windows.Forms.Padding(2);
-            this.Size = new System.Drawing.Size(160, 216);
+            this.Size = new System.Drawing.Size(160, 239);
+            this.Load += new System.EventHandler(this.JA_OrdersList_Load);
             this.ssss.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -239,5 +265,7 @@
         private System.Windows.Forms.Label PayMethod;
         private System.Windows.Forms.Label Shipdate;
         private System.Windows.Forms.Label Orderdate;
+        private System.Windows.Forms.Label Amount;
+        private System.Windows.Forms.Label label2;
     }
 }
