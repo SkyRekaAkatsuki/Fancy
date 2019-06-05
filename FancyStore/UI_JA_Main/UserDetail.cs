@@ -38,7 +38,7 @@ namespace UI_JA_Main
             this.日期.Text = data.RegistrationDate.ToShortDateString();
             this.金額.Text = "99999";
             byte[] q;
-            if (data.PhotoID == 1)
+            if (data.PhotoID == null)
             { q = Cls_JA_Member.db.Photos.Where(n => n.PhotoID == 1).Select(n => n.Photo1).First(); }
             else
             { q = data.Photo.Photo1; }
@@ -102,7 +102,6 @@ namespace UI_JA_Main
                 }
 
             }
-
         }
         string FileName;
         private void button2_Click(object sender, EventArgs e)

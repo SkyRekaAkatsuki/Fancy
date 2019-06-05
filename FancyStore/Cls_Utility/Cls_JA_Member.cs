@@ -29,7 +29,6 @@ namespace Cls_Utility
             {
                 db.Users.Add(NewUser);
                 db.SaveChanges();
-
                 return true;
             }
             catch (DbUpdateException x)
@@ -87,8 +86,8 @@ namespace Cls_Utility
         #region 載入會員基本資料
         public static User UserDetail()
         {
-            FancyStoreEntities db = new FancyStoreEntities();
-            return db.Users.Where(n => n.UserID == UserID).First();
+            FancyStoreEntities dbb = new FancyStoreEntities();
+            return dbb.Users.Where(n => n.UserID == UserID).First();
         }
         #endregion
 
@@ -240,8 +239,6 @@ namespace Cls_Utility
             }
         }
         #endregion
-
-
 
         #region 驗證驗證碼
         public static bool CheckAuthCode(string code)
