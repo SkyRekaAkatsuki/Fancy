@@ -53,6 +53,7 @@
     <Compile Include="Cls_JA_Admin.cs" />
     <Compile Include="Cls_JA_IDo.cs" />
     <Compile Include="Cls_JA_Member.cs" />
+    <Compile Include="EW_Library.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
