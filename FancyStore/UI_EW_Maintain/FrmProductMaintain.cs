@@ -119,7 +119,7 @@ namespace UI_EW_Maintain
 
                 try
                 {
-                    MessageBox.Show($"saveProd.ProductID => ID: {cProd.ProductID} ");
+                    //MessageBox.Show($"cProd.ProductID => ID: {cProd.ProductID} ");
                     dbContext.Products.Add(cProd);
                     this.dbContext.SaveChanges();
                     int i = cProd.ProductID;  //取得資料庫自增ID
@@ -193,6 +193,12 @@ namespace UI_EW_Maintain
         private void FrmProductMaintain_FormClosing(object sender, FormClosingEventArgs e)
         {
             dbContext.Dispose();
+        }
+
+        private void btnPhoto_Click(object sender, EventArgs e)
+        {
+            FrmProductPhoto f = new FrmProductPhoto(cProd);
+            f.ShowDialog();
         }
     }
 }
