@@ -61,13 +61,18 @@ namespace UI_EW_Maintain
         //存圖片檔
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            Photo ph = new Photo();
-            ProductPhoto pp = new ProductPhoto();
-
+            if (string.IsNullOrWhiteSpace( txtFilename))
+            {
+                MessageBox.Show($"尚未選取圖片, 無法存檔");
+                return;
+            }
             using (FileStream fs = new FileStream(txtFilename, FileMode.Open, FileAccess.Read))
             {
                 try   //寫入Photo
                 {
+                    Photo ph = new Photo();
+                    ProductPhoto pp = new ProductPhoto();
+
                     byte[] data = new byte[fs.Length]; //串流讀取出來的資料都為byte
                     fs.Read(data, 0, (int)fs.Length);     //讀取資料到指定byte陣列
                     ph.Photo1 = data;
@@ -79,6 +84,8 @@ namespace UI_EW_Maintain
                     int i = ph.PhotoID;  //取得資料庫自增ID
                     MessageBox.Show($"圖片 [新增] 資料成功 => ID: {i} ");
                     txtPhotoID.Text = ph.PhotoID.ToString();
+                    txtFilename = "";
+                    pictureBox1.Image = null;
 
                     if (i > 0)  //寫入ProductPhoto
                     {
@@ -97,7 +104,6 @@ namespace UI_EW_Maintain
                     MessageBox.Show("圖片 [新增] 資料失敗, 請檢查欄位資料後再試一下, 或找系統管理員協助處理 !");
                     txtPhotoID.Text = "";
                 }
-                return;
             }
         }
 
@@ -112,8 +118,6 @@ namespace UI_EW_Maintain
                 MemoryStream ms = new MemoryStream(data);
                 Bitmap bmp = new Bitmap(ms);
                 pictureBox2.Image = bmp;
-
-                
             }
             catch (Exception ex)
             {
@@ -130,10 +134,18 @@ namespace UI_EW_Maintain
                     {
                         try
                         {
-                            var n = dbContext.ProductPhotoes.Find(mmmmmmmmmmmmmm);
+                            int photoID;
+                            if (int.TryParse(((ProductPhoto)productPhotoBindingSource.Current).PhotoID.ToString(), out photoID))
+                            {
+                                var p = dbContext.Photos.Find(photoID);
+                                dbContext.Photos.Remove(p);
+                                dbContext.SaveChanges();
+                            }
+                            int prodPhotoID = ((ProductPhoto)productPhotoBindingSource.Current).ProductPhotoID;
+                            var n = dbContext.ProductPhotoes.Find(prodPhotoID);
 
                             dbContext.ProductPhotoes.Remove(n);
-                            this.dbContext.SaveChanges();
+                            dbContext.SaveChanges();
                             { MessageBox.Show("圖片 [刪除] 資料成功 !"); }
                             ResetData();
                         }
