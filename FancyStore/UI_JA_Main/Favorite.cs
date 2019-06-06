@@ -26,7 +26,7 @@ namespace UI_JA_Main
                 JA_FavoriteLlis list = new JA_FavoriteLlis
                 {
                     //_PName = item.Product.ProductName,
-                    //_PDesction = item.Product.Desctiption,
+                    ////_PDesction = item.Product.Desctiption,
                     //_PPrice = item.Product.UnitPrice.ToString("C2"),
                     //Tag = item.FavoriteID,
                     //_Ppic = item.Product.ProductPhotoes.Select(n => n.Photo.Photo1).First()

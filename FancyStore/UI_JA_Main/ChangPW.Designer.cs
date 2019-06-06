@@ -32,15 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.驗證碼_P = new System.Windows.Forms.Panel();
             this.驗證碼_B = new System.Windows.Forms.Button();
+            this.jA_Input4 = new UI_JA_Members.JA_Input();
             this.新密碼_P = new System.Windows.Forms.Panel();
+            this.jA_Input3 = new UI_JA_Members.JA_Input();
             this.新密碼_B = new System.Windows.Forms.Button();
             this.驗證舊密碼_P = new System.Windows.Forms.Panel();
-            this.B_更改密碼 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.jA_Input3 = new UI_JA_Members.JA_Input();
             this.jA_Input2 = new UI_JA_Members.JA_Input();
             this.jA_Input1 = new UI_JA_Members.JA_Input();
-            this.jA_Input4 = new UI_JA_Members.JA_Input();
+            this.B_更改密碼 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.驗證碼_P.SuspendLayout();
             this.新密碼_P.SuspendLayout();
             this.驗證舊密碼_P.SuspendLayout();
@@ -81,6 +81,16 @@
             this.驗證碼_B.UseVisualStyleBackColor = false;
             this.驗證碼_B.Click += new System.EventHandler(this.驗證碼_B_Click);
             // 
+            // jA_Input4
+            // 
+            this.jA_Input4.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input4.Location = new System.Drawing.Point(0, 18);
+            this.jA_Input4.Name = "jA_Input4";
+            this.jA_Input4.Size = new System.Drawing.Size(200, 49);
+            this.jA_Input4.TabIndex = 7;
+            this.jA_Input4.Text = "驗證碼";
+            this.jA_Input4.輸入塊字串 = "";
+            // 
             // 新密碼_P
             // 
             this.新密碼_P.Controls.Add(this.jA_Input3);
@@ -90,6 +100,16 @@
             this.新密碼_P.Size = new System.Drawing.Size(200, 100);
             this.新密碼_P.TabIndex = 15;
             this.新密碼_P.Visible = false;
+            // 
+            // jA_Input3
+            // 
+            this.jA_Input3.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input3.Location = new System.Drawing.Point(0, 18);
+            this.jA_Input3.Name = "jA_Input3";
+            this.jA_Input3.Size = new System.Drawing.Size(200, 49);
+            this.jA_Input3.TabIndex = 6;
+            this.jA_Input3.Text = "新密碼";
+            this.jA_Input3.輸入塊字串 = "";
             // 
             // 新密碼_B
             // 
@@ -113,32 +133,6 @@
             this.驗證舊密碼_P.Size = new System.Drawing.Size(200, 159);
             this.驗證舊密碼_P.TabIndex = 14;
             // 
-            // B_更改密碼
-            // 
-            this.B_更改密碼.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(171)))), ((int)(((byte)(143)))));
-            this.B_更改密碼.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B_更改密碼.Location = new System.Drawing.Point(56, 122);
-            this.B_更改密碼.Name = "B_更改密碼";
-            this.B_更改密碼.Size = new System.Drawing.Size(75, 23);
-            this.B_更改密碼.TabIndex = 4;
-            this.B_更改密碼.Text = "下一步";
-            this.B_更改密碼.UseVisualStyleBackColor = false;
-            this.B_更改密碼.Click += new System.EventHandler(this.B_更改密碼_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            // 
-            // jA_Input3
-            // 
-            this.jA_Input3.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input3.Location = new System.Drawing.Point(0, 18);
-            this.jA_Input3.Name = "jA_Input3";
-            this.jA_Input3.Size = new System.Drawing.Size(200, 49);
-            this.jA_Input3.TabIndex = 6;
-            this.jA_Input3.Text = "新密碼";
-            this.jA_Input3.輸入塊字串 = "";
-            // 
             // jA_Input2
             // 
             this.jA_Input2.BackColor = System.Drawing.Color.Transparent;
@@ -159,15 +153,21 @@
             this.jA_Input1.Text = "帳號";
             this.jA_Input1.輸入塊字串 = "";
             // 
-            // jA_Input4
+            // B_更改密碼
             // 
-            this.jA_Input4.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input4.Location = new System.Drawing.Point(0, 18);
-            this.jA_Input4.Name = "jA_Input4";
-            this.jA_Input4.Size = new System.Drawing.Size(200, 49);
-            this.jA_Input4.TabIndex = 7;
-            this.jA_Input4.Text = "驗證碼";
-            this.jA_Input4.輸入塊字串 = "";
+            this.B_更改密碼.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(171)))), ((int)(((byte)(143)))));
+            this.B_更改密碼.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.B_更改密碼.Location = new System.Drawing.Point(56, 122);
+            this.B_更改密碼.Name = "B_更改密碼";
+            this.B_更改密碼.Size = new System.Drawing.Size(75, 23);
+            this.B_更改密碼.TabIndex = 4;
+            this.B_更改密碼.Text = "下一步";
+            this.B_更改密碼.UseVisualStyleBackColor = false;
+            this.B_更改密碼.Click += new System.EventHandler(this.B_更改密碼_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
             // 
             // ChangPW
             // 
@@ -179,6 +179,9 @@
             this.Controls.Add(this.新密碼_P);
             this.Controls.Add(this.驗證舊密碼_P);
             this.Controls.Add(this.驗證碼_P);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ChangPW";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangPW";

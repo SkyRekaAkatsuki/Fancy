@@ -256,25 +256,21 @@
             // 
             // MYRegion
             // 
-            this.MYRegion.DisplayMember = "RegionName";
             this.MYRegion.Enabled = false;
             this.MYRegion.FormattingEnabled = true;
             this.MYRegion.Location = new System.Drawing.Point(269, 331);
             this.MYRegion.Name = "MYRegion";
             this.MYRegion.Size = new System.Drawing.Size(150, 20);
             this.MYRegion.TabIndex = 35;
-            this.MYRegion.ValueMember = "RegionName";
             // 
             // City
             // 
-            this.City.DisplayMember = "CityName";
             this.City.Enabled = false;
             this.City.FormattingEnabled = true;
             this.City.Location = new System.Drawing.Point(109, 331);
             this.City.Name = "City";
             this.City.Size = new System.Drawing.Size(154, 20);
             this.City.TabIndex = 36;
-            this.City.ValueMember = "CityName";
             this.City.SelectedIndexChanged += new System.EventHandler(this.City_SelectedIndexChanged);
             // 
             // Address

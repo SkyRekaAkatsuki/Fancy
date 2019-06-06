@@ -26,7 +26,7 @@ namespace Ctr_Customs
             }
         }
         public string _PName { set { this.label1.Text = value; } }
-        public string _PDesction { set { this.label2.Text = value; } }
+        // public string _PDesction { set { this.label2.Text = value; } }
         public string _PPrice { set { this.label3.Text = value; } }
 
         public JA_FavoriteLlis()
@@ -36,7 +36,7 @@ namespace Ctr_Customs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (Cls_JA_Member.RemoveFavorite((Int32)this.Tag))
+            //if (Cls_JA_Member.RemoveFavorite((int)this.Tag))
             //{
                 Timer t = new Timer();
                 t.Interval = 10;
@@ -44,7 +44,7 @@ namespace Ctr_Customs
                 int i = 0;
                 t.Tick += (s, ee) =>
                 {
-                    if (i!=600)
+                    if (i != 600)
                     {
                         i += 30;
                         this.panel3.Left += 30;
