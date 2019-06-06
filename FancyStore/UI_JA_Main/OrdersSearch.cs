@@ -46,5 +46,10 @@ namespace UI_JA_Main
             
 
         }
+
+        private void OrdersSearch_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

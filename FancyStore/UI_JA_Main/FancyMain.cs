@@ -180,6 +180,7 @@ namespace UI_JA_Main
        async private void button11_Click(object sender, EventArgs e)
         {
             OrdersSearch ordersSearch = new OrdersSearch();
+            ordersSearch.ShowDialog();
            await Task.Run(()=>ordersSearch.ShowDialog());
         }
 
