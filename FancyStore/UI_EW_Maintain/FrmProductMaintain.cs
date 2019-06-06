@@ -200,5 +200,11 @@ namespace UI_EW_Maintain
             FrmProductPhoto f = new FrmProductPhoto(cProd);
             f.ShowDialog();
         }
+
+        private void btnColot_Click(object sender, EventArgs e)
+        {
+            FrmProductColor f = new FrmProductColor(cProd);
+            f.ShowDialog();
+        }
     }
 }
