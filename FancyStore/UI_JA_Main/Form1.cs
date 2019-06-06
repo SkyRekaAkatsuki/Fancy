@@ -14,7 +14,7 @@ namespace UI_JA_Main
     {
         public Form1()
         {
-            InitializeComponent();//
+            InitializeComponent();
         }
     }
 }

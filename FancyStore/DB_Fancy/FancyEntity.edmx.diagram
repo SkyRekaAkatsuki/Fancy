@@ -4,36 +4,38 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="247801d9b0ce4c98b0441cf7cc54b9e9" Name="Diagram1">
+      <Diagram DiagramId="247801d9b0ce4c98b0441cf7cc54b9e9" Name="Diagram1" ZoomLevel="81">
         <EntityTypeShape EntityType="FancyStoreModel.CategoryLarge" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.CategoryMiddle" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.CategorySmall" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.City" Width="1.5" PointX="3" PointY="19.25" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.Color" Width="1.5" PointX="7.5" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="FancyStoreModel.DiscountMethod" Width="1.5" PointX="8.25" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FancyStoreModel.DiscountMethod" Width="1.875" PointX="9.125" PointY="25.375" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.Employee" Width="1.5" PointX="12.5" PointY="20.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="FancyStoreModel.EvaluationSample" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FancyStoreModel.KeyWord" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FancyStoreModel.EvaluationSample" Width="1.5" PointX="0.875" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FancyStoreModel.KeyWord" Width="1.5" PointX="2.875" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.MyFavorite" Width="1.5" PointX="9.75" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="FancyStoreModel.NewsList" Width="1.5" PointX="7.5" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FancyStoreModel.NewsList" Width="1.5" PointX="4.25" PointY="22.5" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.OrderDetail" Width="1.5" PointX="12.75" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.OrderHeader" Width="1.5" PointX="10.5" PointY="28.5" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.OrderStatusList" Width="1.5" PointX="8.25" PointY="28.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.PayMethod" Width="1.5" PointX="8.25" PointY="30.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="FancyStoreModel.Photo" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
+
+        <EntityTypeShape EntityType="FancyStoreModel.Photo" Width="1.5" PointX="4.5" PointY="15.875" IsExpanded="true" />
+
         <EntityTypeShape EntityType="FancyStoreModel.ProductColor" Width="1.5" PointX="9.75" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="FancyStoreModel.ProductEvaluation" Width="1.5" PointX="9.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FancyStoreModel.ProductEvaluation" Width="1.75" PointX="9.75" PointY="21.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.ProductPhoto" Width="1.5" PointX="9.75" PointY="14.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.ProductSize" Width="1.5" PointX="12.75" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.ProductStock" Width="1.5" PointX="15" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.ProductWashing" Width="1.5" PointX="12.75" PointY="15.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.Question" Width="1.5" PointX="14.75" PointY="23.25" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.Region" Width="1.5" PointX="5.25" PointY="19.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="FancyStoreModel.Role" Width="1.5" PointX="10.25" PointY="36.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="FancyStoreModel.Shipping" Width="1.5" PointX="8.25" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FancyStoreModel.Role" Width="1.5" PointX="12.5" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FancyStoreModel.Shipping" Width="1.5" PointX="10.5" PointY="33.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.Size" Width="1.5" PointX="10.5" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.Supplier" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="FancyStoreModel.sysdiagram" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FancyStoreModel.sysdiagram" Width="1.5" PointX="0.875" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.User" Width="1.5" PointX="7.5" PointY="16.25" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.Washing" Width="1.5" PointX="10.5" PointY="17.875" IsExpanded="true" />
         <AssociationConnector Association="FancyStoreModel.FK_CategoryM_CategoryL" ManuallyRouted="false" />
@@ -73,6 +75,8 @@
         <AssociationConnector Association="FancyStoreModel.FK_ProductSize_Products" />
         <AssociationConnector Association="FancyStoreModel.FK_ProductStock_Products" />
         <AssociationConnector Association="FancyStoreModel.FK_ProductWashing_Products" />
+
+        <EntityTypeShape EntityType="FancyStoreModel.VW_EW_CategorySML" Width="1.5" PointX="0.875" PointY="14.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

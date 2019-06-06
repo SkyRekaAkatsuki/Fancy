@@ -16,7 +16,7 @@ namespace UI_JA_Members
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new UserMain());
         }
     }
 }

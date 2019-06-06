@@ -36,14 +36,33 @@ namespace Ctr_Customs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Cls_JA_Members.RemoveFavorite((Int32)this.Tag, Int32.Parse(this.Name)))
-            {
-                if (移除我的最愛成功 != null)
+            //if (Cls_JA_Member.RemoveFavorite((Int32)this.Tag))
+            //{
+                Timer t = new Timer();
+                t.Interval = 10;
+                t.Start();
+                int i = 0;
+                t.Tick += (s, ee) =>
                 {
-                    移除我的最愛成功();
-                }
-            }
-            else { return; }
+                    if (i!=600)
+                    {
+                        i += 30;
+                        this.panel3.Left += 30;
+                    }
+                    else
+                    {
+                        t.Stop();
+                        i = 0;
+                        if (移除我的最愛成功 != null)
+                        {
+                            移除我的最愛成功();
+                        }
+                        t.Dispose();
+                    }
+                };
+
+            //}
+            //else { return; }
 
         }
     }

@@ -29,6 +29,10 @@ namespace UI_JA_Members
             { this.label1.Text = value; }
         }
 
+        public Color 警告
+        {
+            set { this.panel3.BackColor = value; }
+        }
         public string 輸入塊字串
         {
             get

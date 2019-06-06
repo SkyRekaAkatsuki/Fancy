@@ -22,6 +22,7 @@ namespace DB_Fancy
     
         public int PayMethodID { get; set; }
         public string PayMethodName { get; set; }
+        public Nullable<int> Freight { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderHeader> OrderHeaders { get; set; }

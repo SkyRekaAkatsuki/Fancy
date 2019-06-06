@@ -31,12 +31,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
+
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,6 +65,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>img.resx</DependentUpon>
     </Compile>
+    <Compile Include="JA_FavoriteLlis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JA_FavoriteLlis.designer.cs">
+      <DependentUpon>JA_FavoriteLlis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JA_Input.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JA_Input.designer.cs">
+      <DependentUpon>JA_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JA_MemberList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JA_MemberList.designer.cs">
+      <DependentUpon>JA_MemberList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -73,6 +98,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>img.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JA_FavoriteLlis.resx">
+      <DependentUpon>JA_FavoriteLlis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JA_Input.resx">
+      <DependentUpon>JA_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JA_MemberList.resx">
+      <DependentUpon>JA_MemberList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +124,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="Resources\icons8-collapse-arrow-24.png" />
   </ItemGroup>
   <ItemGroup>
