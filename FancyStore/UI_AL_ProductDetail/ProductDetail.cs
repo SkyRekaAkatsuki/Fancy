@@ -17,7 +17,7 @@ namespace UI_AL_ProductDetail
 {
     public partial class ProductDetail : Form
     {
-        public ProductDetail(int ProductID, Action addcart)
+        public ProductDetail(int ProductID)
         {
             InitializeComponent();
             LoadDetail(ProductID);
@@ -28,10 +28,8 @@ namespace UI_AL_ProductDetail
             Checkqty();
             panel1.Left = flowLayoutPanel2.Left + 3;
             panel2.Left = flowLayoutPanel3.Left + 3;
-            Addcart = addcart;
         }
 
-        int userID;
         int colordefault;//記預設點選顏色
         int sizedefault;//記預設點選尺寸
         int itemID;//記購買產品ID
@@ -45,7 +43,6 @@ namespace UI_AL_ProductDetail
 
         FancyStoreEntities et = new FancyStoreEntities();
         int count;
-        public Action Addcart;
 
         void LoadDetail(int ProductID)
         {
@@ -184,7 +181,7 @@ namespace UI_AL_ProductDetail
         private void button1_Click(object sender, EventArgs e)
         {
             CartItem item = new CartItem();
-            item.UserID = Cls_Utility.Class1.UserID/*userID*/;
+            item.UserID = Cls_JA_Member.UserID;
             item.ProductID = itemID;
             item.ProductName = itemName;
             item.CategorySID = itemCategorySID;
@@ -197,7 +194,7 @@ namespace UI_AL_ProductDetail
             Cls_Utility.Class1.CartList.Add(item);
             MessageBox.Show("加入成功");
             Checkqty();
-            Addcart.Invoke();//觸發委派的方法
+            //Addcart.Invoke();//觸發委派的方法
         }
 
         void Checkqty()

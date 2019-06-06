@@ -9,7 +9,6 @@ namespace Cls_Utility
     public class Class1
     {
         public static List<CartItem> CartList = new List<CartItem>();
-        public static int UserID = 1;
     }
 
     public class CartItem

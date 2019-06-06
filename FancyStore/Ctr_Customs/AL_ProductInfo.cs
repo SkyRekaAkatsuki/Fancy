@@ -22,6 +22,8 @@ namespace Ctr_Customs
 
         public EventHandler AddFav;
         public EventHandler RemoveFav;
+        //public EventHandler Incart;
+        //public EventHandler Offcart;
 
         public string PName { set { label1.Text = value; } }
         public int PPrice { set { label2.Text = value.ToString(); } }
@@ -36,6 +38,7 @@ namespace Ctr_Customs
             }
         }
         public bool like = true;
+        public bool buy = true;
 
         private void AL_ProductInfo_Load(object sender, EventArgs e)
         {
@@ -43,7 +46,10 @@ namespace Ctr_Customs
                 button1.Image = imageList1.Images[1];
             else
                 button1.Image = imageList1.Images[0];
-            pictureBox2.Image = imageList1.Images[2];
+            if (buy)
+                pictureBox2.Image = imageList1.Images[3];
+            else
+                pictureBox2.Image = imageList1.Images[2];
 
             foreach (Control c in panel1.Controls)//設定元件的enter&leave
             {
@@ -71,13 +77,8 @@ namespace Ctr_Customs
 
         private void C_Click(object sender, EventArgs e)
         {
-            ProductDetail a = new ProductDetail(ProductID,Addcart);
+            ProductDetail a = new ProductDetail(ProductID);
             a.ShowDialog();
-        }
-
-        void Addcart()
-        {
-            pictureBox2.Image = imageList1.Images[3];
         }
 
         private void AL_ProductInfo_MouseLeave(object sender, EventArgs e)

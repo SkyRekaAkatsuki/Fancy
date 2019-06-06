@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DB_Fancy;
 using Ctr_Customs;
+using Cls_Utility;
 
 namespace UI_AL_ProductDisplay
 {
     public partial class ProductDisplay : Form
     {
-        public ProductDisplay()
+        public ProductDisplay(int CategoryLargeID)
         {
-            int CategoryLargeID = 1;
             InitializeComponent();
             LoadAll(CategoryLargeID);
-
+            panel2.Left = flowLayoutPanel1.Left + 3;
         }
 
         void LoadAll(int CategoryLargeID)
@@ -129,15 +129,20 @@ namespace UI_AL_ProductDisplay
                 };
                 info.AddFav += (a, b) =>//委派加入我的最愛
                   {
-                      et.MyFavorites.Add(new MyFavorite { UserID = Cls_Utility.Class1.UserID, ProductID = n.ProductID });
+                      et.MyFavorites.Add(new MyFavorite { UserID = Cls_JA_Member.UserID, ProductID = n.ProductID });
                       et.SaveChanges();
                   };
                 info.RemoveFav += (a, b) =>//委派刪除我的最愛
                  {
-                     var q3 = et.MyFavorites.Where(p => p.UserID == Cls_Utility.Class1.UserID && p.ProductID == n.ProductID).First();
+                     var q3 = et.MyFavorites.Where(p => p.UserID == Cls_JA_Member.UserID && p.ProductID == n.ProductID).First();
                      et.MyFavorites.Remove(q3);
                      et.SaveChanges();
                  };
+                var q4 = Cls_Utility.Class1.CartList.Any(m => m.ProductID == n.ProductID);
+                if (q4)
+                    info.buy = true;
+                else
+                    info.buy = false;
                 if (q2)
                     info.like = true;
                 else
