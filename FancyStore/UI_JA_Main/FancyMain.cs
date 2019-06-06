@@ -174,14 +174,14 @@ namespace UI_JA_Main
         {
             AllMemberList allMemberList = new AllMemberList();
             this.TopMost = false;
-            allMemberList.Show();
+            allMemberList.ShowDialog();
         }
 
        async private void button11_Click(object sender, EventArgs e)
         {
             OrdersSearch ordersSearch = new OrdersSearch();
-            ordersSearch.ShowDialog();
-           await Task.Run(()=>ordersSearch.ShowDialog());
+            this.TopMost = false;
+            await Task.Run(()=>ordersSearch.ShowDialog());
         }
 
         private void button9_Click(object sender, EventArgs e)
