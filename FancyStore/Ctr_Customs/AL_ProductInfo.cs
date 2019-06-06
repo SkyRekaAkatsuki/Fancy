@@ -37,21 +37,6 @@ namespace Ctr_Customs
         }
         public bool like = true;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (like)
-            {
-                button1.Image = imageList1.Images[0];
-                RemoveFav(sender, e);
-            }
-            else
-            {
-                button1.Image = imageList1.Images[1];
-                AddFav(sender, e);
-            }
-            like = !like;
-        }
-
         private void AL_ProductInfo_Load(object sender, EventArgs e)
         {
             if (like)
@@ -69,10 +54,30 @@ namespace Ctr_Customs
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (like)
+            {
+                button1.Image = imageList1.Images[0];
+                RemoveFav(sender, e);
+            }
+            else
+            {
+                button1.Image = imageList1.Images[1];
+                AddFav(sender, e);
+            }
+            like = !like;
+        }
+
         private void C_Click(object sender, EventArgs e)
         {
-            ProductDetail a = new ProductDetail(ProductID);
+            ProductDetail a = new ProductDetail(ProductID,Addcart);
             a.ShowDialog();
+        }
+
+        void Addcart()
+        {
+            pictureBox2.Image = imageList1.Images[3];
         }
 
         private void AL_ProductInfo_MouseLeave(object sender, EventArgs e)

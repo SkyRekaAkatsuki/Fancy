@@ -17,7 +17,7 @@ namespace UI_AL_ProductDetail
 {
     public partial class ProductDetail : Form
     {
-        public ProductDetail(int ProductID)
+        public ProductDetail(int ProductID, Action addcart)
         {
             InitializeComponent();
             LoadDetail(ProductID);
@@ -25,8 +25,10 @@ namespace UI_AL_ProductDetail
             LoadColor(ProductID);
             LoadSize(ProductID);
             LoadImage(ProductID);
+            Checkqty();
             panel1.Left = flowLayoutPanel2.Left + 3;
             panel2.Left = flowLayoutPanel3.Left + 3;
+            Addcart = addcart;
         }
 
         int userID;
@@ -43,6 +45,7 @@ namespace UI_AL_ProductDetail
 
         FancyStoreEntities et = new FancyStoreEntities();
         int count;
+        public Action Addcart;
 
         void LoadDetail(int ProductID)
         {
@@ -79,29 +82,30 @@ namespace UI_AL_ProductDetail
                 Button c = new Button();
                 c.Name = n.Color.ColorName;
                 c.BackColor = System.Drawing.Color.FromArgb((int)n.Color.R, (int)n.Color.G, (int)n.Color.B);
-                c.Tag = n.PhotoID;
+                c.Tag = n.ProductColorID;
                 c.FlatStyle = FlatStyle.Flat;
                 c.FlatAppearance.BorderSize = 0;
                 toolTip1.SetToolTip(c, n.Color.ColorName);
                 c.MouseEnter += C_Enter;
                 c.Click += C_Click;
                 flowLayoutPanel2.Controls.Add(c);
-                panel1.Top = flowLayoutPanel2.Top+ c.Height +c.Top - 4;
+                panel1.Top = flowLayoutPanel2.Top + c.Height + c.Top - 4;
                 if (colordefault == 0)//預設顏色
                 {
                     itemColorID = (int)c.Tag;
                     itemColorName = c.Name;
                     colordefault = 1;
-                }   
+                }
             }
         }
 
         private void C_Click(object sender, EventArgs e)
         {
             panel1.Left = ((Button)sender).Left + flowLayoutPanel2.Left;
-            panel1.Top = ((Button)sender).Top + ((Button)sender).Height + flowLayoutPanel2.Top -4;
+            panel1.Top = ((Button)sender).Top + ((Button)sender).Height + flowLayoutPanel2.Top - 4;
             itemColorID = (int)((Button)sender).Tag;
             itemColorName = ((Button)sender).Name;
+            Checkqty();
         }
 
         private void C_Enter(object sender, EventArgs e)//觸碰顏色改照片
@@ -117,6 +121,7 @@ namespace UI_AL_ProductDetail
             {
                 Button s = new Button();
                 s.Name = n.Size.SizeName;
+                s.BackColor = System.Drawing.Color.GhostWhite;
                 s.Text = n.Size.SizeName;
                 s.Font = new Font("微軟正黑體", 10F, FontStyle.Bold);
                 s.Tag = n.SizeID;
@@ -124,7 +129,7 @@ namespace UI_AL_ProductDetail
                 s.FlatAppearance.BorderSize = 0;
                 s.Click += S_Click;
                 flowLayoutPanel3.Controls.Add(s);
-                panel2.Top = flowLayoutPanel3.Top + s.Height +s.Top- 4;
+                panel2.Top = flowLayoutPanel3.Top + s.Height + s.Top - 4;
                 if (sizedefault == 0)//預設尺寸
                 {
                     itemSizeID = (int)s.Tag;
@@ -139,6 +144,7 @@ namespace UI_AL_ProductDetail
             panel2.Left = ((Button)sender).Left + flowLayoutPanel3.Left;
             itemSizeID = (int)((Button)sender).Tag;
             itemSizeName = ((Button)sender).Name;
+            Checkqty();
         }
 
         void LoadImage(int ProductID)
@@ -190,7 +196,40 @@ namespace UI_AL_ProductDetail
             item.UnitPrice = itemUnitPrice;
             Cls_Utility.Class1.CartList.Add(item);
             MessageBox.Show("加入成功");
-            //addcart.Invoke();//觸發委派的方法
+            Checkqty();
+            Addcart.Invoke();//觸發委派的方法
+        }
+
+        void Checkqty()
+        {
+            try
+            {
+                var q = et.ProductStocks.Where(n => n.ProductColorID == itemColorID && n.ProductSizeID == itemSizeID).First();
+                if (q.StockQTY != 0)
+                {
+                    button1.Enabled = true;
+                    button1.Text = "加入購物車";
+                    numericUpDown1.Enabled = true;
+                    numericUpDown1.Maximum = q.StockQTY;
+                }
+                else
+                {
+                    button1.Enabled = false;
+                    button1.Text = "庫存不足";
+                    numericUpDown1.Enabled = false;
+                }
+                numericUpDown1.Value = 1;
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("庫存沒資料");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = Cls_Utility.Class1.CartList;
         }
     }
 }

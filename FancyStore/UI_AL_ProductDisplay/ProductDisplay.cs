@@ -19,7 +19,7 @@ namespace UI_AL_ProductDisplay
             int CategoryLargeID = 1;
             InitializeComponent();
             LoadAll(CategoryLargeID);
-            panel2.Left = flowLayoutPanel1.Left + 3;
+
         }
 
         void LoadAll(int CategoryLargeID)
@@ -31,27 +31,6 @@ namespace UI_AL_ProductDisplay
         }
 
         FancyStoreEntities et = new FancyStoreEntities();
-
-        //void LoadL()
-        //{
-        //    var q = et.CategoryLarges.ToList();
-        //    Button btn_L;
-        //    foreach (var n in q)
-        //    {
-        //        btn_L = new Button
-        //        {
-        //            Name = n.CategoryLID.ToString(),
-        //            Text = n.CategoryLName,
-        //        };
-        //        btn_L.Click += Btn_L_Click;
-        //        flowLayoutPanel1.Controls.Add(btn_L);
-        //    }
-        //}
-
-        //private void Btn_L_Click(object sender, EventArgs e)
-        //{
-        //    LoadM(int.Parse(((Button)sender).Name));
-        //}
 
         void LoadM(int lid)//產生中分類
         {
@@ -164,6 +143,15 @@ namespace UI_AL_ProductDisplay
                 else
                     info.like = false;
                 flowLayoutPanel3.Controls.Add(info);
+            }
+        }
+
+        private void flowLayoutPanel3_Resize(object sender, EventArgs e)
+        {
+            panel2.Left = flowLayoutPanel1.Left + 3;
+            foreach (Button x in flowLayoutPanel2.Controls)
+            {
+                x.Width = flowLayoutPanel2.Width;
             }
         }
     }
