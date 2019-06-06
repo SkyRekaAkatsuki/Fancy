@@ -18,6 +18,7 @@ namespace Ctr_Customs
 
         public event Action 資料更動;
 
+
         //Cls_JA_Members Loginusers = new Cls_JA_Members();
 
         public JA_MemberList()
@@ -256,6 +257,7 @@ namespace Ctr_Customs
                 {
                     
                     MessageBox.Show("成功");
+
 
                     if (資料更動 != null)
                     {

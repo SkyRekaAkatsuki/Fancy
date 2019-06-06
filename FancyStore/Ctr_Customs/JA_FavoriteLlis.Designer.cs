@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
             this.label1.Location = new System.Drawing.Point(144, 12);
             this.label1.Name = "label1";
+
             this.label1.Size = new System.Drawing.Size(398, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "STAR WARS系列口袋印花T恤-09-男";
@@ -73,7 +75,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label2.Location = new System.Drawing.Point(144, 51);
             this.label2.Name = "label2";
+
             this.label2.Size = new System.Drawing.Size(310, 33);
+
             this.label2.TabIndex = 3;
             this.label2.Text = "產地：中國牛仔主布：棉100%";
             // 
@@ -85,6 +89,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label3.Location = new System.Drawing.Point(460, 51);
             this.label3.Name = "label3";
+
             this.label3.Size = new System.Drawing.Size(85, 33);
             this.label3.TabIndex = 4;
             this.label3.Text = "NT 999";
@@ -137,6 +142,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(44, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
+
             this.pictureBox1.Size = new System.Drawing.Size(81, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
@@ -166,6 +172,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
+
         private System.Windows.Forms.Panel panel3;
     }
 }

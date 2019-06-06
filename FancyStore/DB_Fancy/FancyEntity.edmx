@@ -1823,6 +1823,7 @@
             <End Role="Product" EntitySet="Products" />
             <End Role="ProductWashing" EntitySet="ProductWashings" />
           </AssociationSet>
+
           <EntitySet Name="VW_EW_CategorySML" EntityType="FancyStoreModel.VW_EW_CategorySML" />
         </EntityContainer>
         <EntityType Name="Product">
@@ -1969,6 +1970,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+
         <EntityType Name="VW_EW_CategorySML">
           <Key>
             <PropertyRef Name="CategorySID" />
@@ -2340,6 +2342,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+
           <EntitySetMapping Name="VW_EW_CategorySML">
             <EntityTypeMapping TypeName="FancyStoreModel.VW_EW_CategorySML">
               <MappingFragment StoreEntitySet="VW_EW_CategorySML">
