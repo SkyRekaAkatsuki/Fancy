@@ -31,14 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+
+
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AL_ProductInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AL_ProductInfo.Designer.cs">
+      <DependentUpon>AL_ProductInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="JA_EmailWindows.cs">
       <SubType>Form</SubType>
@@ -110,8 +116,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="JA_EmailWindows.resx">
-      <DependentUpon>JA_EmailWindows.cs</DependentUpon>
+
+    <EmbeddedResource Include="AL_ProductInfo.resx">
+      <DependentUpon>AL_ProductInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="img.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +152,10 @@
     <ProjectReference Include="..\Cls_Utility\Cls_Utility.csproj">
       <Project>{01638142-40E6-4C12-AE36-61706EF7D382}</Project>
       <Name>Cls_Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI_AL_ProductDetail\UI_AL_ProductDetail.csproj">
+      <Project>{1c1d682b-9d4f-411a-80fe-9479947d40d7}</Project>
+      <Name>UI_AL_ProductDetail</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

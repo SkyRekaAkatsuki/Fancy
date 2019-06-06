@@ -13,6 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_JA_Main", "UI_JA_Main\UI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_Fancy", "DB_Fancy\DB_Fancy.csproj", "{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}"
 EndProject
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_EW_Maintain", "UI_EW_Maintain\UI_EW_Maintain.csproj", "{409A237E-FEAA-44DA-ABE3-20AD071ABFA5}"
 EndProject
 Global
