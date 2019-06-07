@@ -149,9 +149,18 @@ namespace UI_EW_Maintain
         {
             switch (e.ColumnIndex)
             {
+                // EntityFramework 使用Sql Command, 一次刪除多筆資料
+                //dbContext.Database.ExecuteSqlCommand("delete aaa where aaa.id = @CategoryLID", new SqlParameter("@CategoryLI", cl.CategoryLID));
+
+
                 case 1:      //Click 刪除
                     if (MessageBox.Show("確定要刪除嗎?", "刪除作業", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
+                        if (HasProductDetails()) //有Details資料
+                        {
+                            MessageBox.Show($"ProductID:{cProd.ProductID} ({cProd.ProductName}) 有存在 [庫存量] 資料, 不能刪除 !");
+                            return;
+                        }
                         try
                         {
                             int photoID;
@@ -177,6 +186,15 @@ namespace UI_EW_Maintain
                     }
                     break;
             }
+        }
+
+        //判斷Product是否有其他Details資料
+        bool HasProductDetails()
+        {
+            if (dbContext.ProductStocks.Any(x => x.ProductID == cProd.ProductID))  // 有ProductStock
+            { return true; }
+
+            return false;  //無任何Details資料
         }
     }
 }

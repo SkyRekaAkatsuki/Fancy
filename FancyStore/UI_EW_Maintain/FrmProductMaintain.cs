@@ -195,16 +195,37 @@ namespace UI_EW_Maintain
             dbContext.Dispose();
         }
 
+        //圖片
         private void btnPhoto_Click(object sender, EventArgs e)
         {
             FrmProductPhoto f = new FrmProductPhoto(cProd);
             f.ShowDialog();
         }
 
+        //顏色
         private void btnColot_Click(object sender, EventArgs e)
         {
             FrmProductColor f = new FrmProductColor(cProd);
             f.ShowDialog();
+        }
+
+        //尺吋大小
+        private void btnSize_Click(object sender, EventArgs e)
+        {
+            FrmProductSize f = new FrmProductSize(cProd);
+            f.ShowDialog();
+        }
+
+        //洗滌方式
+        private void btnWashing_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //庫存量
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
