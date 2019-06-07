@@ -119,7 +119,7 @@ namespace UI_EW_Maintain
 
                 try
                 {
-                    MessageBox.Show($"saveProd.ProductID => ID: {cProd.ProductID} ");
+                    //MessageBox.Show($"cProd.ProductID => ID: {cProd.ProductID} ");
                     dbContext.Products.Add(cProd);
                     this.dbContext.SaveChanges();
                     int i = cProd.ProductID;  //取得資料庫自增ID
@@ -193,6 +193,39 @@ namespace UI_EW_Maintain
         private void FrmProductMaintain_FormClosing(object sender, FormClosingEventArgs e)
         {
             dbContext.Dispose();
+        }
+
+        //圖片
+        private void btnPhoto_Click(object sender, EventArgs e)
+        {
+            FrmProductPhoto f = new FrmProductPhoto(cProd);
+            f.ShowDialog();
+        }
+
+        //顏色
+        private void btnColot_Click(object sender, EventArgs e)
+        {
+            FrmProductColor f = new FrmProductColor(cProd);
+            f.ShowDialog();
+        }
+
+        //尺吋大小
+        private void btnSize_Click(object sender, EventArgs e)
+        {
+            FrmProductSize f = new FrmProductSize(cProd);
+            f.ShowDialog();
+        }
+
+        //洗滌方式
+        private void btnWashing_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //庫存量
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
