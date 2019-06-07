@@ -95,7 +95,7 @@ namespace UI_JA_Members
                     {
                         this.Show();
                     };
-                    fancyMain.ShowDialog();
+                    fancyMain.Show();
                 }
                 else { MessageBox.Show("帳號密碼錯誤"); }
             }
@@ -224,15 +224,12 @@ namespace UI_JA_Members
             else { MessageBox.Show("資料錯誤"); }
         }
 
-        private void UserMain_Load(object sender, EventArgs e)
-        {
-            bunifuFormFadeTransition1.ShowAsyc(this);
-        }
+
 
         private void button9_Click(object sender, EventArgs e)
         {
             this.textBox1.Text = "Jay";
-            this.textBox2.Text = "fYWjHUNa";
+            this.textBox2.Text = "222";
         }
 
         private void button2_Click(object sender, EventArgs e)

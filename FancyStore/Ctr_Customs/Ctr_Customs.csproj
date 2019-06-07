@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -52,7 +55,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AL_ProductInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AL_ProductInfo.Designer.cs">
+      <DependentUpon>AL_ProductInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="JA_EmailWindows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JA_EmailWindows.Designer.cs">
+      <DependentUpon>JA_EmailWindows.cs</DependentUpon>
+    </Compile>
     <Compile Include="img.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,6 +91,24 @@
     <Compile Include="JA_MemberList.designer.cs">
       <DependentUpon>JA_MemberList.cs</DependentUpon>
     </Compile>
+    <Compile Include="JA_OrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JA_OrderDetail.Designer.cs">
+      <DependentUpon>JA_OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JA_OrdersList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JA_OrdersList.Designer.cs">
+      <DependentUpon>JA_OrdersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetailList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderDetailList.Designer.cs">
+      <DependentUpon>OrderDetailList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -84,6 +117,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AL_ProductInfo.resx">
+      <DependentUpon>AL_ProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="img.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -98,6 +134,15 @@
     <EmbeddedResource Include="JA_MemberList.resx">
       <DependentUpon>JA_MemberList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JA_OrderDetail.resx">
+      <DependentUpon>JA_OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JA_OrdersList.resx">
+      <DependentUpon>JA_OrdersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetailList.resx">
+      <DependentUpon>OrderDetailList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,6 +152,10 @@
     <ProjectReference Include="..\Cls_Utility\Cls_Utility.csproj">
       <Project>{01638142-40E6-4C12-AE36-61706EF7D382}</Project>
       <Name>Cls_Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI_AL_ProductDetail\UI_AL_ProductDetail.csproj">
+      <Project>{1c1d682b-9d4f-411a-80fe-9479947d40d7}</Project>
+      <Name>UI_AL_ProductDetail</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

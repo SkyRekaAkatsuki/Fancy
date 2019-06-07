@@ -37,6 +37,7 @@
       <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
 
+
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -47,8 +48,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -101,6 +104,12 @@
     <Compile Include="Loading.Designer.cs">
       <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdersSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersSearch.Designer.cs">
+      <DependentUpon>OrdersSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDetail.cs">
@@ -108,6 +117,12 @@
     </Compile>
     <Compile Include="UserDetail.Designer.cs">
       <DependentUpon>UserDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="統計.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="統計.Designer.cs">
+      <DependentUpon>統計.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AllMemberList.resx">
       <DependentUpon>AllMemberList.cs</DependentUpon>
@@ -131,6 +146,9 @@
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrdersSearch.resx">
+      <DependentUpon>OrdersSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -142,6 +160,9 @@
     </Compile>
     <EmbeddedResource Include="UserDetail.resx">
       <DependentUpon>UserDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="統計.resx">
+      <DependentUpon>統計.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\DB_Fancy.City.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Region.datasource" />

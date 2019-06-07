@@ -20,7 +20,9 @@
         <EntityTypeShape EntityType="FancyStoreModel.OrderHeader" Width="1.5" PointX="10.5" PointY="28.5" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.OrderStatusList" Width="1.5" PointX="8.25" PointY="28.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.PayMethod" Width="1.5" PointX="8.25" PointY="30.875" IsExpanded="true" />
+
         <EntityTypeShape EntityType="FancyStoreModel.Photo" Width="1.5" PointX="4.5" PointY="15.875" IsExpanded="true" />
+
         <EntityTypeShape EntityType="FancyStoreModel.ProductColor" Width="1.5" PointX="9.75" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.ProductEvaluation" Width="1.75" PointX="9.75" PointY="21.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FancyStoreModel.ProductPhoto" Width="1.5" PointX="10.25" PointY="15" IsExpanded="true" />
@@ -73,6 +75,7 @@
         <AssociationConnector Association="FancyStoreModel.FK_ProductSize_Products" />
         <AssociationConnector Association="FancyStoreModel.FK_ProductStock_Products" />
         <AssociationConnector Association="FancyStoreModel.FK_ProductWashing_Products" />
+
         <EntityTypeShape EntityType="FancyStoreModel.VW_EW_CategorySML" Width="1.5" PointX="0.875" PointY="14.125" />
         <EntityTypeShape EntityType="FancyStoreModel.VW_EW_OrderDetail" Width="2.125" PointX="0.75" PointY="0.75" />
       </Diagram>

@@ -54,6 +54,10 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Gender = new System.Windows.Forms.ComboBox();
+            this.jA_Input4 = new UI_JA_Members.JA_Input();
+            this.jA_Input3 = new UI_JA_Members.JA_Input();
+            this.jA_Input2 = new UI_JA_Members.JA_Input();
+            this.jA_Input1 = new UI_JA_Members.JA_Input();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -77,11 +81,6 @@
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
-            this.jA_Input4 = new UI_JA_Members.JA_Input();
-            this.jA_Input3 = new UI_JA_Members.JA_Input();
-            this.jA_Input2 = new UI_JA_Members.JA_Input();
-            this.jA_Input1 = new UI_JA_Members.JA_Input();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Login_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -298,11 +297,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("qtquickcontrols", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(109, 296);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 25);
+            this.label1.Size = new System.Drawing.Size(82, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Fancy";
             // 
@@ -367,6 +366,46 @@
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(121, 20);
             this.Gender.TabIndex = 47;
+            // 
+            // jA_Input4
+            // 
+            this.jA_Input4.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input4.Location = new System.Drawing.Point(40, 308);
+            this.jA_Input4.Name = "jA_Input4";
+            this.jA_Input4.Size = new System.Drawing.Size(130, 49);
+            this.jA_Input4.TabIndex = 18;
+            this.jA_Input4.Text = "手機";
+            this.jA_Input4.輸入塊字串 = "";
+            // 
+            // jA_Input3
+            // 
+            this.jA_Input3.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input3.Location = new System.Drawing.Point(40, 249);
+            this.jA_Input3.Name = "jA_Input3";
+            this.jA_Input3.Size = new System.Drawing.Size(264, 49);
+            this.jA_Input3.TabIndex = 17;
+            this.jA_Input3.Text = "信箱";
+            this.jA_Input3.輸入塊字串 = "";
+            // 
+            // jA_Input2
+            // 
+            this.jA_Input2.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input2.Location = new System.Drawing.Point(40, 194);
+            this.jA_Input2.Name = "jA_Input2";
+            this.jA_Input2.Size = new System.Drawing.Size(264, 49);
+            this.jA_Input2.TabIndex = 16;
+            this.jA_Input2.Text = "密碼";
+            this.jA_Input2.輸入塊字串 = "";
+            // 
+            // jA_Input1
+            // 
+            this.jA_Input1.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input1.Location = new System.Drawing.Point(40, 124);
+            this.jA_Input1.Name = "jA_Input1";
+            this.jA_Input1.Size = new System.Drawing.Size(264, 49);
+            this.jA_Input1.TabIndex = 15;
+            this.jA_Input1.Text = "帳號";
+            this.jA_Input1.輸入塊字串 = "";
             // 
             // label5
             // 
@@ -600,50 +639,6 @@
             this.timer4.Interval = 10;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
-            // bunifuFormFadeTransition1
-            // 
-            this.bunifuFormFadeTransition1.Delay = 1;
-            // 
-            // jA_Input4
-            // 
-            this.jA_Input4.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input4.Location = new System.Drawing.Point(40, 308);
-            this.jA_Input4.Name = "jA_Input4";
-            this.jA_Input4.Size = new System.Drawing.Size(130, 49);
-            this.jA_Input4.TabIndex = 18;
-            this.jA_Input4.Text = "手機";
-            this.jA_Input4.輸入塊字串 = "";
-            // 
-            // jA_Input3
-            // 
-            this.jA_Input3.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input3.Location = new System.Drawing.Point(40, 249);
-            this.jA_Input3.Name = "jA_Input3";
-            this.jA_Input3.Size = new System.Drawing.Size(264, 49);
-            this.jA_Input3.TabIndex = 17;
-            this.jA_Input3.Text = "信箱";
-            this.jA_Input3.輸入塊字串 = "";
-            // 
-            // jA_Input2
-            // 
-            this.jA_Input2.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input2.Location = new System.Drawing.Point(40, 194);
-            this.jA_Input2.Name = "jA_Input2";
-            this.jA_Input2.Size = new System.Drawing.Size(264, 49);
-            this.jA_Input2.TabIndex = 16;
-            this.jA_Input2.Text = "密碼";
-            this.jA_Input2.輸入塊字串 = "";
-            // 
-            // jA_Input1
-            // 
-            this.jA_Input1.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input1.Location = new System.Drawing.Point(40, 124);
-            this.jA_Input1.Name = "jA_Input1";
-            this.jA_Input1.Size = new System.Drawing.Size(264, 49);
-            this.jA_Input1.TabIndex = 15;
-            this.jA_Input1.Text = "帳號";
-            this.jA_Input1.輸入塊字串 = "";
-            // 
             // UserMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -660,7 +655,6 @@
             this.Name = "UserMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.UserMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Login_panel.ResumeLayout(false);
             this.Login_panel.PerformLayout();
@@ -730,7 +724,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
-        private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
         private System.Windows.Forms.Button button9;
     }
 }

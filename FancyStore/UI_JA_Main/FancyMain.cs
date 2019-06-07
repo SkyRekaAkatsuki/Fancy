@@ -30,7 +30,7 @@ namespace UI_JA_Main
            }));
             t.Start();
            
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
             InitializeComponent();
 
             if (data.Admin) { button10.Visible = true; }
@@ -118,35 +118,45 @@ namespace UI_JA_Main
         bool df = true;
         private void button8_Click(object sender, EventArgs e)
         {
-            if (df)
+            try
             {
-                UserDetail detail = new UserDetail();
-                detail.Shown += (s, ee) =>
+                if (df)
                 {
-                    detail.Left = (this.Left + this.Width) - detail.Width;
-                    detail.Top = this.Top;
-                    TopMost = false;
-                    Timer t = new Timer();
-                    t.Interval = 10;
-                    t.Start();
-                    int dl = 0;
-                    t.Tick += delegate
+                    UserDetail detail = new UserDetail();
+                    detail.Show();
+                    detail.Shown += (s, ee) =>
                     {
-                        if (dl <= 450)
+                        detail.Left = (this.Left + this.Width) - detail.Width;
+                        detail.Top = this.Top;
+                        TopMost = false;
+                        Timer t = new Timer();
+                        t.Interval = 10;
+                        t.Start();
+                        int dl = 0;
+                        t.Tick += delegate
                         {
-                            detail.Left += 25;
-                            dl += 25;
-                        }
-                        else { t.Stop(); dl = detail.Left; df = false; }
+                            if (dl <= 450)
+                            {
+                                detail.Left += 25;
+                                dl += 25;
+                            }
+                            else { t.Stop(); dl = detail.Left; df = false; }
+                        };
                     };
-                };
-                detail.關閉了 += delegate
-                {
-                    df = true;
-                    this.TopMost = true;
-                };
-                detail.Show();
+                    detail.關閉了 += delegate
+                    {
+                        df = true;
+                        this.TopMost = true;
+                    };
+
+                }
             }
+            catch (Exception x)
+            {
+
+                MessageBox.Show(x.Message);
+            }
+
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -164,12 +174,14 @@ namespace UI_JA_Main
         {
             AllMemberList allMemberList = new AllMemberList();
             this.TopMost = false;
-            allMemberList.Show();
+            allMemberList.ShowDialog();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+       async private void button11_Click(object sender, EventArgs e)
         {
-
+            OrdersSearch ordersSearch = new OrdersSearch();
+            this.TopMost = false;
+            await Task.Run(()=>ordersSearch.ShowDialog());
         }
 
         private void button9_Click(object sender, EventArgs e)

@@ -17,7 +17,7 @@ namespace UI_JA_Main
             InitializeComponent();
             int int_tim = 0;
             Timer tim = new Timer();
-            tim.Interval = 500;
+            tim.Interval = 200;
             tim.Tick += (sender, e) => {
                 int_tim++;
                 if (int_tim > 3)

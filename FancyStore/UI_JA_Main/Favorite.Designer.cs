@@ -44,13 +44,13 @@
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(575, 401);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(599, 401);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(30, 6);
+            this.checkBox1.Location = new System.Drawing.Point(33, 6);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(77, 16);
             this.checkBox1.TabIndex = 1;
@@ -60,7 +60,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(162, 6);
+            this.checkBox2.Location = new System.Drawing.Point(197, 6);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(77, 16);
             this.checkBox2.TabIndex = 1;
@@ -70,7 +70,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(294, 6);
+            this.checkBox3.Location = new System.Drawing.Point(361, 6);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(77, 16);
             this.checkBox3.TabIndex = 1;
@@ -80,7 +80,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(426, 6);
+            this.checkBox4.Location = new System.Drawing.Point(525, 6);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(77, 16);
             this.checkBox4.TabIndex = 1;
@@ -91,14 +91,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 461);
+            this.ClientSize = new System.Drawing.Size(659, 461);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Favorite";
             this.Padding = new System.Windows.Forms.Padding(30);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Favorite";
             this.ResumeLayout(false);
             this.PerformLayout();

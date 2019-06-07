@@ -20,16 +20,19 @@ namespace UI_JA_Main
         public AllMemberList()
         {
             InitializeComponent();
+            this.textBox1.Focus();
+            this.textBox1.SelectAll();
+            this.textBox1.Text = "搜尋使用者ID";
             LoadList(Cls_JA_Member.db.Users.ToList());
         }
-        bool IdB ;
+        bool IdB;
         private void button1_Click(object sender, EventArgs e)
         {
             IdB = !IdB;
             if (IdB)
             {
                 this.button1.Image = IconPIc.icons8_up_24;
-                LoadList(Cls_JA_Member.db.Users.OrderByDescending(n=>n.UserID).ToList());
+                LoadList(Cls_JA_Member.db.Users.OrderByDescending(n => n.UserID).ToList());
             }
             else
             {
@@ -54,7 +57,25 @@ namespace UI_JA_Main
             }
         }
 
-
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (this.textBox1.Text == "")
+            {
+                foreach (var item in this.flowLayoutPanel1.Controls)
+                {
+                    ((JA_MemberList)item).Visible = true;
+                }
+                return;
+            }
+            foreach (var item in this.flowLayoutPanel1.Controls)
+            {
+                if (((JA_MemberList)item)._ID == this.textBox1.Text)
+                {
+                    ((JA_MemberList)item).Visible = true;
+                }
+                else { ((JA_MemberList)item).Visible = false; }
+            }
+        }
 
         private void LoadList(List<User> data)
         {
@@ -80,6 +101,7 @@ namespace UI_JA_Main
                     _Enabled = item.Enabled,
                     _PColor = System.Drawing.Color.FromArgb(188, 171, 143),
                     _相片 = q,
+                    _Email = item.Email,
                     Height = 60
                 };
 
@@ -99,13 +121,20 @@ namespace UI_JA_Main
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            統計 chart = new 統計();
+            chart.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             FrmBackMain frmBackMain = new FrmBackMain();
             frmBackMain.Show();
+        }
+
+
+        private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.textBox1.Text="";
         }
     }
 }

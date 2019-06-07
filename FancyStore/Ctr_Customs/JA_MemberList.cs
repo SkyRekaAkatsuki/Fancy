@@ -18,6 +18,7 @@ namespace Ctr_Customs
 
         public event Action 資料更動;
 
+
         //Cls_JA_Members Loginusers = new Cls_JA_Members();
 
         public JA_MemberList()
@@ -69,7 +70,13 @@ namespace Ctr_Customs
             { return this.開通用驗證碼.輸入塊字串; }
             set { this.開通用驗證碼.輸入塊字串 = value; }
         }
-
+        private string Email ;
+        public string _Email
+        {
+            get
+            { return _Email; }
+            set { Email = value; }
+        }
         public bool _權限
         {
             get
@@ -257,6 +264,7 @@ namespace Ctr_Customs
                     
                     MessageBox.Show("成功");
 
+
                     if (資料更動 != null)
                     {
                         資料更動();
@@ -282,6 +290,12 @@ namespace Ctr_Customs
                 }
                 else { MessageBox.Show("失敗"); }
             }
+        }
+
+        private void SEmail_Click(object sender, EventArgs e)
+        {
+            JA_EmailWindows jA_EmailWindows = new JA_EmailWindows();
+            jA_EmailWindows.ShowDialog();
         }
     }
 }
