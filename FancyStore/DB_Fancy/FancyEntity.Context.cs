@@ -58,5 +58,6 @@ namespace DB_Fancy
         public virtual DbSet<Washing> Washings { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<VW_EW_CategorySML> VW_EW_CategorySML { get; set; }
+        public virtual DbSet<VW_EW_OrderDetail> VW_EW_OrderDetail { get; set; }
     }
 }

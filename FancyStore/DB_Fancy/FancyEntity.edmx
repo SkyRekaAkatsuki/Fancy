@@ -340,6 +340,33 @@
           <Property Name="CategorySID" Type="int" Nullable="false" />
           <Property Name="CategoryName" Type="nvarchar" MaxLength="62" />
         </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'FancyStore.dbo.VW_EW_OrderDetail' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="VW_EW_OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ColorName" />
+            <PropertyRef Name="SizeName" />
+            <PropertyRef Name="StockQTY" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductColorID" />
+            <PropertyRef Name="ProductSizeID" />
+            <PropertyRef Name="UnitPrice" />
+          </Key>
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ColorName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="SizeName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="OrderQTY" Type="int" />
+          <Property Name="StockQTY" Type="int" Nullable="false" />
+          <Property Name="Balance" Type="int" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ProductColorID" Type="int" Nullable="false" />
+          <Property Name="ProductSizeID" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="int" />
+        </EntityType>
         <Association Name="FK_CategoryM_CategoryL">
           <End Role="CategoryLarge" Type="Self.CategoryLarge" Multiplicity="1" />
           <End Role="CategoryMiddle" Type="Self.CategoryMiddle" Multiplicity="*" />
@@ -810,6 +837,22 @@
     [VW_EW_CategorySML].[CategorySID] AS [CategorySID], 
     [VW_EW_CategorySML].[CategoryName] AS [CategoryName]
     FROM [dbo].[VW_EW_CategorySML] AS [VW_EW_CategorySML]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_EW_OrderDetail" EntityType="Self.VW_EW_OrderDetail" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_EW_OrderDetail].[OrderID] AS [OrderID], 
+    [VW_EW_OrderDetail].[ProductName] AS [ProductName], 
+    [VW_EW_OrderDetail].[ColorName] AS [ColorName], 
+    [VW_EW_OrderDetail].[SizeName] AS [SizeName], 
+    [VW_EW_OrderDetail].[OrderQTY] AS [OrderQTY], 
+    [VW_EW_OrderDetail].[StockQTY] AS [StockQTY], 
+    [VW_EW_OrderDetail].[Balance] AS [Balance], 
+    [VW_EW_OrderDetail].[ProductID] AS [ProductID], 
+    [VW_EW_OrderDetail].[ProductColorID] AS [ProductColorID], 
+    [VW_EW_OrderDetail].[ProductSizeID] AS [ProductSizeID], 
+    [VW_EW_OrderDetail].[UnitPrice] AS [UnitPrice], 
+    [VW_EW_OrderDetail].[Amount] AS [Amount]
+    FROM [dbo].[VW_EW_OrderDetail] AS [VW_EW_OrderDetail]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_CategoryM_CategoryL" Association="Self.FK_CategoryM_CategoryL">
             <End Role="CategoryLarge" EntitySet="CategoryLarge" />
@@ -1824,6 +1867,7 @@
             <End Role="ProductWashing" EntitySet="ProductWashings" />
           </AssociationSet>
           <EntitySet Name="VW_EW_CategorySML" EntityType="FancyStoreModel.VW_EW_CategorySML" />
+          <EntitySet Name="VW_EW_OrderDetail" EntityType="FancyStoreModel.VW_EW_OrderDetail" />
         </EntityContainer>
         <EntityType Name="Product">
           <Key>
@@ -1975,6 +2019,31 @@
           </Key>
           <Property Name="CategorySID" Type="Int32" Nullable="false" />
           <Property Name="CategoryName" Type="String" MaxLength="62" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VW_EW_OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ColorName" />
+            <PropertyRef Name="SizeName" />
+            <PropertyRef Name="StockQTY" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductColorID" />
+            <PropertyRef Name="ProductSizeID" />
+            <PropertyRef Name="UnitPrice" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ColorName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SizeName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OrderQTY" Type="Int32" />
+          <Property Name="StockQTY" Type="Int32" Nullable="false" />
+          <Property Name="Balance" Type="Int32" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductColorID" Type="Int32" Nullable="false" />
+          <Property Name="ProductSizeID" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2345,6 +2414,24 @@
               <MappingFragment StoreEntitySet="VW_EW_CategorySML">
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
                 <ScalarProperty Name="CategorySID" ColumnName="CategorySID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_EW_OrderDetail">
+            <EntityTypeMapping TypeName="FancyStoreModel.VW_EW_OrderDetail">
+              <MappingFragment StoreEntitySet="VW_EW_OrderDetail">
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="ProductSizeID" ColumnName="ProductSizeID" />
+                <ScalarProperty Name="ProductColorID" ColumnName="ProductColorID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="StockQTY" ColumnName="StockQTY" />
+                <ScalarProperty Name="OrderQTY" ColumnName="OrderQTY" />
+                <ScalarProperty Name="SizeName" ColumnName="SizeName" />
+                <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
