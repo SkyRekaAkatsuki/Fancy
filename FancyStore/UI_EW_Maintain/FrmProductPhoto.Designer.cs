@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductPhoto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnBrowser = new System.Windows.Forms.Button();
@@ -56,8 +56,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.productPhotoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.productPhotoDataGridView = new System.Windows.Forms.DataGridView();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.photoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +63,8 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.photoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,7 +83,7 @@
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -102,9 +102,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel2.Controls.Add(this.productPhotoBindingNavigator);
             this.splitContainer1.Panel2.Controls.Add(this.productPhotoDataGridView);
-            this.splitContainer1.Size = new System.Drawing.Size(778, 584);
-            this.splitContainer1.SplitterDistance = 415;
-            this.splitContainer1.SplitterWidth = 3;
+            this.splitContainer1.Size = new System.Drawing.Size(1037, 730);
+            this.splitContainer1.SplitterDistance = 553;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnInsert
@@ -112,10 +111,11 @@
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnInsert.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(292, 98);
+            this.btnInsert.Location = new System.Drawing.Point(389, 122);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(92, 31);
-            this.btnInsert.TabIndex = 24;
+            this.btnInsert.Size = new System.Drawing.Size(123, 39);
+            this.btnInsert.TabIndex = 1;
             this.btnInsert.Text = "存檔";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -123,10 +123,11 @@
             // btnBrowser
             // 
             this.btnBrowser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnBrowser.Location = new System.Drawing.Point(178, 98);
+            this.btnBrowser.Location = new System.Drawing.Point(237, 122);
+            this.btnBrowser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBrowser.Name = "btnBrowser";
-            this.btnBrowser.Size = new System.Drawing.Size(86, 31);
-            this.btnBrowser.TabIndex = 23;
+            this.btnBrowser.Size = new System.Drawing.Size(115, 39);
+            this.btnBrowser.TabIndex = 0;
             this.btnBrowser.Text = "尋找圖片";
             this.btnBrowser.UseVisualStyleBackColor = false;
             this.btnBrowser.Click += new System.EventHandler(this.btnBrowser_Click);
@@ -134,72 +135,69 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 133);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 166);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(396, 444);
+            this.pictureBox1.Size = new System.Drawing.Size(527, 554);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
             // txtPhotoID
             // 
-            this.txtPhotoID.Location = new System.Drawing.Point(39, 103);
-            this.txtPhotoID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhotoID.Location = new System.Drawing.Point(52, 129);
+            this.txtPhotoID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhotoID.Name = "txtPhotoID";
             this.txtPhotoID.ReadOnly = true;
-            this.txtPhotoID.Size = new System.Drawing.Size(109, 22);
+            this.txtPhotoID.Size = new System.Drawing.Size(144, 25);
             this.txtPhotoID.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 107);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(20, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 12);
+            this.label1.Size = new System.Drawing.Size(26, 15);
             this.label1.TabIndex = 20;
             this.label1.Text = "ID:";
             // 
             // txtDesc
             // 
             this.txtDesc.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtDesc.Location = new System.Drawing.Point(9, 29);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDesc.Location = new System.Drawing.Point(12, 36);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.ReadOnly = true;
             this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtDesc.Size = new System.Drawing.Size(375, 66);
+            this.txtDesc.Size = new System.Drawing.Size(499, 82);
             this.txtDesc.TabIndex = 19;
             // 
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(100, 9);
-            this.lblProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProductName.Location = new System.Drawing.Point(133, 11);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(33, 12);
+            this.lblProductName.Size = new System.Drawing.Size(41, 15);
             this.lblProductName.TabIndex = 18;
             this.lblProductName.Text = "label2";
             // 
             // lblProductID
             // 
             this.lblProductID.AutoSize = true;
-            this.lblProductID.Location = new System.Drawing.Point(10, 9);
-            this.lblProductID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProductID.Location = new System.Drawing.Point(13, 11);
             this.lblProductID.Name = "lblProductID";
-            this.lblProductID.Size = new System.Drawing.Size(33, 12);
+            this.lblProductID.Size = new System.Drawing.Size(41, 15);
             this.lblProductID.TabIndex = 17;
             this.lblProductID.Text = "label1";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 235);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 294);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(335, 339);
+            this.pictureBox2.Size = new System.Drawing.Size(446, 423);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -225,14 +223,14 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.productPhotoBindingNavigatorSaveItem});
-            this.productPhotoBindingNavigator.Location = new System.Drawing.Point(14, 9);
+            this.productPhotoBindingNavigator.Location = new System.Drawing.Point(19, 11);
             this.productPhotoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.productPhotoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.productPhotoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.productPhotoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productPhotoBindingNavigator.Name = "productPhotoBindingNavigator";
             this.productPhotoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productPhotoBindingNavigator.Size = new System.Drawing.Size(265, 27);
+            this.productPhotoBindingNavigator.Size = new System.Drawing.Size(283, 27);
             this.productPhotoBindingNavigator.TabIndex = 1;
             this.productPhotoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -254,7 +252,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(27, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(34, 24);
             this.bindingNavigatorCountItem.Text = "/{0}";
             this.bindingNavigatorCountItem.ToolTipText = "項目總數";
             // 
@@ -296,7 +294,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "位置";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(49, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "目前的位置";
             // 
@@ -352,22 +350,14 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.productPhotoDataGridView.DataSource = this.productPhotoBindingSource;
-            this.productPhotoDataGridView.Location = new System.Drawing.Point(10, 38);
-            this.productPhotoDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.productPhotoDataGridView.Location = new System.Drawing.Point(13, 48);
+            this.productPhotoDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.productPhotoDataGridView.Name = "productPhotoDataGridView";
             this.productPhotoDataGridView.ReadOnly = true;
             this.productPhotoDataGridView.RowTemplate.Height = 27;
-            this.productPhotoDataGridView.Size = new System.Drawing.Size(335, 189);
+            this.productPhotoDataGridView.Size = new System.Drawing.Size(447, 236);
             this.productPhotoDataGridView.TabIndex = 0;
             this.productPhotoDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productPhotoDataGridView_CellClick);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // photoBindingSource
-            // 
-            this.photoBindingSource.DataSource = typeof(DB_Fancy.Photo);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -378,10 +368,10 @@
             // 
             // btnDelete
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle1;
             this.btnDelete.HeaderText = "Delete";
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ReadOnly = true;
@@ -429,13 +419,21 @@
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Visible = false;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // photoBindingSource
+            // 
+            this.photoBindingSource.DataSource = typeof(DB_Fancy.Photo);
+            // 
             // FrmProductPhoto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 584);
+            this.ClientSize = new System.Drawing.Size(1037, 730);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmProductPhoto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProductPhoto";

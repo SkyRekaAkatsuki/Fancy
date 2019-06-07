@@ -77,7 +77,7 @@
         <AssociationConnector Association="FancyStoreModel.FK_ProductWashing_Products" />
 
         <EntityTypeShape EntityType="FancyStoreModel.VW_EW_CategorySML" Width="1.5" PointX="0.875" PointY="14.125" />
-        <EntityTypeShape EntityType="FancyStoreModel.VW_EW_OrderDetail" Width="2.125" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FancyStoreModel.VW_EW_OrderDetail" Width="2.125" PointX="2.875" PointY="7" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

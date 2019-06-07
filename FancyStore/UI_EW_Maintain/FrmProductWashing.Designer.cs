@@ -1,6 +1,6 @@
 ﻿namespace UI_EW_Maintain
 {
-    partial class FrmProductSize
+    partial class FrmProductWashing
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductSize));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.cbSize = new System.Windows.Forms.ComboBox();
-            this.sizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductWashing));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.cbWashing = new System.Windows.Forms.ComboBox();
+            this.washingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.lblProductName = new System.Windows.Forms.Label();
             this.lblProductID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.productSizeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.productWashingBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.productSizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productWashingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -52,61 +52,59 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.productSizeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.productSizeDataGridView = new System.Windows.Forms.DataGridView();
+            this.productWashingBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.productWashingDataGridView = new System.Windows.Forms.DataGridView();
+            this.washingBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.SizeName = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.sizeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.WashingName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.washingBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productSizeBindingNavigator)).BeginInit();
-            this.productSizeBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productSizeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productSizeDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productWashingBindingNavigator)).BeginInit();
+            this.productWashingBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productWashingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productWashingDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.washingBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbSize
+            // cbWashing
             // 
-            this.cbSize.DataSource = this.sizeBindingSource;
-            this.cbSize.DisplayMember = "SizeName";
-            this.cbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSize.FormattingEnabled = true;
-            this.cbSize.Location = new System.Drawing.Point(131, 129);
-            this.cbSize.Margin = new System.Windows.Forms.Padding(4);
-            this.cbSize.Name = "cbSize";
-            this.cbSize.Size = new System.Drawing.Size(112, 23);
-            this.cbSize.TabIndex = 0;
-            this.cbSize.ValueMember = "SizeID";
+            this.cbWashing.DataSource = this.washingBindingSource;
+            this.cbWashing.DisplayMember = "WashingName";
+            this.cbWashing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbWashing.FormattingEnabled = true;
+            this.cbWashing.Location = new System.Drawing.Point(93, 128);
+            this.cbWashing.Margin = new System.Windows.Forms.Padding(4);
+            this.cbWashing.Name = "cbWashing";
+            this.cbWashing.Size = new System.Drawing.Size(517, 23);
+            this.cbWashing.TabIndex = 0;
+            this.cbWashing.ValueMember = "WashingID";
             // 
-            // sizeBindingSource
+            // washingBindingSource
             // 
-            this.sizeBindingSource.DataSource = typeof(DB_Fancy.Size);
+            this.washingBindingSource.DataSource = typeof(DB_Fancy.Washing);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 134);
+            this.label2.Location = new System.Drawing.Point(15, 131);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 15);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "尺吋大小:";
+            this.label2.TabIndex = 40;
+            this.label2.Text = "洗滌方式:";
             // 
             // btnInsert
             // 
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnInsert.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(344, 121);
+            this.btnInsert.Location = new System.Drawing.Point(642, 120);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(100, 39);
@@ -118,52 +116,52 @@
             // txtDesc
             // 
             this.txtDesc.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtDesc.Location = new System.Drawing.Point(12, 35);
+            this.txtDesc.Location = new System.Drawing.Point(21, 34);
             this.txtDesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.ReadOnly = true;
             this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtDesc.Size = new System.Drawing.Size(508, 82);
-            this.txtDesc.TabIndex = 29;
+            this.txtDesc.TabIndex = 38;
             // 
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(133, 10);
+            this.lblProductName.Location = new System.Drawing.Point(142, 9);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(41, 15);
-            this.lblProductName.TabIndex = 28;
+            this.lblProductName.TabIndex = 37;
             this.lblProductName.Text = "label2";
             // 
             // lblProductID
             // 
             this.lblProductID.AutoSize = true;
-            this.lblProductID.Location = new System.Drawing.Point(13, 10);
+            this.lblProductID.Location = new System.Drawing.Point(22, 9);
             this.lblProductID.Name = "lblProductID";
             this.lblProductID.Size = new System.Drawing.Size(41, 15);
-            this.lblProductID.TabIndex = 27;
+            this.lblProductID.TabIndex = 36;
             this.lblProductID.Text = "label1";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.productSizeBindingNavigator);
-            this.panel1.Controls.Add(this.productSizeDataGridView);
-            this.panel1.Location = new System.Drawing.Point(7, 167);
+            this.panel1.Controls.Add(this.productWashingBindingNavigator);
+            this.panel1.Controls.Add(this.productWashingDataGridView);
+            this.panel1.Location = new System.Drawing.Point(9, 163);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(522, 448);
-            this.panel1.TabIndex = 36;
+            this.panel1.Size = new System.Drawing.Size(740, 454);
+            this.panel1.TabIndex = 42;
             // 
-            // productSizeBindingNavigator
+            // productWashingBindingNavigator
             // 
-            this.productSizeBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.productSizeBindingNavigator.BindingSource = this.productSizeBindingSource;
-            this.productSizeBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.productSizeBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.productSizeBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
-            this.productSizeBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.productSizeBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productWashingBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.productWashingBindingNavigator.BindingSource = this.productWashingBindingSource;
+            this.productWashingBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.productWashingBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.productWashingBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.productWashingBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.productWashingBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -175,17 +173,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.productSizeBindingNavigatorSaveItem});
-            this.productSizeBindingNavigator.Location = new System.Drawing.Point(15, 8);
-            this.productSizeBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.productSizeBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.productSizeBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.productSizeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.productSizeBindingNavigator.Name = "productSizeBindingNavigator";
-            this.productSizeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productSizeBindingNavigator.Size = new System.Drawing.Size(284, 27);
-            this.productSizeBindingNavigator.TabIndex = 37;
-            this.productSizeBindingNavigator.Text = "bindingNavigator1";
+            this.productWashingBindingNavigatorSaveItem});
+            this.productWashingBindingNavigator.Location = new System.Drawing.Point(13, 6);
+            this.productWashingBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.productWashingBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.productWashingBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.productWashingBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.productWashingBindingNavigator.Name = "productWashingBindingNavigator";
+            this.productWashingBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.productWashingBindingNavigator.Size = new System.Drawing.Size(284, 27);
+            this.productWashingBindingNavigator.TabIndex = 43;
+            this.productWashingBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -197,9 +195,9 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "加入新的";
             // 
-            // productSizeBindingSource
+            // productWashingBindingSource
             // 
-            this.productSizeBindingSource.DataSource = typeof(DB_Fancy.ProductSize);
+            this.productWashingBindingSource.DataSource = typeof(DB_Fancy.ProductWashing);
             // 
             // bindingNavigatorCountItem
             // 
@@ -278,75 +276,77 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // productSizeBindingNavigatorSaveItem
+            // productWashingBindingNavigatorSaveItem
             // 
-            this.productSizeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.productSizeBindingNavigatorSaveItem.Enabled = false;
-            this.productSizeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("productSizeBindingNavigatorSaveItem.Image")));
-            this.productSizeBindingNavigatorSaveItem.Name = "productSizeBindingNavigatorSaveItem";
-            this.productSizeBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
-            this.productSizeBindingNavigatorSaveItem.Text = "儲存資料";
+            this.productWashingBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.productWashingBindingNavigatorSaveItem.Enabled = false;
+            this.productWashingBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("productWashingBindingNavigatorSaveItem.Image")));
+            this.productWashingBindingNavigatorSaveItem.Name = "productWashingBindingNavigatorSaveItem";
+            this.productWashingBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.productWashingBindingNavigatorSaveItem.Text = "儲存資料";
             // 
-            // productSizeDataGridView
+            // productWashingDataGridView
             // 
-            this.productSizeDataGridView.AllowUserToAddRows = false;
-            this.productSizeDataGridView.AllowUserToDeleteRows = false;
-            this.productSizeDataGridView.AutoGenerateColumns = false;
-            this.productSizeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productSizeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productWashingDataGridView.AllowUserToAddRows = false;
+            this.productWashingDataGridView.AllowUserToDeleteRows = false;
+            this.productWashingDataGridView.AutoGenerateColumns = false;
+            this.productWashingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productWashingDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.btnDelete,
-            this.SizeName,
+            this.WashingName,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.productSizeDataGridView.DataSource = this.productSizeBindingSource;
-            this.productSizeDataGridView.Location = new System.Drawing.Point(12, 41);
-            this.productSizeDataGridView.Name = "productSizeDataGridView";
-            this.productSizeDataGridView.ReadOnly = true;
-            this.productSizeDataGridView.RowTemplate.Height = 27;
-            this.productSizeDataGridView.Size = new System.Drawing.Size(501, 396);
-            this.productSizeDataGridView.TabIndex = 0;
-            this.productSizeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productSizeDataGridView_CellClick);
+            this.dataGridViewTextBoxColumn6});
+            this.productWashingDataGridView.DataSource = this.productWashingBindingSource;
+            this.productWashingDataGridView.Location = new System.Drawing.Point(8, 40);
+            this.productWashingDataGridView.Name = "productWashingDataGridView";
+            this.productWashingDataGridView.ReadOnly = true;
+            this.productWashingDataGridView.RowTemplate.Height = 27;
+            this.productWashingDataGridView.Size = new System.Drawing.Size(724, 405);
+            this.productWashingDataGridView.TabIndex = 0;
+            this.productWashingDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productWashingDataGridView_CellClick);
+            // 
+            // washingBindingSource1
+            // 
+            this.washingBindingSource1.DataSource = typeof(DB_Fancy.Washing);
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductSizeID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ProductSizeID";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductWashingID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ProductWashingID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 80;
             // 
             // btnDelete
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle4;
+            this.btnDelete.FillWeight = 70F;
             this.btnDelete.HeaderText = "Delete";
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ReadOnly = true;
+            this.btnDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseColumnTextForButtonValue = true;
             this.btnDelete.Width = 70;
             // 
-            // SizeName
+            // WashingName
             // 
-            this.SizeName.DataPropertyName = "SizeID";
-            this.SizeName.DataSource = this.sizeBindingSource1;
-            this.SizeName.DisplayMember = "SizeName";
-            this.SizeName.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.SizeName.HeaderText = "尺吋大小";
-            this.SizeName.Name = "SizeName";
-            this.SizeName.ReadOnly = true;
-            this.SizeName.ValueMember = "SizeID";
-            // 
-            // sizeBindingSource1
-            // 
-            this.sizeBindingSource1.DataSource = typeof(DB_Fancy.Size);
+            this.WashingName.DataPropertyName = "WashingID";
+            this.WashingName.DataSource = this.washingBindingSource1;
+            this.WashingName.DisplayMember = "WashingName";
+            this.WashingName.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.WashingName.FillWeight = 300F;
+            this.WashingName.HeaderText = "洗滌方式";
+            this.WashingName.Name = "WashingName";
+            this.WashingName.ValueMember = "WashingID";
+            this.WashingName.Width = 400;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -355,79 +355,59 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ProductID";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ProductID";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "SizeID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "SizeID";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ProductID";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "WashingID";
+            this.dataGridViewTextBoxColumn3.HeaderText = "WashingID";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "OrderDetails";
-            this.dataGridViewTextBoxColumn5.HeaderText = "OrderDetails";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Washing";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Washing";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Visible = false;
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Size";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Size";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Product";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Product";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Visible = false;
             // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "ProductStocks";
-            this.dataGridViewTextBoxColumn7.HeaderText = "ProductStocks";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Product";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Product";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // FrmProductSize
+            // FrmProductWashing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 623);
+            this.ClientSize = new System.Drawing.Size(758, 623);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cbSize);
+            this.Controls.Add(this.cbWashing);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.lblProductName);
             this.Controls.Add(this.lblProductID);
-            this.Name = "FrmProductSize";
+            this.Name = "FrmProductWashing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "產品尺吋大小 - FrmProductSize";
-            this.Load += new System.EventHandler(this.FrmProductSize_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).EndInit();
+            this.Text = "洗滌方式 - FrmWashing";
+            this.Load += new System.EventHandler(this.FrmWashing_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.washingBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productSizeBindingNavigator)).EndInit();
-            this.productSizeBindingNavigator.ResumeLayout(false);
-            this.productSizeBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productSizeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productSizeDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productWashingBindingNavigator)).EndInit();
+            this.productWashingBindingNavigator.ResumeLayout(false);
+            this.productWashingBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productWashingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productWashingDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.washingBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,16 +415,16 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbSize;
+        private System.Windows.Forms.ComboBox cbWashing;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label lblProductName;
         private System.Windows.Forms.Label lblProductID;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.BindingNavigator productSizeBindingNavigator;
+        private System.Windows.Forms.BindingNavigator productWashingBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.BindingSource productSizeBindingSource;
+        private System.Windows.Forms.BindingSource productWashingBindingSource;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -455,19 +435,17 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton productSizeBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView productSizeDataGridView;
-        private System.Windows.Forms.BindingSource sizeBindingSource;
+        private System.Windows.Forms.ToolStripButton productWashingBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView productWashingDataGridView;
+        private System.Windows.Forms.BindingSource washingBindingSource;
+        private System.Windows.Forms.BindingSource washingBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
-        private System.Windows.Forms.DataGridViewComboBoxColumn SizeName;
-        private System.Windows.Forms.BindingSource sizeBindingSource1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn WashingName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

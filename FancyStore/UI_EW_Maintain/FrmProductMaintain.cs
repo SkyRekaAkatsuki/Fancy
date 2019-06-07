@@ -219,7 +219,8 @@ namespace UI_EW_Maintain
         //洗滌方式
         private void btnWashing_Click(object sender, EventArgs e)
         {
-
+            FrmProductWashing f = new FrmProductWashing(cProd);
+            f.ShowDialog();
         }
 
         //庫存量

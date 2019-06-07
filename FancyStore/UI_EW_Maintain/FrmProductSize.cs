@@ -68,7 +68,7 @@ namespace UI_EW_Maintain
                 return;
             }
 
-            try   //寫入Photo
+            try   //寫入 ProductSize
             {
                 ProductSize ps = new ProductSize();
 
@@ -119,7 +119,7 @@ namespace UI_EW_Maintain
                         catch (Exception ex)
                         {
                             Debug.WriteLine(ex);
-                            MessageBox.Show("顏色 [刪除] 資料失敗, 請檢查欄位資料後再試一下, 或找系統管理員協助處理 !");
+                            MessageBox.Show("尺吋大小 [刪除] 資料失敗, 請檢查欄位資料後再試一下, 或找系統管理員協助處理 !");
                         }
                     }
                     break;

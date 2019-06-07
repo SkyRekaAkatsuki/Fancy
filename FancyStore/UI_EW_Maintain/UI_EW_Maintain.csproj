@@ -120,6 +120,12 @@
     <Compile Include="FrmSize.Designer.cs">
       <DependentUpon>FrmSize.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductWashing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductWashing.Designer.cs">
+      <DependentUpon>FrmProductWashing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBackMain.resx">
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSize.resx">
       <DependentUpon>FrmSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductWashing.resx">
+      <DependentUpon>FrmProductWashing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
