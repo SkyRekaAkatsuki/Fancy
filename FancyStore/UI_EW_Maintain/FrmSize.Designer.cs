@@ -89,7 +89,7 @@
             this.sizeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.sizeBindingNavigator.Name = "sizeBindingNavigator";
             this.sizeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.sizeBindingNavigator.Size = new System.Drawing.Size(631, 27);
+            this.sizeBindingNavigator.Size = new System.Drawing.Size(609, 27);
             this.sizeBindingNavigator.TabIndex = 0;
             this.sizeBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -253,7 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 432);
+            this.ClientSize = new System.Drawing.Size(609, 426);
             this.Controls.Add(this.sizeDataGridView);
             this.Controls.Add(this.sizeBindingNavigator);
             this.Name = "FrmSize";

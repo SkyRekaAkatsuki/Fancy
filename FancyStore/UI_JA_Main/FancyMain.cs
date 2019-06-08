@@ -182,6 +182,7 @@ namespace UI_JA_Main
         {
             OrdersSearch ordersSearch = new OrdersSearch();
             ordersSearch.ShowDialog();
+
         }
 
         private void button9_Click(object sender, EventArgs e)
