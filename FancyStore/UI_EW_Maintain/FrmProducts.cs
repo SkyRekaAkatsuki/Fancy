@@ -69,7 +69,6 @@ namespace UI_EW_Maintain
                 Debug.WriteLine(ex);
             }
             productBindingSource.DataSource = q.ToList();
-            productDataGridView.DataSource = null;
             productDataGridView.DataSource = productBindingSource;
         }
 

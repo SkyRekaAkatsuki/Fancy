@@ -90,6 +90,12 @@
     <Compile Include="FrmColor.Designer.cs">
       <DependentUpon>FrmColor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInOut.Designer.cs">
+      <DependentUpon>FrmInOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProductColor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmColor.resx">
       <DependentUpon>FrmColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInOut.resx">
+      <DependentUpon>FrmInOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductColor.resx">
       <DependentUpon>FrmProductColor.cs</DependentUpon>

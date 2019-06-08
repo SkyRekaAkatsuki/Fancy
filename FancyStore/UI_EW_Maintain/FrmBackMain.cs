@@ -61,7 +61,8 @@ namespace UI_EW_Maintain
         //上下架
         private void button8_Click(object sender, EventArgs e)
         {
-
+            FrmInOut f = new FrmInOut();
+            f.Show();
         }
         //訂單出貨
         private void button9_Click(object sender, EventArgs e)
