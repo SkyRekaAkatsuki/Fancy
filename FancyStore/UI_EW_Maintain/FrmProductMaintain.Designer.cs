@@ -168,7 +168,7 @@
             // txtProductID
             // 
             this.txtProductID.Location = new System.Drawing.Point(148, 22);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductID.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.ReadOnly = true;
             this.txtProductID.Size = new System.Drawing.Size(97, 25);
@@ -190,7 +190,7 @@
             this.btnInsert.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
             this.btnInsert.Location = new System.Drawing.Point(201, 508);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(189, 79);
             this.btnInsert.TabIndex = 31;
@@ -205,7 +205,7 @@
             this.cbCategoryS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoryS.FormattingEnabled = true;
             this.cbCategoryS.Location = new System.Drawing.Point(148, 258);
-            this.cbCategoryS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCategoryS.Margin = new System.Windows.Forms.Padding(4);
             this.cbCategoryS.Name = "cbCategoryS";
             this.cbCategoryS.Size = new System.Drawing.Size(360, 23);
             this.cbCategoryS.TabIndex = 30;
@@ -218,7 +218,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(148, 444);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(241, 25);
             this.dateTimePicker2.TabIndex = 29;
@@ -226,7 +226,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(148, 404);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(241, 25);
             this.dateTimePicker1.TabIndex = 28;
@@ -234,7 +234,7 @@
             // txtUnitPrice
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(148, 351);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(189, 25);
             this.txtUnitPrice.TabIndex = 27;
@@ -243,7 +243,7 @@
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(148, 102);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -254,7 +254,7 @@
             // txtProductName
             // 
             this.txtProductName.Location = new System.Drawing.Point(148, 62);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(312, 25);
             this.txtProductName.TabIndex = 25;
@@ -327,7 +327,7 @@
             this.cbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSupplier.FormattingEnabled = true;
             this.cbSupplier.Location = new System.Drawing.Point(148, 301);
-            this.cbSupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.cbSupplier.Name = "cbSupplier";
             this.cbSupplier.Size = new System.Drawing.Size(360, 23);
             this.cbSupplier.TabIndex = 37;

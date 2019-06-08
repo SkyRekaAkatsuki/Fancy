@@ -26,8 +26,6 @@ namespace UI_EW_Maintain
             var q = dbContext.VW_EW_CategorySML.ToList();
             cbCategory.DataSource = q;
             cbCategorySName.DataSource = q;
-            var s = dbContext.Suppliers.ToList();
-            cbSupplierName.DataSource = s;
 
             cbCategory.SelectedIndex = -1;  //預設沒有選值
         }
@@ -40,6 +38,9 @@ namespace UI_EW_Maintain
         void ResetData()
         {
             dbContext = new FancyStoreEntities(); //為了能刷新資料
+
+            var s = dbContext.Suppliers.OrderBy(x=>x.SupplierID).ToList();
+            cbSupplierName.DataSource = s;
 
             var q = dbContext.Products.Select(x => x);
 
@@ -68,6 +69,7 @@ namespace UI_EW_Maintain
                 Debug.WriteLine(ex);
             }
             productBindingSource.DataSource = q.ToList();
+            productDataGridView.DataSource = null;
             productDataGridView.DataSource = productBindingSource;
         }
 

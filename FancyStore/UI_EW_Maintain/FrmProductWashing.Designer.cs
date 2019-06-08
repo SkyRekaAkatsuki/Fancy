@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductWashing));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbWashing = new System.Windows.Forms.ComboBox();
             this.washingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -54,10 +54,10 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.productWashingBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.productWashingDataGridView = new System.Windows.Forms.DataGridView();
-            this.washingBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.WashingName = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.washingBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,7 +104,7 @@
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnInsert.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(642, 120);
+            this.btnInsert.Location = new System.Drawing.Point(627, 120);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(100, 39);
@@ -309,10 +309,6 @@
             this.productWashingDataGridView.TabIndex = 0;
             this.productWashingDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productWashingDataGridView_CellClick);
             // 
-            // washingBindingSource1
-            // 
-            this.washingBindingSource1.DataSource = typeof(DB_Fancy.Washing);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductWashingID";
@@ -323,10 +319,10 @@
             // 
             // btnDelete
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle1;
             this.btnDelete.FillWeight = 70F;
             this.btnDelete.HeaderText = "Delete";
             this.btnDelete.Name = "btnDelete";
@@ -345,8 +341,13 @@
             this.WashingName.FillWeight = 300F;
             this.WashingName.HeaderText = "洗滌方式";
             this.WashingName.Name = "WashingName";
+            this.WashingName.ReadOnly = true;
             this.WashingName.ValueMember = "WashingID";
             this.WashingName.Width = 400;
+            // 
+            // washingBindingSource1
+            // 
+            this.washingBindingSource1.DataSource = typeof(DB_Fancy.Washing);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -360,6 +361,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductID";
             this.dataGridViewTextBoxColumn2.HeaderText = "ProductID";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Visible = false;
             // 
             // dataGridViewTextBoxColumn3
@@ -367,6 +369,7 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "WashingID";
             this.dataGridViewTextBoxColumn3.HeaderText = "WashingID";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Visible = false;
             // 
             // dataGridViewTextBoxColumn5
@@ -374,6 +377,7 @@
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Washing";
             this.dataGridViewTextBoxColumn5.HeaderText = "Washing";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Visible = false;
             // 
             // dataGridViewTextBoxColumn6
@@ -381,6 +385,7 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Product";
             this.dataGridViewTextBoxColumn6.HeaderText = "Product";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Visible = false;
             // 
             // FrmProductWashing

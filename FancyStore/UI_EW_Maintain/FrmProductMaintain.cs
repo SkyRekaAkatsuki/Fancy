@@ -29,8 +29,10 @@ namespace UI_EW_Maintain
             //將cbCategory給DataSource
             var q = dbContext.VW_EW_CategorySML;
             vWEWCategorySMLBindingSource.DataSource = q.ToList();
+            this.cbCategoryS.SelectedValue = _clsProd._CategorySID = cProd.CategorySID;
+
             //將cbSupplier給DataSource
-            var s = dbContext.Suppliers;
+            var s = dbContext.Suppliers.OrderBy(x=>x.SupplierID).ToList();
             supplierBindingSource.DataSource = s.ToList();
 
             switch (FormStatus)    //顯示狀態
@@ -38,8 +40,7 @@ namespace UI_EW_Maintain
                 case "C":
                     this.lblStatus.Text = " 新增 ";
                     this.txtProductID.Text = "";
-                    this.cbCategoryS.SelectedValue = cProd.CategorySID;
-                    this.cbSupplier.SelectedValue = 1;
+                    this.cbSupplier.SelectedValue = cProd.SupplierID = 2;
                     break;
                 case "U":
                     this.lblStatus.Text = " 修改 ";
@@ -47,8 +48,7 @@ namespace UI_EW_Maintain
                     this.txtDescription.Text = cProd.Desctiption;
                     this.txtProductName.Text = cProd.ProductName;
                     this.txtUnitPrice.Text = cProd.UnitPrice.ToString();
-                    this.cbCategoryS.SelectedValue = cProd.CategorySID;
-                    this.cbSupplier.SelectedValue = cProd.SupplierID;
+                    this.cbSupplier.SelectedValue = (Object)cProd.SupplierID;
                     this.dateTimePicker1.Text = cProd.ProductInDate.ToString();
                     this.dateTimePicker2.Text = cProd.ProductOutDate.ToString();
                     break;
@@ -104,7 +104,7 @@ namespace UI_EW_Maintain
             cProd.ProductName = this.txtProductName.Text;
             cProd.UnitPrice = int.Parse(this.txtUnitPrice.Text);
             cProd.CategorySID = _clsProd._CategorySID = int.Parse(this.cbCategoryS.SelectedValue.ToString());
-            cProd.SupplierID = int.Parse(this.cbSupplier.SelectedValue.ToString());
+            cProd.SupplierID = (int)cbSupplier.SelectedValue;
             cProd.ProductInDate = DateTime.Parse(this.dateTimePicker1.Text);
             cProd.ProductOutDate = DateTime.Parse(this.dateTimePicker2.Text);
             cProd.CreateDate = DateTime.Now;
@@ -120,8 +120,12 @@ namespace UI_EW_Maintain
                 try
                 {
                     //MessageBox.Show($"cProd.ProductID => ID: {cProd.ProductID} ");
+                    MessageBox.Show($"insert 前0 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
                     dbContext.Products.Add(cProd);
+                    MessageBox.Show($"insert 前1 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
+               
                     this.dbContext.SaveChanges();
+                    MessageBox.Show($"insert 後 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
                     int i = cProd.ProductID;  //取得資料庫自增ID
                     MessageBox.Show($"產品 [新增] 資料成功 => ID: {i} ");
                     txtProductID.Text = cProd.ProductID.ToString();
@@ -150,7 +154,9 @@ namespace UI_EW_Maintain
                     q.ProductInDate = cProd.ProductInDate;
                     q.ProductOutDate = cProd.ProductOutDate;
 
+                    MessageBox.Show($"update 前 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
                     this.dbContext.SaveChanges();
+                    MessageBox.Show($"update 後 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
                     MessageBox.Show($"產品: {cProd.ProductID}  [修改] 資料成功 !");
                 }
                 catch (Exception ex)
@@ -192,7 +198,9 @@ namespace UI_EW_Maintain
 
         private void FrmProductMaintain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            MessageBox.Show($"close前 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
             dbContext.Dispose();
+            MessageBox.Show($"close後 => {cbSupplier.SelectedValue}  => {cProd.SupplierID}  ");
         }
 
         //圖片
