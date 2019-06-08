@@ -18,6 +18,7 @@ namespace UI_EW_Maintain
         {
             InitializeComponent();
         }
+
         public FrmProductSize(Product prod)
         {
             InitializeComponent();

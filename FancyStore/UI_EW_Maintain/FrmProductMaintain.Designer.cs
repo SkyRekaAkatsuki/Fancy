@@ -54,13 +54,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbSupplier = new System.Windows.Forms.ComboBox();
-            this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.vWEWSupplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vWEWCategorySMLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWEWSupplierBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -322,7 +322,7 @@
             // 
             // cbSupplier
             // 
-            this.cbSupplier.DataSource = this.supplierBindingSource;
+            this.cbSupplier.DataSource = this.vWEWSupplierBindingSource;
             this.cbSupplier.DisplayMember = "SupplierName";
             this.cbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSupplier.FormattingEnabled = true;
@@ -332,10 +332,6 @@
             this.cbSupplier.Size = new System.Drawing.Size(360, 23);
             this.cbSupplier.TabIndex = 37;
             this.cbSupplier.ValueMember = "SupplierID";
-            // 
-            // supplierBindingSource
-            // 
-            this.supplierBindingSource.DataSource = typeof(DB_Fancy.Supplier);
             // 
             // label9
             // 
@@ -350,6 +346,10 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // vWEWSupplierBindingSource
+            // 
+            this.vWEWSupplierBindingSource.DataSource = typeof(DB_Fancy.VW_EW_Supplier);
             // 
             // FrmProductMaintain
             // 
@@ -384,8 +384,8 @@
             this.Load += new System.EventHandler(this.FrmProductMaintain_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.vWEWCategorySMLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWEWSupplierBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,9 +417,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbSupplier;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.BindingSource supplierBindingSource;
         private System.Windows.Forms.BindingSource vWEWCategorySMLBindingSource;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnPhoto;
+        private System.Windows.Forms.BindingSource vWEWSupplierBindingSource;
     }
 }

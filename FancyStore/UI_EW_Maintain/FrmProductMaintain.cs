@@ -33,7 +33,7 @@ namespace UI_EW_Maintain
 
             //將cbSupplier給DataSource
             var s = dbContext.Suppliers.OrderBy(x=>x.SupplierID).ToList();
-            supplierBindingSource.DataSource = s.ToList();
+            vWEWSupplierBindingSource.DataSource = s.ToList();
 
             switch (FormStatus)    //顯示狀態
             {
@@ -100,6 +100,9 @@ namespace UI_EW_Maintain
             if (!ValidationFields())  //欄位驗證不通過則離開, 不做任何處理
             { return; }
 
+            if (FormStatus == "C")   //新增
+            { cProd = new Product(); }
+
             cProd.Desctiption = this.txtDescription.Text;
             cProd.ProductName = this.txtProductName.Text;
             cProd.UnitPrice = int.Parse(this.txtUnitPrice.Text);
@@ -119,13 +122,10 @@ namespace UI_EW_Maintain
 
                 try
                 {
-                    //MessageBox.Show($"cProd.ProductID => ID: {cProd.ProductID} ");
-                    MessageBox.Show($"insert 前0 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
                     dbContext.Products.Add(cProd);
-                    MessageBox.Show($"insert 前1 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
                
                     this.dbContext.SaveChanges();
-                    MessageBox.Show($"insert 後 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
+
                     int i = cProd.ProductID;  //取得資料庫自增ID
                     MessageBox.Show($"產品 [新增] 資料成功 => ID: {i} ");
                     txtProductID.Text = cProd.ProductID.ToString();
@@ -154,9 +154,7 @@ namespace UI_EW_Maintain
                     q.ProductInDate = cProd.ProductInDate;
                     q.ProductOutDate = cProd.ProductOutDate;
 
-                    MessageBox.Show($"update 前 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
                     this.dbContext.SaveChanges();
-                    MessageBox.Show($"update 後 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
                     MessageBox.Show($"產品: {cProd.ProductID}  [修改] 資料成功 !");
                 }
                 catch (Exception ex)
@@ -198,9 +196,7 @@ namespace UI_EW_Maintain
 
         private void FrmProductMaintain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show($"close前 => {cbSupplier.SelectedValue} => {cProd.SupplierID} ");
             dbContext.Dispose();
-            MessageBox.Show($"close後 => {cbSupplier.SelectedValue}  => {cProd.SupplierID}  ");
         }
 
         //圖片
@@ -234,7 +230,8 @@ namespace UI_EW_Maintain
         //庫存量
         private void btnStock_Click(object sender, EventArgs e)
         {
-
+            FrmProductStock f = new FrmProductStock(cProd);
+            f.ShowDialog();
         }
     }
 }

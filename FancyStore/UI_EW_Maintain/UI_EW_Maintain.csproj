@@ -126,6 +126,12 @@
     <Compile Include="FrmProductSize.Designer.cs">
       <DependentUpon>FrmProductSize.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductStock.Designer.cs">
+      <DependentUpon>FrmProductStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSize.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductSize.resx">
       <DependentUpon>FrmProductSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductStock.resx">
+      <DependentUpon>FrmProductStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSize.resx">
       <DependentUpon>FrmSize.cs</DependentUpon>
