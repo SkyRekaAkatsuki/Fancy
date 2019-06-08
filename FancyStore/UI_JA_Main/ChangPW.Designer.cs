@@ -51,7 +51,7 @@
             this.label1.BackColor = System.Drawing.Color.Gray;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(79, 39);
+            this.label1.Location = new System.Drawing.Point(83, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 23);
             this.label1.TabIndex = 17;
@@ -63,7 +63,7 @@
             // 
             this.驗證碼_P.Controls.Add(this.驗證碼_B);
             this.驗證碼_P.Controls.Add(this.jA_Input4);
-            this.驗證碼_P.Location = new System.Drawing.Point(80, 360);
+            this.驗證碼_P.Location = new System.Drawing.Point(84, 420);
             this.驗證碼_P.Name = "驗證碼_P";
             this.驗證碼_P.Size = new System.Drawing.Size(200, 100);
             this.驗證碼_P.TabIndex = 16;
@@ -95,7 +95,7 @@
             // 
             this.新密碼_P.Controls.Add(this.jA_Input3);
             this.新密碼_P.Controls.Add(this.新密碼_B);
-            this.新密碼_P.Location = new System.Drawing.Point(80, 360);
+            this.新密碼_P.Location = new System.Drawing.Point(84, 420);
             this.新密碼_P.Name = "新密碼_P";
             this.新密碼_P.Size = new System.Drawing.Size(200, 100);
             this.新密碼_P.TabIndex = 15;
@@ -128,7 +128,7 @@
             this.驗證舊密碼_P.Controls.Add(this.jA_Input2);
             this.驗證舊密碼_P.Controls.Add(this.jA_Input1);
             this.驗證舊密碼_P.Controls.Add(this.B_更改密碼);
-            this.驗證舊密碼_P.Location = new System.Drawing.Point(80, 85);
+            this.驗證舊密碼_P.Location = new System.Drawing.Point(84, 55);
             this.驗證舊密碼_P.Name = "驗證舊密碼_P";
             this.驗證舊密碼_P.Size = new System.Drawing.Size(200, 159);
             this.驗證舊密碼_P.TabIndex = 14;
@@ -174,7 +174,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(359, 319);
+            this.ClientSize = new System.Drawing.Size(359, 244);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.新密碼_P);
             this.Controls.Add(this.驗證舊密碼_P);
@@ -184,7 +184,7 @@
             this.MinimizeBox = false;
             this.Name = "ChangPW";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ChangPW";
+            this.Text = "密碼更改";
             this.驗證碼_P.ResumeLayout(false);
             this.新密碼_P.ResumeLayout(false);
             this.驗證舊密碼_P.ResumeLayout(false);

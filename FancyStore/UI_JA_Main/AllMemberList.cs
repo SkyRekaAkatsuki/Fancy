@@ -136,5 +136,11 @@ namespace UI_JA_Main
         {
             this.textBox1.Text="";
         }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            AdminQuestionReply reply = new AdminQuestionReply();
+            reply.ShowDialog();
+        }
     }
 }

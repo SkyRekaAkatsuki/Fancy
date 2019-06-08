@@ -24,8 +24,6 @@ namespace UI_JA_Main
         {
 
             FancyStoreEntities db = new FancyStoreEntities();
-            RegisterNum.Text = db.Users.AsEnumerable().Count(n =>
-            n.RegistrationDate.ToShortDateString() == DateTime.Now.ToShortDateString()).ToString();
 
             var 每日會員成長 = db.Users.AsEnumerable().GroupBy(n => n.RegistrationDate.ToShortDateString())
             .Select(n => new { 天 = n.Key, 人數 = n.Count() }).ToList();

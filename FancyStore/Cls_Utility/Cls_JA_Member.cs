@@ -14,7 +14,7 @@ namespace Cls_Utility
 
         public static FancyStoreEntities db = new FancyStoreEntities();
         public static int UserID { get; set; }
-
+        public static bool IsAdmin { get; set; }
 
         #region 註冊
         public static bool Register(User NewUser)
@@ -31,7 +31,7 @@ namespace Cls_Utility
                 db.SaveChanges();
                 return true;
             }
-            catch (DbUpdateException x)
+            catch (DbUpdateException)
             {
 
                 throw;
@@ -207,15 +207,12 @@ namespace Cls_Utility
                 var data = db.Users.FirstOrDefault(n => n.UserName == Account);
                 string guid = Guid.NewGuid().ToString("N");
                 byte[] hashPw = Cls_JA_IDo.HashPw(NewPw, guid);
-
                 data.UserPassword = hashPw;
                 data.GUID = guid;
                 db.SaveChanges();
-
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -235,6 +232,40 @@ namespace Cls_Utility
             catch (Exception)
             {
                 return false;
+                throw;
+            }
+        }
+        #endregion
+
+        #region 會員發問
+        public static bool AddQuestion(int orderid,Question Newquestion)
+        {
+            try
+            {
+                db.Questions.Add(Newquestion);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        #endregion
+
+        #region 取消訂單
+        public static bool CancelOrder(int orderid)
+        {
+            try
+            {
+                var data = db.OrderHeaders.FirstOrDefault(n => n.OrderID == orderid);
+                data.OrderStatusID = 3;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }

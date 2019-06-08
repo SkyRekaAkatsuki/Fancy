@@ -10,6 +10,15 @@ using System.Threading.Tasks;
 
 namespace Cls_Utility
 {
+
+    public enum Status
+    {
+        None = 0,
+        開立 = 1,
+        出貨 = 2,
+        取消 = 4,
+        All = 開立 | 出貨 | 取消
+    }
     public class Cls_JA_IDo
     {
         //產生新密碼
