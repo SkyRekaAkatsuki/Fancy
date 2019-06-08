@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddStock.Designer.cs">
+      <DependentUpon>FrmAddStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBackMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddStock.resx">
+      <DependentUpon>FrmAddStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBackMain.resx">
       <DependentUpon>FrmBackMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +197,10 @@
     <None Include="Properties\DataSources\DB_Fancy.Size.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Supplier.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.VW_EW_CategorySML.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.VW_EW_OrderDetail.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.VW_EW_ProductColor.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.VW_EW_ProductSize.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.VW_EW_Supplier.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Washing.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

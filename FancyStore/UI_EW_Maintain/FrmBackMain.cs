@@ -55,7 +55,8 @@ namespace UI_EW_Maintain
         //補貨
         private void button7_Click(object sender, EventArgs e)
         {
-
+            FrmAddStock f = new FrmAddStock();
+            f.Show();
         }
         //上下架
         private void button8_Click(object sender, EventArgs e)
