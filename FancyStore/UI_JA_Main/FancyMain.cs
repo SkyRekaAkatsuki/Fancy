@@ -20,7 +20,7 @@ namespace UI_JA_Main
     {
         public FancyMain()
         {
-            User data = Cls_JA_Member.UserDetail();
+            Cls_JA_Member.IsAdmin = Cls_JA_Member.UserDetail().Admin;
             Thread t = new Thread(new ThreadStart(delegate
            {
                Loading loading = new Loading();
@@ -33,9 +33,10 @@ namespace UI_JA_Main
             Thread.Sleep(2000);
             InitializeComponent();
 
-            if (data.Admin) { button10.Visible = true; }
-            MessageBox.Show(Cls_JA_Member.UserID.ToString());
-            
+            if (Cls_JA_Member.IsAdmin)
+            {
+                button10.Visible = true;
+            }          
         }
 
 
@@ -177,11 +178,11 @@ namespace UI_JA_Main
             allMemberList.ShowDialog();
         }
 
-       async private void button11_Click(object sender, EventArgs e)
+       private void button11_Click(object sender, EventArgs e)
         {
             OrdersSearch ordersSearch = new OrdersSearch();
-            this.TopMost = false;
-            await Task.Run(()=>ordersSearch.ShowDialog());
+            ordersSearch.ShowDialog();
+
         }
 
         private void button9_Click(object sender, EventArgs e)

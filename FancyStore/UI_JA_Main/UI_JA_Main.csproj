@@ -36,8 +36,6 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
-
-
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -63,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminQuestionReply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminQuestionReply.Designer.cs">
+      <DependentUpon>AdminQuestionReply.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllMemberList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +128,9 @@
     <Compile Include="統計.Designer.cs">
       <DependentUpon>統計.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminQuestionReply.resx">
+      <DependentUpon>AdminQuestionReply.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllMemberList.resx">
       <DependentUpon>AllMemberList.cs</DependentUpon>
     </EmbeddedResource>

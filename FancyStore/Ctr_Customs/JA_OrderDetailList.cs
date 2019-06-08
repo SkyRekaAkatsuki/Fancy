@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace Ctr_Customs
 {
-    public partial class OrderDetailList : UserControl
+    public partial class JA_OrderDetailList : UserControl
     {
         public string _pname { set { this.Pname.Text = value; } }
         public string _pcolor { set { this.Pcolor.Text = value; } }
-        public string psize { set { this.Psize.Text = value; } }
+        public string _size { set { this.Psize.Text = value; } }
         public string _up { set { this.up.Text = value; } }
         public string _qty { set { this.QTY.Text = value; } }
+        public string _小計 { set { this.小計.Text = value; } }
 
-        public OrderDetailList()
+        public JA_OrderDetailList()
         {
             InitializeComponent();
         }

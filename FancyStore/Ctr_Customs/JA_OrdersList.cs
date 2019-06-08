@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cls_Utility;
 
 namespace Ctr_Customs
 {
@@ -14,21 +15,26 @@ namespace Ctr_Customs
     {
 
         public string _OrderNum { get { return _OrderNum; } set { this.OrderNum.Text = value; } }
-        public DateTime _Orderdate { get { return _Orderdate; } set { this.Orderdate.Text = value.ToString("yyyy/MM/dd"); } }
+        DateTime od;
+        public DateTime _Orderdate { get { return od; } set { this.Orderdate.Text = value.ToString("yyyy/MM/dd"); od = value; } }
         public DateTime? _Shipdate { get { return _Shipdate; }
             set {
-                if (value.HasValue) { this.Shipdate.Text = value.Value.ToShortDateString(); }
-                else { this.Shipdate.Text = DateTime.Now.ToString("yyyy/MM/dd"); }
+                this.Shipdate.Text = value.HasValue? value.Value.ToShortDateString(): DateTime.Now.ToString("yyyy/MM/dd");
             }
         }
         public string _PayMethod { get { return _PayMethod; } set { this.PayMethod.Text = value; } }
         public string _Shipping { get { return _Shipping; } set { this.Shipping.Text = value; } }
-        public string _Discount { get { return _Discount; } set { this.Discount.Text = value; } }
-        public string _OrderStatus { get { return _OrderStatus; }
+        public string _Freight { set { this.Freight.Text = value; } }
+        public string _Discount {set { this.Discount.Text = value; } }
+        public Status _Status;
+        private string OStatus;
+        public string _OrderStatus { get { return OStatus; }
             set {
-                if (value == "開立") { this.OrderStatus.BackColor = Color.FromArgb(0, 179, 45); }
-                else if (value == "出貨") { this.OrderStatus.BackColor = Color.FromArgb(255, 170, 51); }
-                else if(value == "取消") { this.OrderStatus.BackColor = Color.FromArgb(244, 67, 54); }
+                if (value == "開立") { this.OrderStatus.BackColor = Color.FromArgb(0, 179, 45); _Status = Status.開立; }
+                else if (value == "出貨") { this.OrderStatus.BackColor = Color.FromArgb(255, 170, 51); _Status = Status.出貨; }
+                else if(value == "取消") { this.OrderStatus.BackColor = Color.FromArgb(244, 67, 54); _Status = Status.取消; }
+                OStatus = value;
+                
                 this.OrderStatus.Text = value;
             }
         }
@@ -45,16 +51,64 @@ namespace Ctr_Customs
             {
                 JA_OrderDetail orderDetail = new JA_OrderDetail();
                 orderDetail.OrderID = (Int32)this.Tag;
+                orderDetail.Name = this.Name;
                 orderDetail.ShowDialog();
             };
             this.ssss.Click += (s, ee) => { action(); };
+            this.ssss.MouseEnter += (s, ee) =>
+            {
+                this.BackColor = Color.FromArgb(224, 224, 224);
+            };
+            this.ssss.MouseLeave += (s, ee) =>
+            {
+                this.BackColor = Color.Transparent;
+            };
             foreach (Control item in this.ssss.Controls)
             {
-                item.Click += (s, ee) =>
+                item.MouseEnter += (s, ee) => 
                 {
-                    action();
+                    this.BackColor = Color.FromArgb(224, 224, 224);
                 };
+                item.MouseLeave += (s, ee) =>
+                {
+                    this.BackColor = Color.Transparent;
+                };
+                if (!(item is Button))
+                {
+                    item.Click += (s, ee) =>
+                    {
+                        action();
+                    };
+                }
+
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (_OrderStatus!="取消")
+            {
+                if (MessageBox.Show("你確定要取消訂單嗎", "提醒你", MessageBoxButtons.YesNo, 
+                    MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    if (Cls_JA_Member.CancelOrder((Int32)this.Tag))
+                    {
+                        this.OrderStatus.Text = "取消";
+                        this.OrderStatus.BackColor = Color.FromArgb(244, 67, 54);
+                        _Status = Status.取消;
+                        MessageBox.Show("取消成功");
+                    }
+                    else
+                    {
+                        MessageBox.Show("取消出現問題，可能無法取消。");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("此訂單狀態以是取消");
+            }
+
         }
     }
 }

@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JA_FavoriteLlis));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -59,7 +57,6 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(58)))));
             this.label1.Location = new System.Drawing.Point(144, 12);
             this.label1.Name = "label1";
-
             this.label1.Size = new System.Drawing.Size(398, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "STAR WARS系列口袋印花T恤-09-男";
@@ -75,7 +72,6 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label3.Location = new System.Drawing.Point(460, 51);
             this.label3.Name = "label3";
-
             this.label3.Size = new System.Drawing.Size(85, 33);
             this.label3.TabIndex = 4;
             this.label3.Text = "NT 999";
@@ -96,6 +92,17 @@
             this.panel2.Size = new System.Drawing.Size(554, 100);
             this.panel2.TabIndex = 6;
             // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button2.Location = new System.Drawing.Point(266, 54);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(97, 30);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "詳細資料";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
@@ -114,11 +121,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(151)))), ((int)(((byte)(117)))));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(44, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(5);
-
             this.pictureBox1.Size = new System.Drawing.Size(81, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
@@ -133,17 +138,6 @@
             this.panel3.Padding = new System.Windows.Forms.Padding(5);
             this.panel3.Size = new System.Drawing.Size(558, 104);
             this.panel3.TabIndex = 7;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(357, 54);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "詳細資料";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // JA_FavoriteLlis
             // 
