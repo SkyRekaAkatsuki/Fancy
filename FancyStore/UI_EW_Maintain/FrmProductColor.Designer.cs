@@ -58,12 +58,10 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.productColorBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.productColorDataGridView = new System.Windows.Forms.DataGridView();
-            this.colorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +70,8 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -91,7 +91,7 @@
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -113,9 +113,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.productColorBindingNavigator);
             this.splitContainer1.Panel2.Controls.Add(this.productColorDataGridView);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(778, 584);
-            this.splitContainer1.SplitterDistance = 415;
-            this.splitContainer1.SplitterWidth = 3;
+            this.splitContainer1.Size = new System.Drawing.Size(1037, 730);
+            this.splitContainer1.SplitterDistance = 553;
             this.splitContainer1.TabIndex = 1;
             // 
             // cbColor
@@ -124,9 +123,10 @@
             this.cbColor.DisplayMember = "ColorName";
             this.cbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbColor.FormattingEnabled = true;
-            this.cbColor.Location = new System.Drawing.Point(135, 104);
+            this.cbColor.Location = new System.Drawing.Point(180, 130);
+            this.cbColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbColor.Name = "cbColor";
-            this.cbColor.Size = new System.Drawing.Size(85, 20);
+            this.cbColor.Size = new System.Drawing.Size(112, 23);
             this.cbColor.TabIndex = 26;
             this.cbColor.ValueMember = "ColorID";
             // 
@@ -137,9 +137,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 108);
+            this.label2.Location = new System.Drawing.Point(129, 135);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 12);
+            this.label2.Size = new System.Drawing.Size(41, 15);
             this.label2.TabIndex = 25;
             this.label2.Text = "顏色:";
             // 
@@ -148,10 +149,11 @@
             this.btnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnInsert.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(316, 98);
+            this.btnInsert.Location = new System.Drawing.Point(421, 122);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(75, 31);
-            this.btnInsert.TabIndex = 24;
+            this.btnInsert.Size = new System.Drawing.Size(100, 39);
+            this.btnInsert.TabIndex = 1;
             this.btnInsert.Text = "存檔";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -159,10 +161,11 @@
             // btnBrowser
             // 
             this.btnBrowser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnBrowser.Location = new System.Drawing.Point(230, 99);
+            this.btnBrowser.Location = new System.Drawing.Point(307, 124);
+            this.btnBrowser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBrowser.Name = "btnBrowser";
-            this.btnBrowser.Size = new System.Drawing.Size(80, 31);
-            this.btnBrowser.TabIndex = 23;
+            this.btnBrowser.Size = new System.Drawing.Size(107, 39);
+            this.btnBrowser.TabIndex = 0;
             this.btnBrowser.Text = "尋找圖片";
             this.btnBrowser.UseVisualStyleBackColor = false;
             this.btnBrowser.Click += new System.EventHandler(this.btnBrowser_Click);
@@ -170,62 +173,59 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 133);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 166);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(396, 444);
+            this.pictureBox1.Size = new System.Drawing.Size(527, 554);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
             // txtPhotoID
             // 
-            this.txtPhotoID.Location = new System.Drawing.Point(30, 104);
-            this.txtPhotoID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhotoID.Location = new System.Drawing.Point(40, 130);
+            this.txtPhotoID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhotoID.Name = "txtPhotoID";
             this.txtPhotoID.ReadOnly = true;
-            this.txtPhotoID.Size = new System.Drawing.Size(54, 22);
+            this.txtPhotoID.Size = new System.Drawing.Size(71, 25);
             this.txtPhotoID.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 108);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(11, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 12);
+            this.label1.Size = new System.Drawing.Size(26, 15);
             this.label1.TabIndex = 20;
             this.label1.Text = "ID:";
             // 
             // txtDesc
             // 
             this.txtDesc.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtDesc.Location = new System.Drawing.Point(9, 29);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDesc.Location = new System.Drawing.Point(12, 36);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.ReadOnly = true;
             this.txtDesc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtDesc.Size = new System.Drawing.Size(382, 66);
+            this.txtDesc.Size = new System.Drawing.Size(508, 82);
             this.txtDesc.TabIndex = 19;
             // 
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(100, 9);
-            this.lblProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProductName.Location = new System.Drawing.Point(133, 11);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(33, 12);
+            this.lblProductName.Size = new System.Drawing.Size(41, 15);
             this.lblProductName.TabIndex = 18;
             this.lblProductName.Text = "label2";
             // 
             // lblProductID
             // 
             this.lblProductID.AutoSize = true;
-            this.lblProductID.Location = new System.Drawing.Point(10, 9);
-            this.lblProductID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProductID.Location = new System.Drawing.Point(13, 11);
             this.lblProductID.Name = "lblProductID";
-            this.lblProductID.Size = new System.Drawing.Size(33, 12);
+            this.lblProductID.Size = new System.Drawing.Size(41, 15);
             this.lblProductID.TabIndex = 17;
             this.lblProductID.Text = "label1";
             // 
@@ -236,6 +236,7 @@
             this.productColorBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.productColorBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.productColorBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.productColorBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.productColorBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -249,14 +250,14 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.productColorBindingNavigatorSaveItem});
-            this.productColorBindingNavigator.Location = new System.Drawing.Point(14, 7);
+            this.productColorBindingNavigator.Location = new System.Drawing.Point(19, 9);
             this.productColorBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.productColorBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.productColorBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.productColorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productColorBindingNavigator.Name = "productColorBindingNavigator";
             this.productColorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productColorBindingNavigator.Size = new System.Drawing.Size(270, 25);
+            this.productColorBindingNavigator.Size = new System.Drawing.Size(299, 27);
             this.productColorBindingNavigator.TabIndex = 2;
             this.productColorBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -267,7 +268,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "加入新的";
             // 
             // productColorBindingSource
@@ -278,7 +279,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(27, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(34, 24);
             this.bindingNavigatorCountItem.Text = "/{0}";
             this.bindingNavigatorCountItem.ToolTipText = "項目總數";
             // 
@@ -289,7 +290,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "刪除";
             // 
             // bindingNavigatorMoveFirstItem
@@ -298,7 +299,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "移到最前面";
             // 
             // bindingNavigatorMovePreviousItem
@@ -307,27 +308,27 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "移到上一個";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "位置";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "目前的位置";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -335,7 +336,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "移到下一個";
             // 
             // bindingNavigatorMoveLastItem
@@ -344,13 +345,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "移到最後面";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // productColorBindingNavigatorSaveItem
             // 
@@ -358,7 +359,7 @@
             this.productColorBindingNavigatorSaveItem.Enabled = false;
             this.productColorBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("productColorBindingNavigatorSaveItem.Image")));
             this.productColorBindingNavigatorSaveItem.Name = "productColorBindingNavigatorSaveItem";
-            this.productColorBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.productColorBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.productColorBindingNavigatorSaveItem.Text = "儲存資料";
             // 
             // productColorDataGridView
@@ -380,32 +381,14 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.productColorDataGridView.DataSource = this.productColorBindingSource;
-            this.productColorDataGridView.Location = new System.Drawing.Point(11, 37);
+            this.productColorDataGridView.Location = new System.Drawing.Point(15, 46);
+            this.productColorDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productColorDataGridView.Name = "productColorDataGridView";
             this.productColorDataGridView.ReadOnly = true;
             this.productColorDataGridView.RowTemplate.Height = 24;
-            this.productColorDataGridView.Size = new System.Drawing.Size(335, 193);
+            this.productColorDataGridView.Size = new System.Drawing.Size(447, 241);
             this.productColorDataGridView.TabIndex = 2;
             this.productColorDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productColorDataGridView_CellClick);
-            // 
-            // colorBindingSource1
-            // 
-            this.colorBindingSource1.DataSource = typeof(DB_Fancy.Color);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 235);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(335, 339);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -437,6 +420,10 @@
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
             this.ColorName.ValueMember = "ColorID";
+            // 
+            // colorBindingSource1
+            // 
+            this.colorBindingSource1.DataSource = typeof(DB_Fancy.Color);
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -500,12 +487,28 @@
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Visible = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 294);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(446, 423);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FrmProductColor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 584);
+            this.ClientSize = new System.Drawing.Size(1037, 730);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmProductColor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "產品顏色 - FrmProductColor";

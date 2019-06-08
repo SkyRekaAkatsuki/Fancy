@@ -168,6 +168,15 @@
     <Compile Include="VW_EW_OrderDetail.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="VW_EW_ProductColor.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VW_EW_ProductSize.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VW_EW_Supplier.cs">
+      <DependentUpon>FancyEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Washing.cs">
       <DependentUpon>FancyEntity.tt</DependentUpon>
     </Compile>

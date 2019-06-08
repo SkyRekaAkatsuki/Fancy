@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddStock.Designer.cs">
+      <DependentUpon>FrmAddStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBackMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="FrmColor.Designer.cs">
       <DependentUpon>FrmColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInOut.Designer.cs">
+      <DependentUpon>FrmInOut.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmProductColor.cs">
       <SubType>Form</SubType>
@@ -114,14 +126,29 @@
     <Compile Include="FrmProductSize.Designer.cs">
       <DependentUpon>FrmProductSize.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductStock.Designer.cs">
+      <DependentUpon>FrmProductStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSize.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSize.Designer.cs">
       <DependentUpon>FrmSize.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductWashing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductWashing.Designer.cs">
+      <DependentUpon>FrmProductWashing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddStock.resx">
+      <DependentUpon>FrmAddStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBackMain.resx">
       <DependentUpon>FrmBackMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmColor.resx">
       <DependentUpon>FrmColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInOut.resx">
+      <DependentUpon>FrmInOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductColor.resx">
       <DependentUpon>FrmProductColor.cs</DependentUpon>
@@ -152,8 +182,14 @@
     <EmbeddedResource Include="FrmProductSize.resx">
       <DependentUpon>FrmProductSize.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductStock.resx">
+      <DependentUpon>FrmProductStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSize.resx">
       <DependentUpon>FrmSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductWashing.resx">
+      <DependentUpon>FrmProductWashing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,6 +215,10 @@
     <None Include="Properties\DataSources\DB_Fancy.Size.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Supplier.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.VW_EW_CategorySML.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.VW_EW_OrderDetail.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.VW_EW_ProductColor.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.VW_EW_ProductSize.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.VW_EW_Supplier.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Washing.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

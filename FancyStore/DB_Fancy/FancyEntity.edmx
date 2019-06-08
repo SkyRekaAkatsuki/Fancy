@@ -367,6 +367,35 @@
           <Property Name="UnitPrice" Type="int" Nullable="false" />
           <Property Name="Amount" Type="int" />
         </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'FancyStore.dbo.VW_EW_ProductColor' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="VW_EW_ProductColor">
+          <Key>
+            <PropertyRef Name="ProductColorID" />
+            <PropertyRef Name="ColorName" />
+          </Key>
+          <Property Name="ProductColorID" Type="int" Nullable="false" />
+          <Property Name="ColorName" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'FancyStore.dbo.VW_EW_ProductSize' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="VW_EW_ProductSize">
+          <Key>
+            <PropertyRef Name="ProductSizeID" />
+            <PropertyRef Name="SizeName" />
+          </Key>
+          <Property Name="ProductSizeID" Type="int" Nullable="false" />
+          <Property Name="SizeName" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'FancyStore.dbo.VW_EW_Supplier' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="VW_EW_Supplier">
+          <Key>
+            <PropertyRef Name="SupplierID" />
+          </Key>
+          <Property Name="SupplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SupplierName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <Association Name="FK_CategoryM_CategoryL">
           <End Role="CategoryLarge" Type="Self.CategoryLarge" Multiplicity="1" />
           <End Role="CategoryMiddle" Type="Self.CategoryMiddle" Multiplicity="*" />
@@ -853,6 +882,24 @@
     [VW_EW_OrderDetail].[UnitPrice] AS [UnitPrice], 
     [VW_EW_OrderDetail].[Amount] AS [Amount]
     FROM [dbo].[VW_EW_OrderDetail] AS [VW_EW_OrderDetail]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_EW_ProductColor" EntityType="Self.VW_EW_ProductColor" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_EW_ProductColor].[ProductColorID] AS [ProductColorID], 
+    [VW_EW_ProductColor].[ColorName] AS [ColorName]
+    FROM [dbo].[VW_EW_ProductColor] AS [VW_EW_ProductColor]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_EW_ProductSize" EntityType="Self.VW_EW_ProductSize" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_EW_ProductSize].[ProductSizeID] AS [ProductSizeID], 
+    [VW_EW_ProductSize].[SizeName] AS [SizeName]
+    FROM [dbo].[VW_EW_ProductSize] AS [VW_EW_ProductSize]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_EW_Supplier" EntityType="Self.VW_EW_Supplier" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_EW_Supplier].[SupplierID] AS [SupplierID], 
+    [VW_EW_Supplier].[SupplierName] AS [SupplierName]
+    FROM [dbo].[VW_EW_Supplier] AS [VW_EW_Supplier]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_CategoryM_CategoryL" Association="Self.FK_CategoryM_CategoryL">
             <End Role="CategoryLarge" EntitySet="CategoryLarge" />
@@ -1869,6 +1916,9 @@
 
           <EntitySet Name="VW_EW_CategorySML" EntityType="FancyStoreModel.VW_EW_CategorySML" />
           <EntitySet Name="VW_EW_OrderDetail" EntityType="FancyStoreModel.VW_EW_OrderDetail" />
+          <EntitySet Name="VW_EW_ProductColor" EntityType="FancyStoreModel.VW_EW_ProductColor" />
+          <EntitySet Name="VW_EW_ProductSize" EntityType="FancyStoreModel.VW_EW_ProductSize" />
+          <EntitySet Name="VW_EW_Supplier" EntityType="FancyStoreModel.VW_EW_Supplier" />
         </EntityContainer>
         <EntityType Name="Product">
           <Key>
@@ -2046,6 +2096,29 @@
           <Property Name="ProductSizeID" Type="Int32" Nullable="false" />
           <Property Name="UnitPrice" Type="Int32" Nullable="false" />
           <Property Name="Amount" Type="Int32" />
+        </EntityType>
+        <EntityType Name="VW_EW_ProductColor">
+          <Key>
+            <PropertyRef Name="ProductColorID" />
+            <PropertyRef Name="ColorName" />
+          </Key>
+          <Property Name="ProductColorID" Type="Int32" Nullable="false" />
+          <Property Name="ColorName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VW_EW_ProductSize">
+          <Key>
+            <PropertyRef Name="ProductSizeID" />
+            <PropertyRef Name="SizeName" />
+          </Key>
+          <Property Name="ProductSizeID" Type="Int32" Nullable="false" />
+          <Property Name="SizeName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VW_EW_Supplier">
+          <Key>
+            <PropertyRef Name="SupplierID" />
+          </Key>
+          <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupplierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2435,6 +2508,30 @@
                 <ScalarProperty Name="ColorName" ColumnName="ColorName" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_EW_ProductColor">
+            <EntityTypeMapping TypeName="FancyStoreModel.VW_EW_ProductColor">
+              <MappingFragment StoreEntitySet="VW_EW_ProductColor">
+                <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+                <ScalarProperty Name="ProductColorID" ColumnName="ProductColorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_EW_ProductSize">
+            <EntityTypeMapping TypeName="FancyStoreModel.VW_EW_ProductSize">
+              <MappingFragment StoreEntitySet="VW_EW_ProductSize">
+                <ScalarProperty Name="SizeName" ColumnName="SizeName" />
+                <ScalarProperty Name="ProductSizeID" ColumnName="ProductSizeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_EW_Supplier">
+            <EntityTypeMapping TypeName="FancyStoreModel.VW_EW_Supplier">
+              <MappingFragment StoreEntitySet="VW_EW_Supplier">
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
