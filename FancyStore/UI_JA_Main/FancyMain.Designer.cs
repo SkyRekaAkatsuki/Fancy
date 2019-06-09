@@ -50,7 +50,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -260,7 +260,8 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::UI_JA_Main.IconPIc.icons8_secured_letter_24;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 8);
+
+            this.pictureBox2.Location = new System.Drawing.Point(12, 7);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(46, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -373,14 +374,6 @@
             this.button3.Text = "Home";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(0, 97);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1051, 530);
-            this.panel5.TabIndex = 3;
             // 
             // FancyMain
             // 

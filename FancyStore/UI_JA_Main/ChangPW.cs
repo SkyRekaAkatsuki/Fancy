@@ -24,15 +24,18 @@ namespace UI_JA_Main
             {
                 this.新密碼_P.Visible = true;
                 this.timer1.Start();
+                int i = 0;
                 this.timer1.Tick += delegate
                 {
-                    if (this.驗證舊密碼_P.Left != -200)
+                    if (i<=350)
                     {
+                        i += 10;
                         this.驗證舊密碼_P.Left -= 10;
                         this.新密碼_P.Top -= 10;
                     }
                     else
                     {
+                        i = 0;
                         this.驗證舊密碼_P.Visible = false;
                         this.timer1.Stop();
                     }

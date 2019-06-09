@@ -26,8 +26,6 @@ namespace UI_EW_Maintain
             var q = dbContext.VW_EW_CategorySML.ToList();
             cbCategory.DataSource = q;
             cbCategorySName.DataSource = q;
-            var s = dbContext.Suppliers.ToList();
-            cbSupplierName.DataSource = s;
 
             cbCategory.SelectedIndex = -1;  //預設沒有選值
         }
@@ -40,6 +38,9 @@ namespace UI_EW_Maintain
         void ResetData()
         {
             dbContext = new FancyStoreEntities(); //為了能刷新資料
+
+            var s = dbContext.Suppliers.OrderBy(x=>x.SupplierID).ToList();
+            cbSupplierName.DataSource = s;
 
             var q = dbContext.Products.Select(x => x);
 
@@ -155,15 +156,12 @@ namespace UI_EW_Maintain
                     {
                         if (HasProductDetails()) //有Details資料
                         {
-                            if (MessageBox.Show($"ProductID:{prod.ProductID} ({prod.ProductName})有存在 [顏色 / 尺吋大小 / 庫存量] 等資料, 確定要一起刪除嗎?", "刪除作業", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                            {
-                                return;
-                            }
+                            MessageBox.Show($"ProductID:{prod.ProductID} ({prod.ProductName}) 有存在 [顏色 / 尺吋大小 / 庫存量 / 圖片 / 洗滌方式 / 產品評價] 等資料, 不能刪除 !");
+                            return;
                         }
                         try
                         {
                             var n = dbContext.Products.Find(prod.ProductID);
-
                             dbContext.Products.Remove(n);
                             this.dbContext.SaveChanges();
                             { MessageBox.Show("產品 [刪除] 資料成功 !"); }
@@ -181,19 +179,22 @@ namespace UI_EW_Maintain
             //判斷Product是否有其他Details資料
             bool HasProductDetails()
             {
-                int n = this.dbContext.ProductColors.Where(x => x.ProductID == prod.ProductID).Count();
-
-                if (n > 0)  //有ProductColor
+                if (dbContext.ProductEvaluations.Any(x => x.ProductID == prod.ProductID))  //有 ProductEvaluations
                 { return true; }
 
-                n = this.dbContext.ProductSizes.Where(x => x.ProductID == prod.ProductID).Count();
-
-                if (n > 0)  //有ProductSize
+                if (dbContext.ProductWashings.Any(x => x.ProductID == prod.ProductID))  //有 ProductWashings
                 { return true; }
 
-                n = this.dbContext.ProductStocks.Where(x => x.ProductID == prod.ProductID).Count();
+                if (dbContext.ProductPhotoes.Any(x => x.ProductID == prod.ProductID))  //有 ProductPhotoes
+                { return true; }
 
-                if (n > 0)  //有ProductStock
+                if (dbContext.ProductColors.Any(x => x.ProductID == prod.ProductID))  //有 ProductColor
+                { return true; }
+
+                if (dbContext.ProductSizes.Any(x => x.ProductID == prod.ProductID))  //有 ProductSize
+                { return true; }
+
+                if (dbContext.ProductStocks.Any(x => x.ProductID == prod.ProductID))  // 有ProductStock
                 { return true; }
 
                 return false;  //無任何Details資料

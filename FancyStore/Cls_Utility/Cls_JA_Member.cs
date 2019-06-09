@@ -14,11 +14,12 @@ namespace Cls_Utility
 
         public static FancyStoreEntities db = new FancyStoreEntities();
         public static int UserID { get; set; }
-
+        public static bool IsAdmin { get; set; }
 
         #region 註冊
         public static bool Register(User NewUser)
         {
+
             if (AccountCheck(NewUser.UserName))
             { throw new Exception("帳號重複"); }
             if (EmailCheck(NewUser.Email))
@@ -28,10 +29,9 @@ namespace Cls_Utility
             {
                 db.Users.Add(NewUser);
                 db.SaveChanges();
-                
                 return true;
             }
-            catch (DbUpdateException x)
+            catch (DbUpdateException)
             {
 
                 throw;
@@ -86,7 +86,8 @@ namespace Cls_Utility
         #region 載入會員基本資料
         public static User UserDetail()
         {
-            return db.Users.Where(n => n.UserID == UserID).First();
+            FancyStoreEntities dbb = new FancyStoreEntities();
+            return dbb.Users.Where(n => n.UserID == UserID).First();
         }
         #endregion
 
@@ -150,10 +151,10 @@ namespace Cls_Utility
                     Photo newp = new Photo
                     {
                         Photo1 = data,
-                        CreateDate = DateTime.Now,      
-                        
+                        CreateDate = DateTime.Now,
+
                     };
-                    
+
                     db.Photos.Add(newp);
                     db.SaveChanges();
 
@@ -206,15 +207,12 @@ namespace Cls_Utility
                 var data = db.Users.FirstOrDefault(n => n.UserName == Account);
                 string guid = Guid.NewGuid().ToString("N");
                 byte[] hashPw = Cls_JA_IDo.HashPw(NewPw, guid);
-
                 data.UserPassword = hashPw;
                 data.GUID = guid;
                 db.SaveChanges();
-
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -239,7 +237,39 @@ namespace Cls_Utility
         }
         #endregion
 
+        #region 會員發問
+        public static bool AddQuestion(int orderid,Question Newquestion)
+        {
+            try
+            {
+                db.Questions.Add(Newquestion);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+        #endregion
+
+        #region 取消訂單
+        public static bool CancelOrder(int orderid)
+        {
+            try
+            {
+                var data = db.OrderHeaders.FirstOrDefault(n => n.OrderID == orderid);
+                data.OrderStatusID = 3;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        #endregion
 
         #region 驗證驗證碼
         public static bool CheckAuthCode(string code)

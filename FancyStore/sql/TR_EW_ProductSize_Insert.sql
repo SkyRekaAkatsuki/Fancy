@@ -1,16 +1,14 @@
-USE [Fancy]
+USE [FancyStore]
 GO
 
-/****** Object:  Trigger [dbo].[TR_EW_ProductSize_Insert]    Script Date: 2019/5/25 下午 02:49:37 ******/
+/****** Object:  Trigger [dbo].[TR_EW_ProductSize_Insert]    Script Date: 2019/6/7 上午 11:40:57 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-
-
-ALTER TRIGGER [dbo].[TR_EW_ProductSize_Insert]
+create TRIGGER [dbo].[TR_EW_ProductSize_Insert]
    ON [dbo].[ProductSize]
    after Insert
 AS
@@ -59,7 +57,7 @@ AS
 									and ps.ProductColorID = @prodColorID )
 					begin
 							insert into [dbo].[ProductStock]
-							values (@prodID,@prodSizeID, @prodColorID,0,10);
+							values (@prodID,@prodSizeID, @prodColorID,10,10,getdate());
 					end
 
 					--因為set rowcount 1的關係，所以一次只會刪一筆
@@ -72,6 +70,9 @@ AS
 
 	--##tempProducutStock功成身退，你可以死了
 	drop table #tempProducutStock   
+GO
+
+ALTER TABLE [dbo].[ProductSize] ENABLE TRIGGER [TR_EW_ProductSize_Insert]
 GO
 
 

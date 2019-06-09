@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -59,6 +63,18 @@
       <DependentUpon>AL_ProductInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="JA_AdminReplayLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JA_AdminReplayLeft.Designer.cs">
+      <DependentUpon>JA_AdminReplayLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JA_EmailWindows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JA_EmailWindows.Designer.cs">
+      <DependentUpon>JA_EmailWindows.cs</DependentUpon>
+    </Compile>
     <Compile Include="img.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,11 +98,35 @@
     <Compile Include="JA_MemberList.designer.cs">
       <DependentUpon>JA_MemberList.cs</DependentUpon>
     </Compile>
+    <Compile Include="JA_OrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JA_OrderDetail.Designer.cs">
+      <DependentUpon>JA_OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JA_OrdersList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JA_OrdersList.Designer.cs">
+      <DependentUpon>JA_OrdersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JA_OrderDetailList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JA_OrderDetailList.Designer.cs">
+      <DependentUpon>JA_OrderDetailList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="JA_QuestionList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JA_QuestionList.Designer.cs">
+      <DependentUpon>JA_QuestionList.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +138,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>img.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="JA_AdminReplayLeft.resx">
+      <DependentUpon>JA_AdminReplayLeft.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JA_FavoriteLlis.resx">
       <DependentUpon>JA_FavoriteLlis.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,15 +150,31 @@
     <EmbeddedResource Include="JA_MemberList.resx">
       <DependentUpon>JA_MemberList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JA_OrderDetail.resx">
+      <DependentUpon>JA_OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JA_OrdersList.resx">
+      <DependentUpon>JA_OrdersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JA_OrderDetailList.resx">
+      <DependentUpon>JA_OrderDetailList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JA_QuestionList.resx">
+      <DependentUpon>JA_QuestionList.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cls_Utility\Cls_Utility.csproj">
       <Project>{01638142-40E6-4C12-AE36-61706EF7D382}</Project>
       <Name>Cls_Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
+      <Project>{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}</Project>
+      <Name>DB_Fancy</Name>
     </ProjectReference>
     <ProjectReference Include="..\UI_AL_ProductDetail\UI_AL_ProductDetail.csproj">
       <Project>{1c1d682b-9d4f-411a-80fe-9479947d40d7}</Project>
@@ -143,6 +202,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-unchecked-checkbox-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

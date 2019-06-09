@@ -43,6 +43,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.開通用驗證碼 = new UI_JA_Members.JA_Input();
             this.使用者密碼 = new UI_JA_Members.JA_Input();
+
+            this.SEmail = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserImg)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +53,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.刪除_B);
+            this.panel1.Controls.Add(this.SEmail);
             this.panel1.Controls.Add(this.展開);
             this.panel1.Controls.Add(this.RegisterTIme);
             this.panel1.Controls.Add(this.MYRegion);
@@ -61,16 +64,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(938, 60);
+            this.panel1.Size = new System.Drawing.Size(1006, 60);
             this.panel1.TabIndex = 0;
             // 
             // 刪除_B
             // 
             this.刪除_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.刪除_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+
+            this.刪除_B.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.刪除_B.Image = global::Ctr_Customs.img.icons8_trash_16;
             this.刪除_B.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.刪除_B.Location = new System.Drawing.Point(858, 20);
+            this.刪除_B.Location = new System.Drawing.Point(926, 20);
             this.刪除_B.Name = "刪除_B";
             this.刪除_B.Size = new System.Drawing.Size(65, 25);
             this.刪除_B.TabIndex = 0;
@@ -83,6 +88,8 @@
             // 
             this.展開.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(166)))), ((int)(((byte)(121)))));
             this.展開.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+
+            this.展開.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.展開.Image = global::Ctr_Customs.img.icons8_expand_arrow_24;
             this.展開.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.展開.Location = new System.Drawing.Point(783, 20);
@@ -226,6 +233,22 @@
             this.使用者密碼.Text = "使用者密碼";
             this.使用者密碼.輸入塊字串 = "";
             // 
+            // SEmail
+            // 
+            this.SEmail.BackColor = System.Drawing.Color.Turquoise;
+            this.SEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SEmail.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SEmail.Image = global::Ctr_Customs.img.icons8_expand_arrow_24;
+            this.SEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SEmail.Location = new System.Drawing.Point(855, 20);
+            this.SEmail.Name = "SEmail";
+            this.SEmail.Size = new System.Drawing.Size(65, 25);
+            this.SEmail.TabIndex = 6;
+            this.SEmail.Text = "Email";
+            this.SEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SEmail.UseVisualStyleBackColor = false;
+            this.SEmail.Click += new System.EventHandler(this.SEmail_Click);
+            // 
             // JA_MemberList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -240,7 +263,8 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "JA_MemberList";
-            this.Size = new System.Drawing.Size(938, 130);
+
+            this.Size = new System.Drawing.Size(1006, 130);
             this.Load += new System.EventHandler(this.JA_MemberList_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UserImg)).EndInit();
@@ -265,5 +289,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button SEmail;
     }
 }
