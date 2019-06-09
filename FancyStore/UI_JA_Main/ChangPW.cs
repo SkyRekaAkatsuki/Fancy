@@ -75,13 +75,15 @@ namespace UI_JA_Main
                 t.Start();
                 t.Tick += delegate
                 {
-                    if (this.新密碼_P.Left != -200)
+                    if (i<=350)
                     {
+                        i += 10;
                         this.新密碼_P.Left -= 10;
                         this.驗證碼_P.Top -= 10;
                     }
                     else
                     {
+                        i = 0;
                         this.新密碼_P.Visible = false;
                         t.Stop();
                     }
@@ -98,7 +100,6 @@ namespace UI_JA_Main
         {
             if (Cls_JA_Member.CheckAuthCode(this.jA_Input4.輸入塊字串))
             {
-
                 Cls_JA_Member.UpdatePassword(this.jA_Input3.輸入塊字串, this.jA_Input1.輸入塊字串);
                 MessageBox.Show("更改成功，請重新登入");
                 if (密碼更改成功 != null)
