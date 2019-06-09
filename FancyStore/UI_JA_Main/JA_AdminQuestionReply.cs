@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace UI_JA_Main
 {
-    public partial class AdminQuestionReply : Form
+    public partial class JA_AdminQuestionReply : Form
     {
-        public AdminQuestionReply()
+        public JA_AdminQuestionReply()
         {
 
             InitializeComponent();

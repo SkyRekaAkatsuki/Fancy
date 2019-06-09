@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace UI_JA_Main
 {
-    public partial class OrdersSearch : Form
+    public partial class JA_OrdersSearch : Form
     {
 
 
-        public OrdersSearch()
+        public JA_OrdersSearch()
         {
             InitializeComponent();
 

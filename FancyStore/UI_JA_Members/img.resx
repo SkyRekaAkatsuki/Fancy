@@ -145,4 +145,7 @@
   <data name="icons8_secured_letter_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8-secured-letter-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="becbbec6b0a1b4c2bbe7b6f7__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\becbbec6b0a1b4c2bbe7b6f7 (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

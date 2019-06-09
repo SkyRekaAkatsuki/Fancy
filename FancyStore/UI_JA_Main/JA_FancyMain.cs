@@ -17,14 +17,14 @@ using UI_AL_ProductDisplay;
 
 namespace UI_JA_Main
 {
-    public partial class FancyMain : Form
+    public partial class JA_FancyMain : Form
     {
-        public FancyMain()
+        public JA_FancyMain()
         {
             Cls_JA_Member.IsAdmin = Cls_JA_Member.UserDetail().Admin;
             Thread t = new Thread(new ThreadStart(delegate
            {
-               Loading loading = new Loading();
+               JA_Loading loading = new JA_Loading();
 
                Application.Run(loading);
 
@@ -130,7 +130,7 @@ namespace UI_JA_Main
             {
                 if (df)
                 {
-                    UserDetail detail = new UserDetail();
+                    JA_UserDetail detail = new JA_UserDetail();
                     detail.Show();
                     detail.Shown += (s, ee) =>
                     {
@@ -169,7 +169,7 @@ namespace UI_JA_Main
 
         private void button14_Click(object sender, EventArgs e)
         {
-            ChangPW changPW = new ChangPW();
+            JA_ChangPW changPW = new JA_ChangPW();
             changPW.密碼更改成功 += delegate
             {
                 this.Close();
@@ -180,14 +180,14 @@ namespace UI_JA_Main
 
         private void button10_Click(object sender, EventArgs e)
         {
-            AllMemberList allMemberList = new AllMemberList();
+            JA_AllMemberList allMemberList = new JA_AllMemberList();
             this.TopMost = false;
             allMemberList.ShowDialog();
         }
 
        private void button11_Click(object sender, EventArgs e)
         {
-            OrdersSearch ordersSearch = new OrdersSearch();
+            JA_OrdersSearch ordersSearch = new JA_OrdersSearch();
             this.TopMost = false;
             ordersSearch.ShowDialog();
 
@@ -195,7 +195,7 @@ namespace UI_JA_Main
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Favorite favorite = new Favorite();
+            JA_Favorite favorite = new JA_Favorite();
             this.TopMost = false;
             favorite.ShowDialog();
         }

@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace UI_JA_Main
 {
-    public partial class 統計 : Form
+    public partial class JA_統計 : Form
     {
         FancyStoreEntities db = new FancyStoreEntities();
-        public 統計()
+        public JA_統計()
         {
             InitializeComponent();
         }

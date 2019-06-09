@@ -1,6 +1,6 @@
 ﻿namespace UI_JA_Main
 {
-    partial class ChangPW
+    partial class JA_ChangPW
     {
         /// <summary>
         /// Required designer variable.
@@ -41,9 +41,12 @@
             this.jA_Input1 = new UI_JA_Members.JA_Input();
             this.B_更改密碼 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.驗證碼_P.SuspendLayout();
             this.新密碼_P.SuspendLayout();
             this.驗證舊密碼_P.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +54,7 @@
             this.label1.BackColor = System.Drawing.Color.Gray;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(83, 9);
+            this.label1.Location = new System.Drawing.Point(82, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 23);
             this.label1.TabIndex = 17;
@@ -169,12 +172,34 @@
             // 
             this.timer1.Interval = 10;
             // 
-            // ChangPW
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(62)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(359, 35);
+            this.panel1.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "更改密碼";
+            // 
+            // JA_ChangPW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(359, 244);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.新密碼_P);
             this.Controls.Add(this.驗證舊密碼_P);
@@ -182,12 +207,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ChangPW";
+            this.Name = "JA_ChangPW";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "密碼更改";
             this.驗證碼_P.ResumeLayout(false);
             this.新密碼_P.ResumeLayout(false);
             this.驗證舊密碼_P.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +233,7 @@
         private UI_JA_Members.JA_Input jA_Input1;
         private System.Windows.Forms.Button B_更改密碼;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }

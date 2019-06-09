@@ -1,6 +1,6 @@
 ﻿namespace UI_JA_Main
 {
-    partial class 統計
+    partial class JA_統計
     {
         /// <summary>
         /// Required designer variable.

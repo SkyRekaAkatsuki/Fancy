@@ -31,7 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
@@ -141,6 +140,9 @@
     <EmbeddedResource Include="JA_AdminReplayLeft.resx">
       <DependentUpon>JA_AdminReplayLeft.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JA_EmailWindows.resx">
+      <DependentUpon>JA_EmailWindows.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JA_FavoriteLlis.resx">
       <DependentUpon>JA_FavoriteLlis.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +207,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-secured-letter-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

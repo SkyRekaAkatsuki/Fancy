@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_JA_Main
 {
-    public partial class Loading : Form
+    public partial class JA_Loading : Form
     {
-        public Loading()
+        public JA_Loading()
         {
             InitializeComponent();
             int int_tim = 0;

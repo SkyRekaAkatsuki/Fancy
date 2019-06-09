@@ -1,6 +1,6 @@
 ﻿namespace UI_JA_Main
 {
-    partial class AllMemberList
+    partial class JA_AllMemberList
     {
         /// <summary>
         /// Required designer variable.

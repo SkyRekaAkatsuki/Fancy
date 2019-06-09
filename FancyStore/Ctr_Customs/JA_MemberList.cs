@@ -70,7 +70,7 @@ namespace Ctr_Customs
             { return this.開通用驗證碼.輸入塊字串; }
             set { this.開通用驗證碼.輸入塊字串 = value; }
         }
-        private string Email ;
+        private string Email;
         public string _Email
         {
             get
@@ -92,7 +92,7 @@ namespace Ctr_Customs
                 else { this.權限.SelectedIndex = 0; }
             }
         }
-        
+        Image picg;
         public byte[] _相片
         {
             set
@@ -101,7 +101,7 @@ namespace Ctr_Customs
                 {
                     this.UserImg.Image = Image.FromStream(ms);
                 }
-
+                picg = this.UserImg.Image;
             }
         }
 
@@ -109,7 +109,7 @@ namespace Ctr_Customs
         {
             get
             {
-                return this.刪除_B.Text=="管制";
+                return this.刪除_B.Text == "管制";
             }
             set
             {
@@ -237,31 +237,27 @@ namespace Ctr_Customs
                     "提醒你", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if (this.開通用驗證碼.輸入塊字串.Trim() != String.Empty)
+                if (Cls_JA_Admin.UpdateUserAcode(Int32.Parse(this._ID), _開通用驗證碼))
                 {
-                    if (Cls_JA_Admin.UpdateUserAcode(Int32.Parse(this._ID), _開通用驗證碼))
+                    MessageBox.Show("成功");
+                    if (資料更動 != null)
                     {
-                        MessageBox.Show("成功");
-                        if (資料更動 != null)
-                        {
-                            資料更動();
-                        }
+                        資料更動();
                     }
-                    else { MessageBox.Show("失敗"); }
                 }
-                else { MessageBox.Show("輸入新驗證碼"); }
+                else { MessageBox.Show("失敗"); }
             }
         }
 
         private void 刪除_B_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show($"確定要刪除ID為 :[ {this._ID} ]這位使用者嗎?",
+            if (MessageBox.Show($"確定要管制ID為 :[ {this._ID} ]這位使用者嗎?",
                                 "提醒你", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                                 MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 if (Cls_JA_Admin.DeleteUser(Int32.Parse(this._ID), _Enabled))
                 {
-                    
+
                     MessageBox.Show("成功");
 
 
@@ -294,7 +290,7 @@ namespace Ctr_Customs
 
         private void SEmail_Click(object sender, EventArgs e)
         {
-            JA_EmailWindows jA_EmailWindows = new JA_EmailWindows();
+            JA_EmailWindows jA_EmailWindows = new JA_EmailWindows(Email, _Name, picg);
             jA_EmailWindows.ShowDialog();
         }
     }

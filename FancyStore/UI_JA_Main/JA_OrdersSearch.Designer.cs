@@ -1,6 +1,6 @@
 ﻿namespace UI_JA_Main
 {
-    partial class OrdersSearch
+    partial class JA_OrdersSearch
     {
         /// <summary>
         /// Required designer variable.
