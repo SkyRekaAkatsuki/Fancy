@@ -86,7 +86,7 @@ namespace Ctr_Customs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (_OrderStatus!="取消")
+            if (_OrderStatus=="開立")
             {
                 if (MessageBox.Show("你確定要取消訂單嗎", "提醒你", MessageBoxButtons.YesNo, 
                     MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -106,7 +106,7 @@ namespace Ctr_Customs
             }
             else
             {
-                MessageBox.Show("此訂單狀態以是取消");
+                MessageBox.Show("此訂單已無法取消。");
             }
 
         }
