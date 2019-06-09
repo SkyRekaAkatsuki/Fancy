@@ -223,9 +223,9 @@ namespace Cls_Utility
         {
             try
             {
-                //MyFavorite data = db.MyFavorites.Where(n => n.FavoriteID == tag).FirstOrDefault();
-                //db.MyFavorites.Remove(data);
-                //db.SaveChanges();
+                MyFavorite data = db.MyFavorites.Find(tag);
+                db.MyFavorites.Remove(data);
+                db.SaveChanges();
 
                 return true;
             }

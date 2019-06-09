@@ -20,16 +20,16 @@ namespace UI_JA_Main
             InitializeComponent();
             var userFavorite = Cls_JA_Member.db.MyFavorites.Where(n => n.UserID == Cls_JA_Member.UserID).Select(n => n);
 
-            //foreach (var item in userFavorite)
-            for (int i = 0; i <= 10; i++)
+            foreach (var item in userFavorite)
+            //for (int i = 0; i <= 10; i++)
             {
                 JA_FavoriteLlis list = new JA_FavoriteLlis
                 {
-                    //_PName = item.Product.ProductName,
-                    ////_PDesction = item.Product.Desctiption,
-                    //_PPrice = item.Product.UnitPrice.ToString("C2"),
-                    //Tag = item.FavoriteID,
-                    //_Ppic = item.Product.ProductPhotoes.Select(n => n.Photo.Photo1).First()
+                    _PName = item.Product.ProductName,
+                    _PID = item.ProductID,
+                    _PPrice = item.Product.UnitPrice.ToString("C2"),
+                    Tag = item.FavoriteID,
+                    _Ppic = item.Product.ProductPhotoes.Select(n => n.Photo.Photo1).First()
                 };
 
                 list.移除我的最愛成功 += delegate

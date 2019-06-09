@@ -62,8 +62,6 @@
             this.label1.Text = "STAR WARS系列口袋印花T恤-09-男";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -102,6 +100,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "詳細資料";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
