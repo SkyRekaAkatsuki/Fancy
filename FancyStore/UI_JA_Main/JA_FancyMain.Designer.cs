@@ -1,6 +1,6 @@
 ﻿namespace UI_JA_Main
 {
-    partial class FancyMain
+    partial class JA_FancyMain
     {
         /// <summary>
         /// Required designer variable.
@@ -398,7 +398,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
     }
 }

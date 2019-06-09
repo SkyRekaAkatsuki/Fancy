@@ -15,9 +15,9 @@ using UI_EW_Maintain;
 
 namespace UI_JA_Main
 {
-    public partial class AllMemberList : Form
+    public partial class JA_AllMemberList : Form
     {
-        public AllMemberList()
+        public JA_AllMemberList()
         {
             InitializeComponent();
             this.textBox1.Focus();
@@ -121,7 +121,7 @@ namespace UI_JA_Main
 
         private void button7_Click(object sender, EventArgs e)
         {
-            統計 chart = new 統計();
+            JA_統計 chart = new JA_統計();
             chart.Show();
         }
 
@@ -139,7 +139,7 @@ namespace UI_JA_Main
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            AdminQuestionReply reply = new AdminQuestionReply();
+            JA_AdminQuestionReply reply = new JA_AdminQuestionReply();
             reply.ShowDialog();
         }
     }

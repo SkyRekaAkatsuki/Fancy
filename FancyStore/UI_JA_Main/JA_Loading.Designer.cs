@@ -1,6 +1,6 @@
 ﻿namespace UI_JA_Main
 {
-    partial class Loading
+    partial class JA_Loading
     {
         /// <summary>
         /// Required designer variable.

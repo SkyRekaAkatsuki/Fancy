@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace UI_JA_Main
 {
-    public partial class ChangPW : Form
+    public partial class JA_ChangPW : Form
     {
-        public ChangPW()
+        public JA_ChangPW()
         {
             InitializeComponent();
         }

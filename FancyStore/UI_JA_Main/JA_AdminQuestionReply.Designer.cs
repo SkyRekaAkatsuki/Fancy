@@ -1,6 +1,6 @@
 ﻿namespace UI_JA_Main
 {
-    partial class AdminQuestionReply
+    partial class JA_AdminQuestionReply
     {
         /// <summary>
         /// Required designer variable.

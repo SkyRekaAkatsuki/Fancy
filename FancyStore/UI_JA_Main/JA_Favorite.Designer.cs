@@ -1,6 +1,6 @@
 ﻿namespace UI_JA_Main
 {
-    partial class Favorite
+    partial class JA_Favorite
     {
         /// <summary>
         /// Required designer variable.

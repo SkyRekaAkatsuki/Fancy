@@ -15,12 +15,12 @@ using System.Windows.Forms;
 namespace UI_JA_Main
 {
 
-    public partial class UserDetail : Form
+    public partial class JA_UserDetail : Form
     {
         public event Action 關閉了;
         DbSet<DB_Fancy.Region> allregion = Cls_JA_Member.db.Regions;
         User data = Cls_JA_Member.UserDetail();
-        public UserDetail()
+        public JA_UserDetail()
         {
 
             InitializeComponent();

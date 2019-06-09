@@ -13,9 +13,9 @@ using UI_JA_Main;
 
 namespace UI_JA_Members
 {
-    public partial class UserMain : Form
+    public partial class JA_UserMain : Form
     {
-        public UserMain()
+        public JA_UserMain()
         {
             InitializeComponent();
             this.Gender.SelectedIndex = 0;
@@ -86,18 +86,24 @@ namespace UI_JA_Members
         {
             try
             {
-                if (Cls_JA_Member.VaildateUser(this.textBox1.Text, this.textBox2.Text))
+                if (Cls_JA_Member.VaildateUser(this.jA_Input5.輸入塊字串, this.jA_Input6.輸入塊字串))
                 {
                     this.Hide();
                     MessageBox.Show("成功");
-                    FancyMain fancyMain = new FancyMain();
+                    JA_FancyMain fancyMain = new JA_FancyMain();
                     fancyMain.FormClosing += (s, ee) =>
                     {
                         this.Show();
                     };
                     fancyMain.Show();
                 }
-                else { MessageBox.Show("帳號密碼錯誤"); }
+                else
+                {
+                    this.jA_Input5.Focus();
+                    this.jA_Input5.輸入塊字串 = this.jA_Input6.輸入塊字串 = "";
+                    this.jA_Input5.警告 = System.Drawing.Color.FromArgb(244, 67, 54);
+                    this.jA_Input6.警告 = System.Drawing.Color.FromArgb(244, 67, 54);
+                }
             }
             catch (Exception)
             {
@@ -142,8 +148,7 @@ namespace UI_JA_Members
         private void button5_Click(object sender, EventArgs e)
         {
             this.timer2.Enabled = true;
-            this.textBox1.Text = "";
-            this.textBox2.Text = "";
+            this.jA_Input5.輸入塊字串 = this.jA_Input6.輸入塊字串 = "";
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -165,15 +170,13 @@ namespace UI_JA_Members
         private void button4_Click(object sender, EventArgs e)
         {
             this.timer4.Enabled = true;
-            this.textBox1.Text = "";
-            this.textBox2.Text = "";
+            this.jA_Input5.輸入塊字串 = this.jA_Input6.輸入塊字串 = "";
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             this.timer3.Enabled = true;
-            this.textBox3.Text = "";
-            this.textBox4.Text = "";
+            this.jA_Input7.輸入塊字串 = this.jA_Input8.輸入塊字串 = "";
         }
 
         private void timer3_Tick(object sender, EventArgs e)
@@ -215,11 +218,11 @@ namespace UI_JA_Members
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (Cls_JA_Member.ForgotPassword(textBox4.Text, textBox3.Text))
+            if (Cls_JA_Member.ForgotPassword(this.jA_Input7.輸入塊字串, this.jA_Input8.輸入塊字串))
             {
                 MessageBox.Show("新密碼成功寄出");
                 this.timer3.Enabled = true;
-                textBox4.Text = textBox3.Text = "";
+                this.jA_Input7.輸入塊字串 = this.jA_Input8.輸入塊字串 = "";
             }
             else { MessageBox.Show("資料錯誤"); }
         }
@@ -228,8 +231,8 @@ namespace UI_JA_Members
 
         private void button9_Click(object sender, EventArgs e)
         {
-            this.textBox1.Text = "Jay";
-            this.textBox2.Text = "222";
+            this.jA_Input5.輸入塊字串 = "Jay";
+            this.jA_Input6.輸入塊字串 = "123";
         }
 
         private void button2_Click(object sender, EventArgs e)

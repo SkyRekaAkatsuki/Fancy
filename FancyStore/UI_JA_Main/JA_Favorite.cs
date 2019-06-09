@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace UI_JA_Main
 {
-    public partial class Favorite : Form
+    public partial class JA_Favorite : Form
     {
-        public Favorite()
+        public JA_Favorite()
         {
             InitializeComponent();
             var userFavorite = Cls_JA_Member.db.MyFavorites.Where(n => n.UserID == Cls_JA_Member.UserID).Select(n => n);

@@ -36,7 +36,6 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
-
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -60,11 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserMain.cs">
+    <Compile Include="JA_UserMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserMain.Designer.cs">
-      <DependentUpon>UserMain.cs</DependentUpon>
+    <Compile Include="JA_UserMain.Designer.cs">
+      <DependentUpon>JA_UserMain.cs</DependentUpon>
     </Compile>
     <Compile Include="img.Designer.cs">
       <DependentUpon>img.resx</DependentUpon>
@@ -73,8 +72,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UserMain.resx">
-      <DependentUpon>UserMain.cs</DependentUpon>
+    <EmbeddedResource Include="JA_UserMain.resx">
+      <DependentUpon>JA_UserMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="img.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -166,6 +165,7 @@
     <Content Include="bin\Debug\UI_JA_Members.pdb" />
     <Content Include="bin\Debug\zh-Hant\EntityFramework.resources.dll" />
     <Content Include="bin\Debug\zh-Hant\EntityFramework.SqlServer.resources.dll" />
+    <None Include="Resources\becbbec6b0a1b4c2bbe7b6f7 %281%29.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
