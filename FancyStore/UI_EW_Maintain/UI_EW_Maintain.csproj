@@ -132,6 +132,12 @@
     <Compile Include="FrmProductStock.Designer.cs">
       <DependentUpon>FrmProductStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShipment.Designer.cs">
+      <DependentUpon>FrmShipment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSize.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     <EmbeddedResource Include="FrmProductStock.resx">
       <DependentUpon>FrmProductStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmShipment.resx">
+      <DependentUpon>FrmShipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSize.resx">
       <DependentUpon>FrmSize.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +213,11 @@
     <None Include="Properties\DataSources\DB_Fancy.CategoryMiddle.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.CategorySmall.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Color.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.DiscountMethod.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.OrderDetail.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.OrderHeader.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.OrderStatusList.datasource" />
+    <None Include="Properties\DataSources\DB_Fancy.PayMethod.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Photo.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.Product.datasource" />
     <None Include="Properties\DataSources\DB_Fancy.ProductColor.datasource" />

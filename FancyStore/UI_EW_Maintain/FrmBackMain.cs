@@ -67,7 +67,8 @@ namespace UI_EW_Maintain
         //訂單出貨
         private void button9_Click(object sender, EventArgs e)
         {
-
+            FrmShipment f = new FrmShipment();
+            f.Show();
         }
     }
 }
