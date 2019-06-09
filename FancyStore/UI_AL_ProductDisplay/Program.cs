@@ -16,7 +16,7 @@ namespace UI_AL_ProductDisplay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductDisplay());
+            Application.Run(new ProductDisplay(1));
         }
     }
 }

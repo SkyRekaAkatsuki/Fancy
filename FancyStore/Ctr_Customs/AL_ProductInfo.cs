@@ -22,30 +22,36 @@ namespace Ctr_Customs
 
         public EventHandler AddFav;
         public EventHandler RemoveFav;
+        //public EventHandler Incart;
+        //public EventHandler Offcart;
 
-        public string PName { set { label1.Text = value; } }
-        public int PPrice { set { label2.Text = value.ToString(); } }
+        public string PName { set { Lbl_Name.Text = value; } }
+        public int PPrice { set { Lbl_Price.Text = value.ToString("C0"); } }
         public int ProductID { get; set; }
         public byte[] Picturebyte//set圖片的二進位資料
         {
             set
             {
                 MemoryStream ms = new MemoryStream(value);
-                pictureBox1.Image = Image.FromStream(ms);
+                Pb_Productimage.Image = Image.FromStream(ms);
                 ms.Dispose();
             }
         }
         public bool like = true;
+        public bool buy = true;
 
         private void AL_ProductInfo_Load(object sender, EventArgs e)
         {
             if (like)
-                button1.Image = imageList1.Images[1];
+                Btn_Favorite.Image = imageList1.Images[1];
             else
-                button1.Image = imageList1.Images[0];
-            pictureBox2.Image = imageList1.Images[2];
+                Btn_Favorite.Image = imageList1.Images[0];
+            if (buy)
+                Pb_Cartstatus.Image = imageList1.Images[3];
+            else
+                Pb_Cartstatus.Image = imageList1.Images[2];
 
-            foreach (Control c in panel1.Controls)//設定元件的enter&leave
+            foreach (Control c in P_Buttom.Controls)//設定元件的enter&leave
             {
                 c.MouseEnter += AL_ProductInfo_MouseEnter;
                 c.MouseLeave += AL_ProductInfo_MouseLeave;
@@ -54,16 +60,16 @@ namespace Ctr_Customs
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Btn_Favorite_Click(object sender, EventArgs e)
         {
             if (like)
             {
-                button1.Image = imageList1.Images[0];
+                Btn_Favorite.Image = imageList1.Images[0];
                 RemoveFav(sender, e);
             }
             else
             {
-                button1.Image = imageList1.Images[1];
+                Btn_Favorite.Image = imageList1.Images[1];
                 AddFav(sender, e);
             }
             like = !like;
@@ -71,23 +77,23 @@ namespace Ctr_Customs
 
         private void C_Click(object sender, EventArgs e)
         {
-            ProductDetail a = new ProductDetail(ProductID,Addcart);
+            ProductDetail a = new ProductDetail(ProductID,InCart);
             a.ShowDialog();
-        }
-
-        void Addcart()
-        {
-            pictureBox2.Image = imageList1.Images[3];
         }
 
         private void AL_ProductInfo_MouseLeave(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.White;
+            P_Buttom.BackColor = Color.White;
         }
 
         private void AL_ProductInfo_MouseEnter(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.AliceBlue;
+            P_Buttom.BackColor = Color.AliceBlue;
+        }
+
+        void InCart()
+        {
+            Pb_Cartstatus.Image = imageList1.Images[3];
         }
     }
 }

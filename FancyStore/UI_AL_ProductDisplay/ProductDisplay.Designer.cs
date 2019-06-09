@@ -28,96 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.Tlp_Bottom = new System.Windows.Forms.TableLayoutPanel();
+            this.Flp_CategoryM = new System.Windows.Forms.FlowLayoutPanel();
+            this.Flp_CategoryS = new System.Windows.Forms.FlowLayoutPanel();
+            this.Flp_Products = new System.Windows.Forms.FlowLayoutPanel();
+            this.Bar_BtnM = new System.Windows.Forms.Panel();
+            this.P_Search = new System.Windows.Forms.Panel();
+            this.Btn_Search = new System.Windows.Forms.Button();
+            this.Tb_Searchbox = new System.Windows.Forms.TextBox();
+            this.Tlp_Bottom.SuspendLayout();
+            this.P_Search.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // Tlp_Bottom
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(886, 538);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.Tlp_Bottom.BackColor = System.Drawing.Color.White;
+            this.Tlp_Bottom.ColumnCount = 2;
+            this.Tlp_Bottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.Tlp_Bottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.Tlp_Bottom.Controls.Add(this.Flp_CategoryM, 1, 0);
+            this.Tlp_Bottom.Controls.Add(this.Flp_CategoryS, 0, 1);
+            this.Tlp_Bottom.Controls.Add(this.Flp_Products, 1, 1);
+            this.Tlp_Bottom.Controls.Add(this.P_Search, 0, 0);
+            this.Tlp_Bottom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tlp_Bottom.Location = new System.Drawing.Point(0, 0);
+            this.Tlp_Bottom.Margin = new System.Windows.Forms.Padding(0);
+            this.Tlp_Bottom.Name = "Tlp_Bottom";
+            this.Tlp_Bottom.RowCount = 2;
+            this.Tlp_Bottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.Tlp_Bottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.Tlp_Bottom.Size = new System.Drawing.Size(1401, 662);
+            this.Tlp_Bottom.TabIndex = 0;
             // 
-            // flowLayoutPanel2
+            // Flp_CategoryM
             // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 37);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(146, 501);
-            this.flowLayoutPanel2.TabIndex = 1;
+            this.Flp_CategoryM.BackColor = System.Drawing.Color.White;
+            this.Flp_CategoryM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Flp_CategoryM.Location = new System.Drawing.Point(280, 0);
+            this.Flp_CategoryM.Margin = new System.Windows.Forms.Padding(0);
+            this.Flp_CategoryM.Name = "Flp_CategoryM";
+            this.Flp_CategoryM.Size = new System.Drawing.Size(1121, 66);
+            this.Flp_CategoryM.TabIndex = 3;
             // 
-            // flowLayoutPanel3
+            // Flp_CategoryS
             // 
-            this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.GhostWhite;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(146, 37);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(740, 502);
-            this.flowLayoutPanel3.TabIndex = 2;
-            this.flowLayoutPanel3.Resize += new System.EventHandler(this.flowLayoutPanel3_Resize);
+            this.Flp_CategoryS.BackColor = System.Drawing.Color.White;
+            this.Flp_CategoryS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Flp_CategoryS.Location = new System.Drawing.Point(0, 66);
+            this.Flp_CategoryS.Margin = new System.Windows.Forms.Padding(0);
+            this.Flp_CategoryS.Name = "Flp_CategoryS";
+            this.Flp_CategoryS.Size = new System.Drawing.Size(280, 596);
+            this.Flp_CategoryS.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // Flp_Products
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(149, 1);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(740, 37);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.Flp_Products.AutoScroll = true;
+            this.Flp_Products.BackColor = System.Drawing.Color.GhostWhite;
+            this.Flp_Products.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Flp_Products.Location = new System.Drawing.Point(280, 66);
+            this.Flp_Products.Margin = new System.Windows.Forms.Padding(0);
+            this.Flp_Products.Name = "Flp_Products";
+            this.Flp_Products.Size = new System.Drawing.Size(1121, 596);
+            this.Flp_Products.TabIndex = 2;
+            this.Flp_Products.Resize += new System.EventHandler(this.flowLayoutPanel3_Resize);
             // 
-            // panel2
+            // Bar_BtnM
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(8, 24);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(75, 4);
-            this.panel2.TabIndex = 1;
+            this.Bar_BtnM.BackColor = System.Drawing.Color.Black;
+            this.Bar_BtnM.Location = new System.Drawing.Point(11, 30);
+            this.Bar_BtnM.Margin = new System.Windows.Forms.Padding(0);
+            this.Bar_BtnM.Name = "Bar_BtnM";
+            this.Bar_BtnM.Size = new System.Drawing.Size(100, 5);
+            this.Bar_BtnM.TabIndex = 1;
+            // 
+            // P_Search
+            // 
+            this.P_Search.Controls.Add(this.Tb_Searchbox);
+            this.P_Search.Controls.Add(this.Btn_Search);
+            this.P_Search.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.P_Search.Location = new System.Drawing.Point(3, 3);
+            this.P_Search.Name = "P_Search";
+            this.P_Search.Size = new System.Drawing.Size(274, 60);
+            this.P_Search.TabIndex = 4;
+            // 
+            // Btn_Search
+            // 
+            this.Btn_Search.BackColor = System.Drawing.Color.Gold;
+            this.Btn_Search.FlatAppearance.BorderSize = 0;
+            this.Btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Search.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Btn_Search.Location = new System.Drawing.Point(183, 27);
+            this.Btn_Search.Name = "Btn_Search";
+            this.Btn_Search.Size = new System.Drawing.Size(88, 29);
+            this.Btn_Search.TabIndex = 0;
+            this.Btn_Search.Text = "搜尋";
+            this.Btn_Search.UseVisualStyleBackColor = false;
+            this.Btn_Search.Click += new System.EventHandler(this.Btn_Search_Click);
+            // 
+            // Tb_Searchbox
+            // 
+            this.Tb_Searchbox.Location = new System.Drawing.Point(3, 28);
+            this.Tb_Searchbox.MaxLength = 50;
+            this.Tb_Searchbox.Multiline = true;
+            this.Tb_Searchbox.Name = "Tb_Searchbox";
+            this.Tb_Searchbox.Size = new System.Drawing.Size(174, 28);
+            this.Tb_Searchbox.TabIndex = 1;
             // 
             // ProductDisplay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 538);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.ClientSize = new System.Drawing.Size(1401, 662);
+            this.Controls.Add(this.Bar_BtnM);
+            this.Controls.Add(this.Tlp_Bottom);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProductDisplay";
             this.ShowIcon = false;
             this.Text = "Form1";
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.Tlp_Bottom.ResumeLayout(false);
+            this.P_Search.ResumeLayout(false);
+            this.P_Search.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel Tlp_Bottom;
+        private System.Windows.Forms.FlowLayoutPanel Flp_CategoryM;
+        private System.Windows.Forms.FlowLayoutPanel Flp_CategoryS;
+        private System.Windows.Forms.FlowLayoutPanel Flp_Products;
+        private System.Windows.Forms.Panel Bar_BtnM;
+        private System.Windows.Forms.Panel P_Search;
+        private System.Windows.Forms.TextBox Tb_Searchbox;
+        private System.Windows.Forms.Button Btn_Search;
     }
 }
 

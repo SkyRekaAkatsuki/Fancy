@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 using Timer = System.Windows.Forms.Timer;
+using UI_AL_ProductDisplay;
 
 namespace UI_JA_Main
 {
@@ -105,6 +106,12 @@ namespace UI_JA_Main
         private void button5_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
+            panel5.Controls.Clear();
+            ProductDisplay p = new ProductDisplay(1);
+            p.TopLevel = false;
+            panel5.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
