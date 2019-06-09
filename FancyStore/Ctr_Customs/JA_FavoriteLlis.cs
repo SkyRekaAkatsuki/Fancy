@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Cls_Utility;
+using UI_AL_ProductDetail;
 
 namespace Ctr_Customs
 {
@@ -26,7 +27,8 @@ namespace Ctr_Customs
             }
         }
         public string _PName { set { this.label1.Text = value; } }
-        // public string _PDesction { set { this.label2.Text = value; } }
+        private int PID;
+        public int _PID { set { PID = value; } }
         public string _PPrice { set { this.label3.Text = value; } }
 
         public JA_FavoriteLlis()
@@ -36,8 +38,8 @@ namespace Ctr_Customs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (Cls_JA_Member.RemoveFavorite((int)this.Tag))
-            //{
+            if (Cls_JA_Member.RemoveFavorite((int)this.Tag))
+            {
                 Timer t = new Timer();
                 t.Interval = 10;
                 t.Start();
@@ -61,8 +63,18 @@ namespace Ctr_Customs
                     }
                 };
 
-            //}
-            //else { return; }
+        }
+            else { return; }
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProductDetail productDetail = new ProductDetail(PID, Addcart);
+            productDetail.ShowDialog();
+        }
+
+        void Addcart()
+        {
 
         }
     }
