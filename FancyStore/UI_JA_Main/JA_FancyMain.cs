@@ -102,7 +102,7 @@ namespace UI_JA_Main
         {
             panel4.Left = ((Button)sender).Left;
         }
-
+        //衣料品
         private void button5_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
@@ -113,12 +113,29 @@ namespace UI_JA_Main
             p.Dock = DockStyle.Fill;
             p.Show();
         }
-
+        //下半身
         private void button6_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
+            panel6.Controls.Clear();
+            ProductDisplay p = new ProductDisplay(2);
+            p.TopLevel = false;
+            panel6.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
         }
 
+        //配件
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panel4.Left = ((Button)sender).Left;
+            panel6.Controls.Clear();
+            ProductDisplay p = new ProductDisplay(5);
+            p.TopLevel = false;
+            panel6.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
+        }
         private void button12_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -199,6 +216,8 @@ namespace UI_JA_Main
             this.TopMost = false;
             favorite.ShowDialog();
         }
+
+
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
