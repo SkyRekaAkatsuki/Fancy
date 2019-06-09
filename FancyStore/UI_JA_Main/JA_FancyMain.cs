@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 using Timer = System.Windows.Forms.Timer;
 using UI_AL_ProductDisplay;
+using UI_EW_Maintain;
 
 namespace UI_JA_Main
 {
@@ -217,7 +218,11 @@ namespace UI_JA_Main
             favorite.ShowDialog();
         }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmCart f = new FrmCart();
+            f.ShowDialog();
+        }
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
