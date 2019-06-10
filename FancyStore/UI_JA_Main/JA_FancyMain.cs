@@ -235,6 +235,7 @@ namespace UI_JA_Main
         private void button2_Click(object sender, EventArgs e)
         {
             FrmCart f = new FrmCart();
+            this.TopMost = false;
             f.ShowDialog();
         }
 
