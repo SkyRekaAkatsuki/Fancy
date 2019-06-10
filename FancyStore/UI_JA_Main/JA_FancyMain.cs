@@ -14,6 +14,8 @@ using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 using Timer = System.Windows.Forms.Timer;
 using UI_AL_ProductDisplay;
+using UI_AL_Home;
+using UI_AL_AboutUs;
 
 namespace UI_JA_Main
 {
@@ -96,11 +98,23 @@ namespace UI_JA_Main
         private void button3_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
+            panel6.Controls.Clear();
+            Home p = new Home();
+            p.TopLevel = false;
+            panel6.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             panel4.Left = ((Button)sender).Left;
+            panel6.Controls.Clear();
+            AboutUs p = new AboutUs();
+            p.TopLevel = false;
+            panel6.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
         }
         //衣料品
         private void button5_Click(object sender, EventArgs e)
