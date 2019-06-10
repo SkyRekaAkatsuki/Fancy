@@ -45,17 +45,17 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(400, 58);
+            this.panel1.Location = new System.Drawing.Point(300, 58);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 300);
+            this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 1;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.Pb_Firstblock);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(-400, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(-800, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1200, 300);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(2400, 450);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // Pb_Firstblock
@@ -64,7 +64,7 @@
             this.Pb_Firstblock.Location = new System.Drawing.Point(0, 0);
             this.Pb_Firstblock.Margin = new System.Windows.Forms.Padding(0);
             this.Pb_Firstblock.Name = "Pb_Firstblock";
-            this.Pb_Firstblock.Size = new System.Drawing.Size(400, 300);
+            this.Pb_Firstblock.Size = new System.Drawing.Size(800, 450);
             this.Pb_Firstblock.TabIndex = 0;
             this.Pb_Firstblock.TabStop = false;
             // 

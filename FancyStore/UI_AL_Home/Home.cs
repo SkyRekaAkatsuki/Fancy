@@ -31,7 +31,7 @@ namespace UI_AL_Home
             var q = et.NewsLists.ToList();
             for(int i=0;i<=q.Count-1;i++)
             {
-                PictureBox b = new PictureBox { Width = 300, Height = 300, BackColor = System.Drawing.Color.Blue, Margin = new Padding(0), BorderStyle = BorderStyle.Fixed3D,Image=imageList1.Images[i] };
+                PictureBox b = new PictureBox { Width = 600, Height = 450, BackColor = System.Drawing.Color.Blue, Margin = new Padding(0), BorderStyle = BorderStyle.Fixed3D,Image=imageList1.Images[i] };
                 flowLayoutPanel1.Controls.Add(b);
             }
         }
