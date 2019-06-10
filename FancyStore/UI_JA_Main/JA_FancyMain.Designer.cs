@@ -336,10 +336,10 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(757, 0);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.button7.Location = new System.Drawing.Point(568, 0);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 50);
+            this.button7.Size = new System.Drawing.Size(75, 40);
             this.button7.TabIndex = 1;
             this.button7.Text = "配件";
             this.button7.UseVisualStyleBackColor = true;
@@ -377,8 +377,9 @@
             // 
             // panel6
             // 
-            this.panel6.Location = new System.Drawing.Point(0, 119);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.panel6.Location = new System.Drawing.Point(0, 95);
+            this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1401, 665);
             this.panel6.TabIndex = 3;

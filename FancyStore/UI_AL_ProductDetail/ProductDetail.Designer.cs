@@ -43,19 +43,16 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Bar_Color = new System.Windows.Forms.Panel();
             this.Bar_Size = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Productimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nud_QTY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Pb_Productimage
             // 
-            this.Pb_Productimage.Location = new System.Drawing.Point(92, 41);
-            this.Pb_Productimage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Pb_Productimage.Location = new System.Drawing.Point(51, 30);
+            this.Pb_Productimage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Pb_Productimage.Name = "Pb_Productimage";
-            this.Pb_Productimage.Size = new System.Drawing.Size(379, 379);
+            this.Pb_Productimage.Size = new System.Drawing.Size(284, 303);
             this.Pb_Productimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_Productimage.TabIndex = 0;
             this.Pb_Productimage.TabStop = false;
@@ -64,53 +61,55 @@
             // 
             this.Lbl_Name.AutoSize = true;
             this.Lbl_Name.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Lbl_Name.Location = new System.Drawing.Point(529, 54);
+            this.Lbl_Name.Location = new System.Drawing.Point(379, 40);
+            this.Lbl_Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Name.Name = "Lbl_Name";
-            this.Lbl_Name.Size = new System.Drawing.Size(78, 22);
+            this.Lbl_Name.Size = new System.Drawing.Size(64, 18);
             this.Lbl_Name.TabIndex = 1;
             this.Lbl_Name.Text = "商品名稱";
             // 
             // Lbl_Description
             // 
-            this.Lbl_Description.AutoSize = true;
             this.Lbl_Description.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Lbl_Description.Location = new System.Drawing.Point(529, 94);
+            this.Lbl_Description.Location = new System.Drawing.Point(379, 77);
+            this.Lbl_Description.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Description.Name = "Lbl_Description";
-            this.Lbl_Description.Size = new System.Drawing.Size(44, 22);
+            this.Lbl_Description.Size = new System.Drawing.Size(378, 304);
             this.Lbl_Description.TabIndex = 2;
             this.Lbl_Description.Text = "說明";
             // 
             // Flp_Washing
             // 
-            this.Flp_Washing.Location = new System.Drawing.Point(525, 182);
-            this.Flp_Washing.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Flp_Washing.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.Flp_Washing.Location = new System.Drawing.Point(376, 381);
+            this.Flp_Washing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Flp_Washing.Name = "Flp_Washing";
-            this.Flp_Washing.Size = new System.Drawing.Size(508, 192);
+            this.Flp_Washing.Size = new System.Drawing.Size(381, 156);
             this.Flp_Washing.TabIndex = 4;
             // 
             // Flp_Color
             // 
-            this.Flp_Color.Location = new System.Drawing.Point(525, 378);
-            this.Flp_Color.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Flp_Color.Location = new System.Drawing.Point(51, 489);
+            this.Flp_Color.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Flp_Color.Name = "Flp_Color";
-            this.Flp_Color.Size = new System.Drawing.Size(508, 79);
+            this.Flp_Color.Size = new System.Drawing.Size(284, 62);
             this.Flp_Color.TabIndex = 5;
             // 
             // Flp_Size
             // 
-            this.Flp_Size.Location = new System.Drawing.Point(525, 474);
-            this.Flp_Size.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Flp_Size.Location = new System.Drawing.Point(51, 554);
+            this.Flp_Size.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Flp_Size.Name = "Flp_Size";
-            this.Flp_Size.Size = new System.Drawing.Size(508, 47);
+            this.Flp_Size.Size = new System.Drawing.Size(284, 45);
             this.Flp_Size.TabIndex = 6;
             // 
             // Flp_Images
             // 
             this.Flp_Images.AutoScroll = true;
-            this.Flp_Images.Location = new System.Drawing.Point(92, 465);
-            this.Flp_Images.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Flp_Images.Location = new System.Drawing.Point(51, 369);
+            this.Flp_Images.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Flp_Images.Name = "Flp_Images";
-            this.Flp_Images.Size = new System.Drawing.Size(379, 100);
+            this.Flp_Images.Size = new System.Drawing.Size(284, 104);
             this.Flp_Images.TabIndex = 7;
             this.Flp_Images.WrapContents = false;
             // 
@@ -119,9 +118,10 @@
             this.Lbl_Price.AutoSize = true;
             this.Lbl_Price.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Lbl_Price.ForeColor = System.Drawing.Color.Crimson;
-            this.Lbl_Price.Location = new System.Drawing.Point(851, 55);
+            this.Lbl_Price.Location = new System.Drawing.Point(620, 41);
+            this.Lbl_Price.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Price.Name = "Lbl_Price";
-            this.Lbl_Price.Size = new System.Drawing.Size(52, 25);
+            this.Lbl_Price.Size = new System.Drawing.Size(42, 21);
             this.Lbl_Price.TabIndex = 8;
             this.Lbl_Price.Text = "價錢";
             // 
@@ -131,10 +131,9 @@
             this.Btn_Addcart.FlatAppearance.BorderSize = 0;
             this.Btn_Addcart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Addcart.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Btn_Addcart.Location = new System.Drawing.Point(855, 549);
-            this.Btn_Addcart.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Addcart.Location = new System.Drawing.Point(622, 552);
             this.Btn_Addcart.Name = "Btn_Addcart";
-            this.Btn_Addcart.Size = new System.Drawing.Size(179, 46);
+            this.Btn_Addcart.Size = new System.Drawing.Size(134, 37);
             this.Btn_Addcart.TabIndex = 9;
             this.Btn_Addcart.Text = "加入購物車";
             this.Btn_Addcart.UseVisualStyleBackColor = false;
@@ -144,25 +143,23 @@
             // 
             this.Lbl_Qty.AutoSize = true;
             this.Lbl_Qty.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.Lbl_Qty.Location = new System.Drawing.Point(525, 561);
-            this.Lbl_Qty.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_Qty.Location = new System.Drawing.Point(379, 562);
             this.Lbl_Qty.Name = "Lbl_Qty";
-            this.Lbl_Qty.Size = new System.Drawing.Size(44, 22);
+            this.Lbl_Qty.Size = new System.Drawing.Size(36, 18);
             this.Lbl_Qty.TabIndex = 10;
             this.Lbl_Qty.Text = "數量";
             // 
             // Nud_QTY
             // 
             this.Nud_QTY.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.Nud_QTY.Location = new System.Drawing.Point(585, 559);
-            this.Nud_QTY.Margin = new System.Windows.Forms.Padding(4);
+            this.Nud_QTY.Location = new System.Drawing.Point(427, 560);
             this.Nud_QTY.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.Nud_QTY.Name = "Nud_QTY";
-            this.Nud_QTY.Size = new System.Drawing.Size(72, 30);
+            this.Nud_QTY.Size = new System.Drawing.Size(54, 25);
             this.Nud_QTY.TabIndex = 11;
             this.Nud_QTY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Nud_QTY.Value = new decimal(new int[] {
@@ -174,52 +171,28 @@
             // Bar_Color
             // 
             this.Bar_Color.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Bar_Color.Location = new System.Drawing.Point(537, 41);
-            this.Bar_Color.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Bar_Color.Location = new System.Drawing.Point(385, 30);
+            this.Bar_Color.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Bar_Color.Name = "Bar_Color";
-            this.Bar_Color.Size = new System.Drawing.Size(100, 5);
+            this.Bar_Color.Size = new System.Drawing.Size(75, 4);
             this.Bar_Color.TabIndex = 12;
             // 
             // Bar_Size
             // 
             this.Bar_Size.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Bar_Size.Location = new System.Drawing.Point(681, 41);
-            this.Bar_Size.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Bar_Size.Location = new System.Drawing.Point(493, 30);
+            this.Bar_Size.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Bar_Size.Name = "Bar_Size";
-            this.Bar_Size.Size = new System.Drawing.Size(100, 5);
+            this.Bar_Size.Size = new System.Drawing.Size(75, 4);
             this.Bar_Size.TabIndex = 13;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(93, 448);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(320, 188);
-            this.dataGridView1.TabIndex = 14;
-            this.dataGridView1.Visible = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(421, 582);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 29);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ProductDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(1109, 662);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(810, 618);
+            this.Controls.Add(this.Lbl_Description);
             this.Controls.Add(this.Bar_Size);
             this.Controls.Add(this.Bar_Color);
             this.Controls.Add(this.Nud_QTY);
@@ -230,17 +203,16 @@
             this.Controls.Add(this.Flp_Size);
             this.Controls.Add(this.Flp_Color);
             this.Controls.Add(this.Flp_Washing);
-            this.Controls.Add(this.Lbl_Description);
             this.Controls.Add(this.Lbl_Name);
             this.Controls.Add(this.Pb_Productimage);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProductDetail";
             this.Text = "商品詳細資訊";
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Productimage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nud_QTY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,8 +234,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel Bar_Color;
         private System.Windows.Forms.Panel Bar_Size;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
     }
 }
 

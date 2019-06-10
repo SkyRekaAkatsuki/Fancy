@@ -32,10 +32,10 @@
             this.Flp_CategoryM = new System.Windows.Forms.FlowLayoutPanel();
             this.Flp_CategoryS = new System.Windows.Forms.FlowLayoutPanel();
             this.Flp_Products = new System.Windows.Forms.FlowLayoutPanel();
-            this.Bar_BtnM = new System.Windows.Forms.Panel();
             this.P_Search = new System.Windows.Forms.Panel();
-            this.Btn_Search = new System.Windows.Forms.Button();
             this.Tb_Searchbox = new System.Windows.Forms.TextBox();
+            this.Btn_Search = new System.Windows.Forms.Button();
+            this.Bar_BtnM = new System.Windows.Forms.Panel();
             this.Tlp_Bottom.SuspendLayout();
             this.P_Search.SuspendLayout();
             this.SuspendLayout();
@@ -57,27 +57,27 @@
             this.Tlp_Bottom.RowCount = 2;
             this.Tlp_Bottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.Tlp_Bottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.Tlp_Bottom.Size = new System.Drawing.Size(1401, 662);
+            this.Tlp_Bottom.Size = new System.Drawing.Size(1051, 530);
             this.Tlp_Bottom.TabIndex = 0;
             // 
             // Flp_CategoryM
             // 
             this.Flp_CategoryM.BackColor = System.Drawing.Color.White;
             this.Flp_CategoryM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Flp_CategoryM.Location = new System.Drawing.Point(280, 0);
+            this.Flp_CategoryM.Location = new System.Drawing.Point(210, 0);
             this.Flp_CategoryM.Margin = new System.Windows.Forms.Padding(0);
             this.Flp_CategoryM.Name = "Flp_CategoryM";
-            this.Flp_CategoryM.Size = new System.Drawing.Size(1121, 66);
+            this.Flp_CategoryM.Size = new System.Drawing.Size(841, 53);
             this.Flp_CategoryM.TabIndex = 3;
             // 
             // Flp_CategoryS
             // 
             this.Flp_CategoryS.BackColor = System.Drawing.Color.White;
             this.Flp_CategoryS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Flp_CategoryS.Location = new System.Drawing.Point(0, 66);
+            this.Flp_CategoryS.Location = new System.Drawing.Point(0, 53);
             this.Flp_CategoryS.Margin = new System.Windows.Forms.Padding(0);
             this.Flp_CategoryS.Name = "Flp_CategoryS";
-            this.Flp_CategoryS.Size = new System.Drawing.Size(280, 596);
+            this.Flp_CategoryS.Size = new System.Drawing.Size(210, 477);
             this.Flp_CategoryS.TabIndex = 1;
             // 
             // Flp_Products
@@ -85,31 +85,35 @@
             this.Flp_Products.AutoScroll = true;
             this.Flp_Products.BackColor = System.Drawing.Color.GhostWhite;
             this.Flp_Products.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Flp_Products.Location = new System.Drawing.Point(280, 66);
+            this.Flp_Products.Location = new System.Drawing.Point(210, 53);
             this.Flp_Products.Margin = new System.Windows.Forms.Padding(0);
             this.Flp_Products.Name = "Flp_Products";
-            this.Flp_Products.Size = new System.Drawing.Size(1121, 596);
+            this.Flp_Products.Size = new System.Drawing.Size(841, 477);
             this.Flp_Products.TabIndex = 2;
             this.Flp_Products.Resize += new System.EventHandler(this.flowLayoutPanel3_Resize);
-            // 
-            // Bar_BtnM
-            // 
-            this.Bar_BtnM.BackColor = System.Drawing.Color.Black;
-            this.Bar_BtnM.Location = new System.Drawing.Point(11, 30);
-            this.Bar_BtnM.Margin = new System.Windows.Forms.Padding(0);
-            this.Bar_BtnM.Name = "Bar_BtnM";
-            this.Bar_BtnM.Size = new System.Drawing.Size(100, 5);
-            this.Bar_BtnM.TabIndex = 1;
             // 
             // P_Search
             // 
             this.P_Search.Controls.Add(this.Tb_Searchbox);
             this.P_Search.Controls.Add(this.Btn_Search);
             this.P_Search.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.P_Search.Location = new System.Drawing.Point(3, 3);
+            this.P_Search.Location = new System.Drawing.Point(2, 2);
+            this.P_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.P_Search.Name = "P_Search";
-            this.P_Search.Size = new System.Drawing.Size(274, 60);
+            this.P_Search.Size = new System.Drawing.Size(206, 49);
             this.P_Search.TabIndex = 4;
+            // 
+            // Tb_Searchbox
+            // 
+            this.Tb_Searchbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Tb_Searchbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.Tb_Searchbox.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Tb_Searchbox.Location = new System.Drawing.Point(2, 22);
+            this.Tb_Searchbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tb_Searchbox.MaxLength = 50;
+            this.Tb_Searchbox.Name = "Tb_Searchbox";
+            this.Tb_Searchbox.Size = new System.Drawing.Size(132, 23);
+            this.Tb_Searchbox.TabIndex = 1;
             // 
             // Btn_Search
             // 
@@ -117,32 +121,33 @@
             this.Btn_Search.FlatAppearance.BorderSize = 0;
             this.Btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Search.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Btn_Search.Location = new System.Drawing.Point(183, 27);
+            this.Btn_Search.Location = new System.Drawing.Point(137, 22);
+            this.Btn_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_Search.Name = "Btn_Search";
-            this.Btn_Search.Size = new System.Drawing.Size(88, 29);
+            this.Btn_Search.Size = new System.Drawing.Size(66, 23);
             this.Btn_Search.TabIndex = 0;
             this.Btn_Search.Text = "搜尋";
             this.Btn_Search.UseVisualStyleBackColor = false;
             this.Btn_Search.Click += new System.EventHandler(this.Btn_Search_Click);
             // 
-            // Tb_Searchbox
+            // Bar_BtnM
             // 
-            this.Tb_Searchbox.Location = new System.Drawing.Point(3, 28);
-            this.Tb_Searchbox.MaxLength = 50;
-            this.Tb_Searchbox.Multiline = true;
-            this.Tb_Searchbox.Name = "Tb_Searchbox";
-            this.Tb_Searchbox.Size = new System.Drawing.Size(174, 28);
-            this.Tb_Searchbox.TabIndex = 1;
+            this.Bar_BtnM.BackColor = System.Drawing.Color.Black;
+            this.Bar_BtnM.Location = new System.Drawing.Point(8, 24);
+            this.Bar_BtnM.Margin = new System.Windows.Forms.Padding(0);
+            this.Bar_BtnM.Name = "Bar_BtnM";
+            this.Bar_BtnM.Size = new System.Drawing.Size(75, 4);
+            this.Bar_BtnM.TabIndex = 1;
+            this.Bar_BtnM.Visible = false;
             // 
             // ProductDisplay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1401, 662);
+            this.ClientSize = new System.Drawing.Size(1051, 530);
             this.Controls.Add(this.Bar_BtnM);
             this.Controls.Add(this.Tlp_Bottom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProductDisplay";
             this.ShowIcon = false;
             this.Text = "Form1";
