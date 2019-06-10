@@ -42,10 +42,9 @@
             // lblSubAmount
             // 
             this.lblSubAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblSubAmount.Location = new System.Drawing.Point(575, 0);
-            this.lblSubAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubAmount.Location = new System.Drawing.Point(767, 0);
             this.lblSubAmount.Name = "lblSubAmount";
-            this.lblSubAmount.Size = new System.Drawing.Size(81, 29);
+            this.lblSubAmount.Size = new System.Drawing.Size(108, 36);
             this.lblSubAmount.TabIndex = 25;
             this.lblSubAmount.Text = "小計金額";
             this.lblSubAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -53,10 +52,9 @@
             // lblUnitPrice
             // 
             this.lblUnitPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblUnitPrice.Location = new System.Drawing.Point(375, 0);
-            this.lblUnitPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUnitPrice.Location = new System.Drawing.Point(500, 0);
             this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(61, 29);
+            this.lblUnitPrice.Size = new System.Drawing.Size(81, 36);
             this.lblUnitPrice.TabIndex = 23;
             this.lblUnitPrice.Text = "單價";
             this.lblUnitPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -64,10 +62,9 @@
             // lblSize
             // 
             this.lblSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblSize.Location = new System.Drawing.Point(332, 0);
-            this.lblSize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSize.Location = new System.Drawing.Point(443, 0);
             this.lblSize.Name = "lblSize";
-            this.lblSize.Size = new System.Drawing.Size(38, 29);
+            this.lblSize.Size = new System.Drawing.Size(51, 36);
             this.lblSize.TabIndex = 22;
             this.lblSize.Text = "尺吋";
             this.lblSize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,10 +72,9 @@
             // lblColor
             // 
             this.lblColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblColor.Location = new System.Drawing.Point(272, 0);
-            this.lblColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblColor.Location = new System.Drawing.Point(363, 0);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(56, 29);
+            this.lblColor.Size = new System.Drawing.Size(75, 36);
             this.lblColor.TabIndex = 21;
             this.lblColor.Text = "顏色";
             this.lblColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,10 +82,9 @@
             // lblProductName
             // 
             this.lblProductName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblProductName.Location = new System.Drawing.Point(2, 0);
-            this.lblProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProductName.Location = new System.Drawing.Point(3, 0);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(265, 29);
+            this.lblProductName.Size = new System.Drawing.Size(353, 36);
             this.lblProductName.TabIndex = 20;
             this.lblProductName.Text = "產品名稱";
             this.lblProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,10 +93,10 @@
             // 
             this.nuQty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.nuQty.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.nuQty.Location = new System.Drawing.Point(441, 0);
-            this.nuQty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nuQty.Location = new System.Drawing.Point(588, 0);
+            this.nuQty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nuQty.Name = "nuQty";
-            this.nuQty.Size = new System.Drawing.Size(60, 29);
+            this.nuQty.Size = new System.Drawing.Size(80, 34);
             this.nuQty.TabIndex = 26;
             this.nuQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nuQty.ValueChanged += new System.EventHandler(this.nuQty_ValueChanged);
@@ -109,10 +104,10 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnCancel.Location = new System.Drawing.Point(661, 0);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(881, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(76, 29);
+            this.btnCancel.Size = new System.Drawing.Size(101, 36);
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -121,17 +116,16 @@
             // lblStockQTY
             // 
             this.lblStockQTY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblStockQTY.Location = new System.Drawing.Point(506, 0);
-            this.lblStockQTY.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStockQTY.Location = new System.Drawing.Point(675, 0);
             this.lblStockQTY.Name = "lblStockQTY";
-            this.lblStockQTY.Size = new System.Drawing.Size(64, 29);
+            this.lblStockQTY.Size = new System.Drawing.Size(85, 36);
             this.lblStockQTY.TabIndex = 28;
             this.lblStockQTY.Text = "庫存量";
             this.lblStockQTY.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // EW_Cart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblStockQTY);
             this.Controls.Add(this.btnCancel);
@@ -141,9 +135,9 @@
             this.Controls.Add(this.lblSize);
             this.Controls.Add(this.lblColor);
             this.Controls.Add(this.lblProductName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EW_Cart";
-            this.Size = new System.Drawing.Size(738, 29);
+            this.Size = new System.Drawing.Size(984, 36);
             this.Load += new System.EventHandler(this.EW_Cart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nuQty)).EndInit();
             this.ResumeLayout(false);

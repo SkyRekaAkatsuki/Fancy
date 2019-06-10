@@ -46,11 +46,15 @@ namespace Ctr_Customs
             lblStockQTY.Text = ps.StockQTY.ToString();
         }
 
+        //會員修改數量
         private void nuQty_ValueChanged(object sender, EventArgs e)
         {
             Cls_Utility.Class1.CartList[index].Qty = (int)nuQty.Value;
-        }
 
+            lblSubAmount.Text = (ct.UnitPrice * (int)nuQty.Value).ToString();
+        }
+        
+        //取消產品訂購
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Cls_Utility.Class1.CartList[index].Qty = 0;

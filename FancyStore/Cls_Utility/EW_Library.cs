@@ -24,7 +24,10 @@ namespace Cls_Utility
         public static Nullable<System.DateTime> _CreateDate { get; set; }
     }
 
-    public class EW_Library
+    public static class EW_Library
     {
+        public static int _OrderAmt { get; set; }
+        public static int _Freight { get; set; }
+        public static int _TotalAmt { get; set; }
     }
 }
