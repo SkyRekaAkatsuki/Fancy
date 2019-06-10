@@ -18,6 +18,7 @@ namespace Ctr_Customs
         {
             InitializeComponent();
         }
+        FancyStoreEntities dbContext = new FancyStoreEntities();
 
         CartItem ct = new CartItem();
         int index;
@@ -38,7 +39,12 @@ namespace Ctr_Customs
             lblUnitPrice.Text = ct.UnitPrice.ToString();
             nuQty.Value = ct.Qty;
             lblSubAmount.Text = (ct.UnitPrice * ct.Qty).ToString();
-        }        
+
+            var ps = dbContext.ProductStocks.Where(x => x.ProductID == ct.ProductID
+            && x.ProductSizeID == ct.ProductSizeID && x.ProductColorID == ct.ProductColorID).FirstOrDefault();
+            nuQty.Maximum = ps.StockQTY;
+            lblStockQTY.Text = ps.StockQTY.ToString();
+        }
 
         private void nuQty_ValueChanged(object sender, EventArgs e)
         {

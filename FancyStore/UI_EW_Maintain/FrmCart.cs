@@ -20,6 +20,7 @@ namespace UI_EW_Maintain
             InitializeComponent();
 
             panel1.Height = 0;
+            this.Height = 330;
         }
 
         FancyStoreEntities dbContext = new FancyStoreEntities();
@@ -48,22 +49,44 @@ namespace UI_EW_Maintain
 
         bool IsPay = false;
 
+        //結帳
         private void btnPay_Click(object sender, EventArgs e)
         {
             IsPay = !IsPay;
 
             if(IsPay)
             {
-                panel1.Height = 130;
+                panel1.Height = 120;
+                this.Height = 460;
                 btnPay.Text = "取消結帳";
             }
             else
             {
                 panel1.Height = 0;
+                this.Height = 330;
                 btnPay.Text = "結帳";
+            }            
+        }
+
+        //繼續購物
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            //離開時刪除 QTY 為 0 的資料
+            for (int i= Cls_Utility.Class1.CartList.Count() - 1; i >= 0; i--)
+            {
+                if (Cls_Utility.Class1.CartList[i].Qty ==0)
+                {
+                    Cls_Utility.Class1.CartList.RemoveAt(i);
+                }
             }
 
-            
+            this.Dispose();
+            this.Close();
+        }
+
+        //確認下單
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
         }
     }
 }
