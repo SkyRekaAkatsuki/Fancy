@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D4921E7-A1EF-411A-A287-F8C7E0CDFF4F}</ProjectGuid>
+    <ProjectGuid>{9D976D76-B28C-4444-9650-9AB63D42CC7A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UI_AL_AboutUs</RootNamespace>
-    <AssemblyName>UI_AL_AboutUs</AssemblyName>
+    <RootNamespace>UI_AL_AddNews</RootNamespace>
+    <AssemblyName>UI_AL_AddNews</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,16 +52,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutUs.cs">
+    <Compile Include="AddNews.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutUs.Designer.cs">
-      <DependentUpon>AboutUs.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>AddNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewsList.Designer.cs">
+      <DependentUpon>NewsList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutUs.resx">
-      <DependentUpon>AboutUs.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>AddNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsList.resx">
+      <DependentUpon>NewsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +80,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -81,7 +95,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background.jpg" />
+    <ProjectReference Include="..\Ctr_Customs\Ctr_Customs.csproj">
+      <Project>{a9dccdd6-aed2-451a-8cc6-9ea7f627cec3}</Project>
+      <Name>Ctr_Customs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
+      <Project>{5392D1D7-99DD-4BA6-9965-F1C02C0B51CB}</Project>
+      <Name>DB_Fancy</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
