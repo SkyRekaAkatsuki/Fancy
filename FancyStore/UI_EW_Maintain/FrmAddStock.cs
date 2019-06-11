@@ -56,9 +56,16 @@ namespace UI_EW_Maintain
                     {
                         ps.StockID = ((ProductStock)productStockBindingSource.Current).StockID;
 
+                        int addQty;
+
+                        if (!int.TryParse(productStockDataGridView[5, e.RowIndex].Value.ToString(), out addQty))
+                        {
+                            addQty = 0;
+                        }
+                        //MessageBox.Show($"cell={productStockDataGridView[5, e.RowIndex].Value} => addQty= {addQty}");
                         var q = dbContext.ProductStocks.Find(ps.StockID);
 
-                        q.StockQTY = ((ProductStock)productStockBindingSource.Current).StockQTY;
+                        q.StockQTY = ((ProductStock)productStockBindingSource.Current).StockQTY + addQty;
 
                         this.dbContext.SaveChanges();
 

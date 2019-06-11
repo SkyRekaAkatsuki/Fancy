@@ -18,10 +18,6 @@ namespace UI_JA_Main
         public JA_統計()
         {
             InitializeComponent();
-        }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            db = new FancyStoreEntities();
             var 每日會員成長 = db.Users.AsEnumerable().GroupBy(n => n.RegistrationDate.ToShortDateString())
             .Select(n => new { 天 = n.Key, 人數 = n.Count() }).ToList();
             this.chart1.DataSource = 每日會員成長;
@@ -62,7 +58,7 @@ namespace UI_JA_Main
 
             var 小分類銷售比 = db.OrderDetails.AsEnumerable().Where(n => n.OrderHeader.OrderStatusID != 3)
                 .GroupBy(n => n.Product.CategorySmall.CategorySName).Select
-                (n => new { 小分類 = n.Key, 銷售額 = n.Sum(nn => nn.UnitPrice * nn.OrderQTY).ToString("C2") }).OrderByDescending(n => n.銷售額);
+                (n => new { 小分類 = n.Key, 銷售額 = n.Sum(nn => nn.UnitPrice * nn.OrderQTY).ToString("C2") }).OrderByDescending(n => n.銷售額).Take(5);
             this.chart7.DataSource = 小分類銷售比;
             this.chart7.Series[0].XValueMember = "小分類";
             this.chart7.Series[0].YValueMembers = "銷售額";
@@ -79,6 +75,21 @@ namespace UI_JA_Main
             this.chart8.Series[0].YValueMembers = "銷售額";
             this.chart8.Series[0].Name = "銷售額";
             this.chart8.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+
+            var 年銷售比 = db.OrderDetails.AsEnumerable().Where(n =>
+             n.OrderHeader.OrderStatusID != 3)
+            .GroupBy(n => n.CreateDate.Value.Year).Select
+             (n => new { 年 = $"{n.Key}", 年銷售額 = n.Sum(nn => nn.UnitPrice * nn.OrderQTY).ToString("C2") }).OrderByDescending(n => n.年銷售額);
+            this.chart9.DataSource = 年銷售比;
+            this.chart9.Series[0].XValueMember = "年";
+            this.chart9.Series[0].YValueMembers = "年銷售額";
+            this.chart9.Series[0].Name = "年銷售額";
+            this.chart9.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
 
         }
 

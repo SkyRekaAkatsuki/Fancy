@@ -68,6 +68,12 @@
       <DependentUpon>AL_ProductInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="EW_Cart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EW_Cart.Designer.cs">
+      <DependentUpon>EW_Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="JA_AdminReplayLeft.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AL_ProductInfo.resx">
       <DependentUpon>AL_ProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EW_Cart.resx">
+      <DependentUpon>EW_Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="img.resx">
       <Generator>ResXFileCodeGenerator</Generator>

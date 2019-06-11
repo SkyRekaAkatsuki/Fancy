@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 using Timer = System.Windows.Forms.Timer;
 using UI_AL_ProductDisplay;
+using UI_EW_Maintain;
 using UI_AL_Home;
 using UI_AL_AboutUs;
 
@@ -45,7 +46,6 @@ namespace UI_JA_Main
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
         }
 
 
@@ -61,7 +61,6 @@ namespace UI_JA_Main
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-
         }
         bool userCheck = true;
         private void button1_Click(object sender, EventArgs e)
@@ -237,7 +236,14 @@ namespace UI_JA_Main
             favorite.ShowDialog();
         }
 
-
+        //購物車
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmCart f = new FrmCart();
+            this.TopMost = false;
+            f.ShowDialog();
+            button5_Click(button5, e);
+        }
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
