@@ -23,7 +23,6 @@ namespace UI_AL_AddNews
             {
                 flowLayoutPanel1.Controls.Add(new AL_NewsInfo { NewsID = n.NewsID, Title = n.Title, NewsDate = (DateTime)n.NewsDate, NewsContent = n.NewContent, PhotoID = (int)n.PhotoID });
             }
-
         }
         FancyStoreEntities et = new FancyStoreEntities();
 

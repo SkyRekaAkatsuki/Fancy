@@ -65,7 +65,6 @@ namespace UI_AL_Home
                         if (flowLayoutPanel1.Controls.Count <= 2)
                         {
                             Addnews();
-                            MessageBox.Show("add");
                         }
                     }
                     else
