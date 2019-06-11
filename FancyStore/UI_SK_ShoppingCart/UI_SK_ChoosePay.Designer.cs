@@ -354,12 +354,13 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(171)))), ((int)(((byte)(143)))));
             this.button3.Location = new System.Drawing.Point(30, 870);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 100);
             this.button3.TabIndex = 11;
             this.button3.Text = "下一步，確認資料";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // UI_SK_ChoosePay
