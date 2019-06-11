@@ -51,6 +51,12 @@ namespace UI_JA_Main
 
         private void FancyMain_Load(object sender, EventArgs e)
         {
+            panel6.Controls.Clear();
+            Home p = new Home();
+            p.TopLevel = false;
+            panel6.Controls.Add(p);
+            p.Dock = DockStyle.Fill;
+            p.Show();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
