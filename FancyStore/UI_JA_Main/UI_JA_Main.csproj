@@ -281,6 +281,10 @@
       <Project>{409A237E-FEAA-44DA-ABE3-20AD071ABFA5}</Project>
       <Name>UI_EW_Maintain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UI_SK_ShoppingCart\UI_SK_ShoppingCart.csproj">
+      <Project>{1BE63B40-1DA9-4457-A1C3-523FC5317550}</Project>
+      <Name>UI_SK_ShoppingCart</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\c799b8371ec33aa82da920268390868e.png" />

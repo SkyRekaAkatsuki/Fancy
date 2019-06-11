@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F669CDA7-2338-4AF2-8201-55415FAF0BFE}</ProjectGuid>
+    <ProjectGuid>{1BE63B40-1DA9-4457-A1C3-523FC5317550}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UI_AL_Home</RootNamespace>
-    <AssemblyName>UI_AL_Home</AssemblyName>
+    <RootNamespace>UI_SK_ShoppingCart</RootNamespace>
+    <AssemblyName>UI_SK_ShoppingCart</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,11 +37,16 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,17 +58,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Home.cs">
+    <Compile Include="UI_SK_ChoosePay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="UI_SK_ChoosePay.Designer.cs">
+      <DependentUpon>UI_SK_ChoosePay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_SK_MainCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_SK_MainCart.Designer.cs">
+      <DependentUpon>UI_SK_MainCart.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="UI_SK_MotherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_SK_MotherForm.Designer.cs">
+      <DependentUpon>UI_SK_MotherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_SK_RecieptWay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_SK_RecieptWay.Designer.cs">
+      <DependentUpon>UI_SK_RecieptWay.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,6 +93,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI_SK_ChoosePay.resx">
+      <DependentUpon>UI_SK_ChoosePay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_SK_MainCart.resx">
+      <DependentUpon>UI_SK_MainCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_SK_MotherForm.resx">
+      <DependentUpon>UI_SK_MotherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_SK_RecieptWay.resx">
+      <DependentUpon>UI_SK_RecieptWay.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,17 +124,16 @@
       <Name>Cls_Utility</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ctr_Customs\Ctr_Customs.csproj">
-      <Project>{A9DCCDD6-AED2-451A-8CC6-9EA7F627CEC3}</Project>
+      <Project>{a9dccdd6-aed2-451a-8cc6-9ea7f627cec3}</Project>
       <Name>Ctr_Customs</Name>
     </ProjectReference>
     <ProjectReference Include="..\DB_Fancy\DB_Fancy.csproj">
       <Project>{5392d1d7-99dd-4ba6-9965-f1c02c0b51cb}</Project>
       <Name>DB_Fancy</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UI_AL_ProductDetail\UI_AL_ProductDetail.csproj">
-      <Project>{1c1d682b-9d4f-411a-80fe-9479947d40d7}</Project>
-      <Name>UI_AL_ProductDetail</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
