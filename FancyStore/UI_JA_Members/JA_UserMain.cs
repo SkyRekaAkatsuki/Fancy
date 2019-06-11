@@ -232,7 +232,7 @@ namespace UI_JA_Members
         private void button9_Click(object sender, EventArgs e)
         {
             this.jA_Input5.輸入塊字串 = "Jay";
-            this.jA_Input6.輸入塊字串 = "123";
+            this.jA_Input6.輸入塊字串 = "222";
         }
 
         private void button2_Click(object sender, EventArgs e)

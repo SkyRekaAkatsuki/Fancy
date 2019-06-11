@@ -50,7 +50,7 @@
             // Pb_Productimage
             // 
             this.Pb_Productimage.Location = new System.Drawing.Point(51, 30);
-            this.Pb_Productimage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pb_Productimage.Margin = new System.Windows.Forms.Padding(2);
             this.Pb_Productimage.Name = "Pb_Productimage";
             this.Pb_Productimage.Size = new System.Drawing.Size(284, 303);
             this.Pb_Productimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -82,7 +82,7 @@
             // 
             this.Flp_Washing.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Flp_Washing.Location = new System.Drawing.Point(376, 381);
-            this.Flp_Washing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Flp_Washing.Margin = new System.Windows.Forms.Padding(2);
             this.Flp_Washing.Name = "Flp_Washing";
             this.Flp_Washing.Size = new System.Drawing.Size(381, 156);
             this.Flp_Washing.TabIndex = 4;
@@ -90,7 +90,7 @@
             // Flp_Color
             // 
             this.Flp_Color.Location = new System.Drawing.Point(51, 489);
-            this.Flp_Color.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Flp_Color.Margin = new System.Windows.Forms.Padding(2);
             this.Flp_Color.Name = "Flp_Color";
             this.Flp_Color.Size = new System.Drawing.Size(284, 62);
             this.Flp_Color.TabIndex = 5;
@@ -98,7 +98,7 @@
             // Flp_Size
             // 
             this.Flp_Size.Location = new System.Drawing.Point(51, 554);
-            this.Flp_Size.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Flp_Size.Margin = new System.Windows.Forms.Padding(2);
             this.Flp_Size.Name = "Flp_Size";
             this.Flp_Size.Size = new System.Drawing.Size(284, 45);
             this.Flp_Size.TabIndex = 6;
@@ -107,7 +107,7 @@
             // 
             this.Flp_Images.AutoScroll = true;
             this.Flp_Images.Location = new System.Drawing.Point(51, 369);
-            this.Flp_Images.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Flp_Images.Margin = new System.Windows.Forms.Padding(2);
             this.Flp_Images.Name = "Flp_Images";
             this.Flp_Images.Size = new System.Drawing.Size(284, 104);
             this.Flp_Images.TabIndex = 7;
@@ -172,7 +172,7 @@
             // 
             this.Bar_Color.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Bar_Color.Location = new System.Drawing.Point(385, 30);
-            this.Bar_Color.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Bar_Color.Margin = new System.Windows.Forms.Padding(2);
             this.Bar_Color.Name = "Bar_Color";
             this.Bar_Color.Size = new System.Drawing.Size(75, 4);
             this.Bar_Color.TabIndex = 12;
@@ -181,7 +181,7 @@
             // 
             this.Bar_Size.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Bar_Size.Location = new System.Drawing.Point(493, 30);
-            this.Bar_Size.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Bar_Size.Margin = new System.Windows.Forms.Padding(2);
             this.Bar_Size.Name = "Bar_Size";
             this.Bar_Size.Size = new System.Drawing.Size(75, 4);
             this.Bar_Size.TabIndex = 13;
@@ -206,10 +206,11 @@
             this.Controls.Add(this.Lbl_Name);
             this.Controls.Add(this.Pb_Productimage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProductDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "商品詳細資訊";
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Productimage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Nud_QTY)).EndInit();
