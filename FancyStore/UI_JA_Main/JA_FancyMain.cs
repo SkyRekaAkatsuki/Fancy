@@ -46,7 +46,6 @@ namespace UI_JA_Main
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
         }
 
 
@@ -56,7 +55,6 @@ namespace UI_JA_Main
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-
         }
         bool userCheck = true;
         private void button1_Click(object sender, EventArgs e)
