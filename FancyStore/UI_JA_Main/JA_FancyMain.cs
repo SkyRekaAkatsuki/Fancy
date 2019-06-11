@@ -232,11 +232,13 @@ namespace UI_JA_Main
             favorite.ShowDialog();
         }
 
+        //購物車
         private void button2_Click(object sender, EventArgs e)
         {
             FrmCart f = new FrmCart();
             this.TopMost = false;
             f.ShowDialog();
+            button5_Click(button5, e);
         }
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)

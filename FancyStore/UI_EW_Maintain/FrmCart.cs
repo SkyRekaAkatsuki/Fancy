@@ -33,6 +33,10 @@ namespace UI_EW_Maintain
             comboBox1.DataSource = payMethodBindingSource;
             comboBox1.SelectedIndex = 0;
 
+            var u = dbContext.Users.Find(Cls_JA_Member.UserID);
+
+            lblUser.Text = $"會員: {u.UserName}"; 
+
             ResetData();
         }
 
