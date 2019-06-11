@@ -49,6 +49,7 @@
             this.btnPay = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.payMethodBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,7 +61,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.DarkKhaki;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 58);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(748, 220);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -191,7 +192,7 @@
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnConfirm.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnConfirm.Location = new System.Drawing.Point(551, 58);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(141, 37);
             this.btnConfirm.TabIndex = 12;
@@ -204,7 +205,7 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnExit.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnExit.Location = new System.Drawing.Point(145, 282);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(141, 34);
             this.btnExit.TabIndex = 13;
@@ -219,7 +220,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(94, 43);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(170, 20);
             this.comboBox1.TabIndex = 14;
@@ -246,7 +247,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(9, 321);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(747, 122);
             this.panel1.TabIndex = 15;
@@ -256,7 +257,7 @@
             this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnPay.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnPay.Location = new System.Drawing.Point(444, 282);
-            this.btnPay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(2);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(141, 34);
             this.btnPay.TabIndex = 15;
@@ -266,9 +267,11 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(59)))), ((int)(((byte)(62)))));
+            this.panel2.Controls.Add(this.lblUser);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(766, 33);
@@ -277,11 +280,24 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(341, 13);
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(329, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 12);
+            this.label6.Size = new System.Drawing.Size(115, 26);
             this.label6.TabIndex = 0;
-            this.label6.Text = "label6";
+            this.label6.Text = "購    物    車";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lblUser.Location = new System.Drawing.Point(8, 7);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(54, 17);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "label10";
             // 
             // FrmCart
             // 
@@ -297,10 +313,9 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "FrmCart";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.FrmCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.payMethodBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -334,5 +349,6 @@
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblUser;
     }
 }
