@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -17,29 +18,34 @@ namespace UI_AL_Home
         public Home()
         {
             InitializeComponent();
+            var q = et.NewsLists.ToList();
+            foreach (var n in q)
+            {
+                picturelist.Add(n.Photo.Photo1);
+            }
             Addnews();
-            Wait();
         }
+
         FancyStoreEntities et = new FancyStoreEntities();
-        private void button1_Click(object sender, EventArgs e)
+        List<byte[]> picturelist = new List<byte[]>();
+
+        void GetPicture(PictureBox p, byte[] photo)//讀取圖片
         {
-            timer1.Enabled = true;
+            MemoryStream ms = new MemoryStream(photo);
+            p.Image = Image.FromStream(ms);
+            ms.Dispose();
+            GC.Collect();
         }
 
         void Addnews()
         {
-            var q = et.NewsLists.ToList();
-            for(int i=0;i<=q.Count-1;i++)
+            //var q = et.NewsLists.ToList();
+            foreach (var n in picturelist)
             {
-                PictureBox b = new PictureBox { Width = 300, Height = 300, BackColor = System.Drawing.Color.Blue, Margin = new Padding(0), BorderStyle = BorderStyle.Fixed3D,Image=imageList1.Images[i] };
-                flowLayoutPanel1.Controls.Add(b);
+                PictureBox banner = new PictureBox { Width = 1051, Height = 530, Margin = new Padding(0), Padding = new Padding(0), BorderStyle = BorderStyle.None, SizeMode = PictureBoxSizeMode.StretchImage };
+                GetPicture(banner, n);
+                flowLayoutPanel1.Controls.Add(banner);
             }
-        }
-
-        void Wait()
-        {
-            Thread.Sleep(1000);
-            timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -47,22 +53,23 @@ namespace UI_AL_Home
             int count = 0;
             foreach (PictureBox p in flowLayoutPanel1.Controls)
             {
-                p.MouseHover += P_MouseHover;
-                p.MouseLeave += P_MouseLeave;
+                //p.MouseHover += P_MouseHover;
+                //p.MouseLeave += P_MouseLeave;
                 if (count == 0)
                 {
                     if (p.Width <= 0)
                     {
-                        //Thread.Sleep(1000);
+                        Timer1_stop();
                         flowLayoutPanel1.Controls.Remove(p);
-                        if (flowLayoutPanel1.Controls.Count <= 3)
+                        p.Dispose();
+                        if (flowLayoutPanel1.Controls.Count <= 2)
+                        {
                             Addnews();
-                        //flowLayoutPanel1.Controls.Add(new PictureBox { BackColor = System.Drawing.Color.Green, Width = 300, Height = 300, Margin = new Padding(0), BorderStyle = BorderStyle.Fixed3D });
-                        //MessageBox.Show(p.Location.X + "" + p.Location.Y);
-                        //timer1.Enabled = false;
+                            MessageBox.Show("add");
+                        }
                     }
                     else
-                    p.Width -= 5;
+                        p.Width -= 64;
                 }
                 count = 1;
             }
@@ -76,6 +83,18 @@ namespace UI_AL_Home
         private void P_MouseHover(object sender, EventArgs e)
         {
             timer1.Enabled = false;
+        }
+
+        void Timer1_stop()
+        {
+            timer1.Stop();
+            timer1.Enabled = false;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer1.Start();
+            timer1.Enabled = true;
         }
     }
 }

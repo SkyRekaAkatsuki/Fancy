@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AL_NewsInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AL_NewsInfo.Designer.cs">
+      <DependentUpon>AL_NewsInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="AL_ProductInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AL_NewsInfo.resx">
+      <DependentUpon>AL_NewsInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AL_ProductInfo.resx">
       <DependentUpon>AL_ProductInfo.cs</DependentUpon>
     </EmbeddedResource>

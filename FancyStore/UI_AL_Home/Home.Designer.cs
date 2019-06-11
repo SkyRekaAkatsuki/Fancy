@@ -33,9 +33,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Pb_Firstblock = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Firstblock)).BeginInit();
@@ -45,17 +45,19 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(400, 58);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 300);
+            this.panel1.Size = new System.Drawing.Size(1051, 530);
             this.panel1.TabIndex = 1;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.Pb_Firstblock);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(-400, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(-1051, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1200, 300);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(3153, 530);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // Pb_Firstblock
@@ -64,39 +66,40 @@
             this.Pb_Firstblock.Location = new System.Drawing.Point(0, 0);
             this.Pb_Firstblock.Margin = new System.Windows.Forms.Padding(0);
             this.Pb_Firstblock.Name = "Pb_Firstblock";
-            this.Pb_Firstblock.Size = new System.Drawing.Size(400, 300);
+            this.Pb_Firstblock.Size = new System.Drawing.Size(1051, 530);
             this.Pb_Firstblock.TabIndex = 0;
             this.Pb_Firstblock.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(271, 392);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "iconfinder_heart13_216262.png");
-            this.imageList1.Images.SetKeyName(1, "iconfinder_heart34_216489.png");
+            this.imageList1.Images.SetKeyName(0, "banner1.jpg");
+            this.imageList1.Images.SetKeyName(1, "banner5.jpg");
+            this.imageList1.Images.SetKeyName(2, "banner4.jpg");
+            this.imageList1.Images.SetKeyName(3, "bannerr3.jpg");
+            this.imageList1.Images.SetKeyName(4, "banner6.jpg");
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 2000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1401, 662);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1051, 530);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Home";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -110,10 +113,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox Pb_Firstblock;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

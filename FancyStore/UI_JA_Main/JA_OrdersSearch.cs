@@ -20,14 +20,15 @@ namespace UI_JA_Main
         public JA_OrdersSearch()
         {
             InitializeComponent();
-
-            Loaddata(Cls_JA_Member.db.OrderHeaders.Where(n =>n.OrderDate.Year ==DateTime.Now.Year&&
+            FancyStoreEntities db = new FancyStoreEntities();
+            Loaddata(db.OrderHeaders.Where(n =>n.OrderDate.Year ==DateTime.Now.Year&&
                      n.OrderDate.Month == DateTime.Now.Month
-            ).ToList());
+            ).OrderByDescending(n=>n.OrderDate).ToList());
         }
 
 
         Status mod = Status.All;
+        int count;
         private void checkBox1_CheckStateChanged(object sender, EventArgs e)
         {
             if (((CheckBox)sender).Checked)
@@ -47,6 +48,7 @@ namespace UI_JA_Main
         private void Loaddata(List<OrderHeader> data)
         {
             this.flowLayoutPanel1.Controls.Clear();
+           
             foreach (var item in data.Where(n=>n.UserID==Cls_JA_Member.UserID))
             {
                 JA_OrdersList ordersList = new JA_OrdersList
@@ -63,22 +65,38 @@ namespace UI_JA_Main
                     Tag = item.OrderID,
                     Name = item.OrderNum
                 };
+                ordersList.detailclose += delegate
+                {
+                   // this.flowLayoutPanel1.AutoScrollPosition = new Point( Math.Abs(p.X),0);
+                };
                 this.flowLayoutPanel1.Controls.Add(ordersList);
-                過濾();
                 Application.DoEvents();
             }
-
+            過濾();
         }
         void 過濾()
         {
-            foreach (var item in this.flowLayoutPanel1.Controls)
+            count = 0;
+            foreach (JA_OrdersList item in this.flowLayoutPanel1.Controls)
             {
-                if ((((JA_OrdersList)item)._Status & mod) == ((JA_OrdersList)item)._Status)
+                if ((item._Status & mod) == item._Status)
                 {
-                    ((JA_OrdersList)item).Visible = true;
+                    item.Visible = true;
+                    count++;
                 }
-                else { ((JA_OrdersList)item).Visible = false; }
+                else { item.Visible = false; }
             }
+            label2.Text = count.ToString();
+        }
+        Point p;
+        private void JA_OrdersSearch_MouseMove(object sender, MouseEventArgs e)
+        {
+            p = flowLayoutPanel1.AutoScrollPosition;
+        }
+
+        private void flowLayoutPanel1_Scroll(object sender, ScrollEventArgs e)
+        {
+           
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI_EW_Maintain
+namespace UI_AL_AddNews
 {
     static class Program
     {
@@ -16,9 +16,8 @@ namespace UI_EW_Maintain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmBackMain());
-            Application.Run(new FrmAddStock());
-            //Application.Run(new FrmProducts());
+            Application.Run(new AddNews());
+            //Application.Run(new NewsList());
         }
     }
 }
