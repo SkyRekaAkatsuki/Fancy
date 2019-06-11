@@ -243,10 +243,11 @@ namespace UI_JA_Main
             //FrmCart f = new FrmCart();
             //this.TopMost = false;
             //f.ShowDialog();
-            //button5_Click(button5, e);
             UI_SK_MainCart UISKMC = new UI_SK_MainCart();
             //UI_SK_ChoosePay UISKCP = new UI_SK_ChoosePay();
-            UISKMC.Show();
+            UISKMC.ShowDialog();
+            button5_Click(button5, e);
+
         }
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)
