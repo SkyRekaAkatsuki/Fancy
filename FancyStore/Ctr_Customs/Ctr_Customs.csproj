@@ -42,6 +42,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -133,6 +139,30 @@
     <Compile Include="JA_QuestionList.Designer.cs">
       <DependentUpon>JA_QuestionList.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_SK_RW_CheckList_Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SK_RW_CheckList_Item.Designer.cs">
+      <DependentUpon>UC_SK_RW_CheckList_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SK_RW_CheckList_Title.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SK_RW_CheckList_Title.Designer.cs">
+      <DependentUpon>UC_SK_RW_CheckList_Title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SK_ShoppingCartTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SK_ShoppingCartTitle.Designer.cs">
+      <DependentUpon>UC_SK_ShoppingCartTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SK_ShoppingItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SK_ShoppingItem.Designer.cs">
+      <DependentUpon>UC_SK_ShoppingItem.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AL_ProductInfo.resx">
@@ -176,6 +206,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JA_QuestionList.resx">
       <DependentUpon>JA_QuestionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SK_RW_CheckList_Item.resx">
+      <DependentUpon>UC_SK_RW_CheckList_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SK_RW_CheckList_Title.resx">
+      <DependentUpon>UC_SK_RW_CheckList_Title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SK_ShoppingCartTitle.resx">
+      <DependentUpon>UC_SK_ShoppingCartTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SK_ShoppingItem.resx">
+      <DependentUpon>UC_SK_ShoppingItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

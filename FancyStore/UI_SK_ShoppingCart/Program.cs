@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI_EW_Maintain
+namespace UI_SK_ShoppingCart
 {
+    
     static class Program
     {
         /// <summary>
@@ -16,9 +19,9 @@ namespace UI_EW_Maintain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmBackMain());
-            Application.Run(new FrmProducts());
-            //Application.Run(new FrmProducts());
+            Application.Run(new UI_SK_MotherForm());
+    
         }
     }
 }
+
