@@ -77,14 +77,14 @@ namespace UI_JA_Main
             this.chart8.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
 
 
-            var 年銷售比 = db.OrderDetails.AsEnumerable().Where(n =>
+            var 年成長比 = db.OrderDetails.AsEnumerable().Where(n =>
              n.OrderHeader.OrderStatusID != 3)
-            .GroupBy(n => n.CreateDate.Value.Year).Select
-             (n => new { 年 = $"{n.Key}", 年銷售額 = n.Sum(nn => nn.UnitPrice * nn.OrderQTY).ToString("C2") }).OrderByDescending(n => n.年銷售額);
-            this.chart9.DataSource = 年銷售比;
+            .GroupBy(n => n.CreateDate.Value.Year).OrderBy(n => n.Key).Select
+             (n => new { 年 = n.Key, 年成長比 = n.Sum(nn => nn.UnitPrice * nn.OrderQTY) });
+            this.chart9.DataSource = 年成長比;
             this.chart9.Series[0].XValueMember = "年";
-            this.chart9.Series[0].YValueMembers = "年銷售額";
-            this.chart9.Series[0].Name = "年銷售額";
+            this.chart9.Series[0].YValueMembers = "年成長比";
+            this.chart9.Series[0].Name = "年成長比";
             this.chart9.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
 
         }
@@ -98,8 +98,8 @@ namespace UI_JA_Main
             db = new FancyStoreEntities();
             var 年月銷售比 = db.OrderDetails.AsEnumerable().Where(n => n.CreateDate.Value.Year == ((Int32)((ComboBox)sender).SelectedItem)
             && n.OrderHeader.OrderStatusID != 3)
-                .GroupBy(n => n.CreateDate.Value.Month).Select
-                (n => new { 月 = $"{n.Key}月", 月銷售額 = n.Sum(nn => nn.UnitPrice * nn.OrderQTY).ToString("C2") }).OrderByDescending(n => n.月銷售額);
+                .GroupBy(n => n.CreateDate.Value.Month).OrderBy(n=>n.Key).Select
+                (n => new { 月 = $"{n.Key}月", 月銷售額 = n.Sum(nn => nn.UnitPrice * nn.OrderQTY) });
             this.chart4.DataSource = 年月銷售比;
             this.chart4.Series[0].XValueMember = "月";
             this.chart4.Series[0].YValueMembers = "月銷售額";
@@ -111,8 +111,8 @@ namespace UI_JA_Main
             this.chart5.Series[0].YValueMembers = "月銷售額";
             this.chart5.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
 
-            label1.Text = $"{年月銷售比.First().月}銷售額在今年銷售最高:{年月銷售比.First().月銷售額}";
-            label2.Text = $"{年月銷售比.Last().月}銷售額在今年銷售最低:{年月銷售比.Last().月銷售額}";
+            label1.Text = $"{年月銷售比.OrderByDescending(n=>n.月銷售額).First().月}銷售額在今年銷售最高:{年月銷售比.OrderByDescending(n => n.月銷售額).First().月銷售額:C2}";
+            label2.Text = $"{年月銷售比.OrderByDescending(n => n.月銷售額).Last().月}銷售額在今年銷售最低:{年月銷售比.OrderByDescending(n => n.月銷售額).Last().月銷售額:C2}";
         }
     }
 }
