@@ -80,7 +80,7 @@ namespace UI_SK_ShoppingCart
 
         int tempQTY_SearchStockQTY;
         int tempQTY_WriteToSQL;
-        int j, k, l;
+        int j;
         
         private void UI_SK_RW_BornOrder_Click(object sender, EventArgs e)
         {
@@ -105,18 +105,18 @@ namespace UI_SK_ShoppingCart
                 {
 
                 }
-                using (var dbContext_FSE = new FancyStoreEntities())
-                {
-                    var q2 = (from ps in dbContext_FSE.ProductStocks.AsEnumerable()
-                             where ps.ProductID == Cls_Utility.Class1.CartList[i].ProductID &&
-                             ps.ProductColorID == Cls_Utility.Class1.CartList[i].ProductColorID &&
-                             ps.ProductSizeID == Cls_Utility.Class1.CartList[i].ProductSizeID
-                             select ps).FirstOrDefault();
+                //using (var dbContext_FSE = new FancyStoreEntities())
+                //{
+                //    var q2 = (from ps in dbContext_FSE.ProductStocks.AsEnumerable()
+                //             where ps.ProductID == Cls_Utility.Class1.CartList[i].ProductID &&
+                //             ps.ProductColorID == Cls_Utility.Class1.CartList[i].ProductColorID &&
+                //             ps.ProductSizeID == Cls_Utility.Class1.CartList[i].ProductSizeID
+                //             select ps).FirstOrDefault();
 
-                    q2.StockQTY = tempQTY_SearchStockQTY - Cls_Utility.Class1.CartList[i].Qty;
+                //    q2.StockQTY = tempQTY_SearchStockQTY - Cls_Utility.Class1.CartList[i].Qty;
 
-                    dbContext_FSE.SaveChanges();
-                }
+                //    dbContext_FSE.SaveChanges();
+                //}
             }
 
             //for (int i = 0; i <= Cls_Utility.Class1.CartList.Count - 1; i++)
@@ -125,11 +125,7 @@ namespace UI_SK_ShoppingCart
 
             //}
 
-
-
-
-
-            int id;
+           int id;
             using (var dbContext_FSE = new FancyStoreEntities())
             {
                 OrderHeader OH = new OrderHeader();

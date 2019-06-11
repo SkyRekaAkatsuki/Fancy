@@ -107,7 +107,7 @@ namespace Ctr_Customs
             //    MessageBox.Show("請先點選更新數量", "System Alarm");
             //    return;
             //}
-
+            //MessageBox.Show( "Test =" + Cls_Utility.Class1.CartList[idx].Qty);
             if (Cls_Utility.Class1.CartList[idx].Qty - 1 < 0)
             {
                 UC_SK_ShoppingItem_OrderQTY_lbl.Text = (Cls_Utility.Class1.CartList[idx].Qty).ToString();
@@ -133,11 +133,12 @@ namespace Ctr_Customs
             //    MessageBox.Show("請先點選更新數量","System Alarm");
             //    return;
             //}
-            Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Remove = true;
+            //Cls_SK_NormalClass.UI_SK_MC_QtyANDRemove_InterLock_Remove = true;
 
-            Cls_Utility.Class1.CartList.RemoveAt(Convert.ToInt32(SK_UC_ShoppingItem_RemoveRowOrder_btn.Tag));
-
+            //Cls_Utility.Class1.CartList.RemoveAt(Convert.ToInt32(SK_UC_ShoppingItem_RemoveRowOrder_btn.Tag));
+            Cls_Utility.Class1.CartList[idx].Qty = 0;
             this.Enabled = false;
+            this.Visible = false;
 
             return;
         }

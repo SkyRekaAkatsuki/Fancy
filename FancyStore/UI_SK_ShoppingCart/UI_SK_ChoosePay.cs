@@ -22,6 +22,13 @@ namespace UI_SK_ShoppingCart
         {
             InitializeComponent();
 
+            for (int i = Cls_Utility.Class1.CartList.Count() - 1; i >= 0; i--)
+            {
+                if (Cls_Utility.Class1.CartList[i].Qty == 0)
+                {
+                    Cls_Utility.Class1.CartList.RemoveAt(i);
+                }
+            }
             #region 小計
             for (int i =0;i<= Cls_Utility.Class1.CartList.Count - 1; i++)
             {
