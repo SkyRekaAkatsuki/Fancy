@@ -17,6 +17,7 @@ using UI_AL_ProductDisplay;
 using UI_EW_Maintain;
 using UI_AL_Home;
 using UI_AL_AboutUs;
+using UI_SK_ShoppingCart;
 
 namespace UI_JA_Main
 {
@@ -239,10 +240,13 @@ namespace UI_JA_Main
         //購物車
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmCart f = new FrmCart();
-            this.TopMost = false;
-            f.ShowDialog();
-            button5_Click(button5, e);
+            //FrmCart f = new FrmCart();
+            //this.TopMost = false;
+            //f.ShowDialog();
+            //button5_Click(button5, e);
+            UI_SK_MainCart UISKMC = new UI_SK_MainCart();
+            //UI_SK_ChoosePay UISKCP = new UI_SK_ChoosePay();
+            UISKMC.Show();
         }
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)
