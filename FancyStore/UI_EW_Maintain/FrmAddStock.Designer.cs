@@ -30,11 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddStock));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.productStockBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.productStockBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -50,12 +52,12 @@
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vWEWProductColorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vWEWProductSizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productStockBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ProductColorName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ProductSizeName = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.AddQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,11 +69,11 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.productStockBindingNavigator)).BeginInit();
             this.productStockBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productStockBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productStockDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vWEWProductColorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vWEWProductSizeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productStockBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // productStockBindingNavigator
@@ -101,7 +103,7 @@
             this.productStockBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productStockBindingNavigator.Name = "productStockBindingNavigator";
             this.productStockBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productStockBindingNavigator.Size = new System.Drawing.Size(965, 27);
+            this.productStockBindingNavigator.Size = new System.Drawing.Size(883, 27);
             this.productStockBindingNavigator.TabIndex = 0;
             this.productStockBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -115,10 +117,14 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "加入新的";
             // 
+            // productStockBindingSource
+            // 
+            this.productStockBindingSource.DataSource = typeof(DB_Fancy.ProductStock);
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(34, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(27, 24);
             this.bindingNavigatorCountItem.Text = "/{0}";
             this.bindingNavigatorCountItem.ToolTipText = "項目總數";
             // 
@@ -160,7 +166,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "位置";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "目前的位置";
             // 
@@ -213,6 +219,7 @@
             this.ProductName,
             this.ProductColorName,
             this.ProductSizeName,
+            this.AddQty,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn4,
@@ -223,10 +230,11 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.productStockDataGridView.DataSource = this.productStockBindingSource;
-            this.productStockDataGridView.Location = new System.Drawing.Point(9, 31);
+            this.productStockDataGridView.Location = new System.Drawing.Point(7, 25);
+            this.productStockDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.productStockDataGridView.Name = "productStockDataGridView";
             this.productStockDataGridView.RowTemplate.Height = 27;
-            this.productStockDataGridView.Size = new System.Drawing.Size(942, 618);
+            this.productStockDataGridView.Size = new System.Drawing.Size(865, 494);
             this.productStockDataGridView.TabIndex = 1;
             this.productStockDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productStockDataGridView_CellClick);
             // 
@@ -242,10 +250,6 @@
             // 
             this.vWEWProductSizeBindingSource.DataSource = typeof(DB_Fancy.VW_EW_ProductSize);
             // 
-            // productStockBindingSource
-            // 
-            this.productStockBindingSource.DataSource = typeof(DB_Fancy.ProductStock);
-            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductID";
@@ -256,10 +260,10 @@
             // 
             // btnSave
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnSave.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnSave.DefaultCellStyle = dataGridViewCellStyle1;
             this.btnSave.HeaderText = "Save";
             this.btnSave.Name = "btnSave";
             this.btnSave.Text = "存檔";
@@ -276,7 +280,7 @@
             this.ProductName.Name = "ProductName";
             this.ProductName.ReadOnly = true;
             this.ProductName.ValueMember = "ProductID";
-            this.ProductName.Width = 150;
+            this.ProductName.Width = 250;
             // 
             // ProductColorName
             // 
@@ -300,27 +304,40 @@
             this.ProductSizeName.Name = "ProductSizeName";
             this.ProductSizeName.ReadOnly = true;
             this.ProductSizeName.ValueMember = "ProductSizeID";
+            this.ProductSizeName.Width = 70;
+            // 
+            // AddQty
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.AddQty.DefaultCellStyle = dataGridViewCellStyle2;
+            this.AddQty.HeaderText = "補貨量";
+            this.AddQty.Name = "AddQty";
+            this.AddQty.Width = 80;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "StockQTY";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Red;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn5.HeaderText = "庫存量";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 80;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "MinStock";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn6.HeaderText = "安全量";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 80;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -373,11 +390,12 @@
             // 
             // FrmAddStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 657);
+            this.ClientSize = new System.Drawing.Size(883, 526);
             this.Controls.Add(this.productStockDataGridView);
             this.Controls.Add(this.productStockBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmAddStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "補貨作業 - FrmAddStock";
@@ -385,11 +403,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.productStockBindingNavigator)).EndInit();
             this.productStockBindingNavigator.ResumeLayout(false);
             this.productStockBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productStockBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productStockDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vWEWProductColorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vWEWProductSizeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productStockBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,6 +438,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewComboBoxColumn ProductColorName;
         private System.Windows.Forms.DataGridViewComboBoxColumn ProductSizeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AddQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
