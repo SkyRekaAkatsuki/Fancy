@@ -23,6 +23,7 @@ namespace UI_SK_ShoppingCart
         public UI_SK_MainCart()
         {
             InitializeComponent();
+
             #region 初次顯示
             //int j;
             //int tempQTY_SearchStockQTY;
@@ -69,6 +70,16 @@ namespace UI_SK_ShoppingCart
             #endregion 初次顯示
         }
 
+        public void UI_SK_MainCart_Load(object sender, EventArgs e)
+        {
+            if (Cls_Utility.Class1.CartList.Count -1 < 0)
+            {
+               this.UI_SK_MC_GoToChoosePay_Btn.Enabled = false;
+                MessageBox.Show("購物車沒東西,將返回第一頁","System Alarm");
+                this.Close();
+            }
+        }
+
         public string CHECK(int COLOR, int SIZE, int ID)
         {
             var q = dbContext_FSE.ProductStocks.Where(N => N.ProductID == ID && N.ProductColorID == COLOR && N.ProductSizeID == SIZE).Select(N => N.StockQTY).First();
@@ -102,21 +113,14 @@ namespace UI_SK_ShoppingCart
                 }
             }
             UI_SK_ChoosePay UISKCP = new UI_SK_ChoosePay();
-            UISKCP.Show();
-            this.Hide();
+            UISKCP.ShowDialog();
+            this.Close();
         }
         #endregion 第一次庫存檢查
 
 
 
 
-        public void UI_SK_MainCart_Load(object sender, EventArgs e)
-        {
-            
-            
-
-
-        }
 
         #region 重刷FlowlayoutPanel
 
