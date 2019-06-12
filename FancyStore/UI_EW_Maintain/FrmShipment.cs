@@ -135,7 +135,7 @@ namespace UI_EW_Maintain
                         {
                             oh.ShippingID = shippingID;
                         }
-
+                        shippingID = 0;  //必須歸0, 否則下一筆會自動承繼上筆的資料
                         dbContext.SaveChanges();
                         MessageBox.Show($"[出貨] 完成 !");
                     }
