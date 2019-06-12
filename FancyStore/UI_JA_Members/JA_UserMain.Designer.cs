@@ -31,8 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JA_UserMain));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Login_panel = new System.Windows.Forms.Panel();
+            this.jA_Input6 = new UI_JA_Members.JA_Input();
+            this.jA_Input5 = new UI_JA_Members.JA_Input();
             this.button9 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -42,6 +47,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SingUp_panel = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,6 +64,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.fg_panel = new System.Windows.Forms.Panel();
+            this.jA_Input8 = new UI_JA_Members.JA_Input();
+            this.jA_Input7 = new UI_JA_Members.JA_Input();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
@@ -65,28 +75,18 @@
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.jA_Input5 = new UI_JA_Members.JA_Input();
-            this.jA_Input6 = new UI_JA_Members.JA_Input();
-            this.jA_Input7 = new UI_JA_Members.JA_Input();
-            this.jA_Input8 = new UI_JA_Members.JA_Input();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Login_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SingUp_panel.SuspendLayout();
             this.fg_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuDragControl1
@@ -95,6 +95,17 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.pictureBox1;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::UI_JA_Members.img.boutique_clothes_indoors_264554;
+            this.pictureBox1.Location = new System.Drawing.Point(300, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(700, 565);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Login_panel
             // 
@@ -114,6 +125,26 @@
             this.Login_panel.Size = new System.Drawing.Size(322, 386);
             this.Login_panel.TabIndex = 0;
             // 
+            // jA_Input6
+            // 
+            this.jA_Input6.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input6.Location = new System.Drawing.Point(63, 187);
+            this.jA_Input6.Name = "jA_Input6";
+            this.jA_Input6.Size = new System.Drawing.Size(201, 49);
+            this.jA_Input6.TabIndex = 1;
+            this.jA_Input6.Text = "密碼";
+            this.jA_Input6.輸入塊字串 = "";
+            // 
+            // jA_Input5
+            // 
+            this.jA_Input5.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input5.Location = new System.Drawing.Point(63, 122);
+            this.jA_Input5.Name = "jA_Input5";
+            this.jA_Input5.Size = new System.Drawing.Size(201, 49);
+            this.jA_Input5.TabIndex = 0;
+            this.jA_Input5.Text = "帳號";
+            this.jA_Input5.輸入塊字串 = "";
+            // 
             // button9
             // 
             this.button9.FlatAppearance.BorderSize = 0;
@@ -126,6 +157,26 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::UI_JA_Members.img.icons8_password_32;
+            this.pictureBox4.Location = new System.Drawing.Point(15, 199);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::UI_JA_Members.img.icons8_customer_32;
+            this.pictureBox3.Location = new System.Drawing.Point(15, 134);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -133,7 +184,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "歡迎觀臨";
+            this.label4.Text = "歡迎光臨";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -226,6 +277,16 @@
             this.label1.Size = new System.Drawing.Size(82, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Fancy";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(300, 615);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // SingUp_panel
             // 
@@ -400,6 +461,46 @@
             this.fg_panel.Size = new System.Drawing.Size(322, 386);
             this.fg_panel.TabIndex = 6;
             // 
+            // jA_Input8
+            // 
+            this.jA_Input8.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input8.Location = new System.Drawing.Point(70, 187);
+            this.jA_Input8.Name = "jA_Input8";
+            this.jA_Input8.Size = new System.Drawing.Size(201, 49);
+            this.jA_Input8.TabIndex = 1;
+            this.jA_Input8.Text = "信箱";
+            this.jA_Input8.輸入塊字串 = "";
+            // 
+            // jA_Input7
+            // 
+            this.jA_Input7.BackColor = System.Drawing.Color.Transparent;
+            this.jA_Input7.Location = new System.Drawing.Point(70, 122);
+            this.jA_Input7.Name = "jA_Input7";
+            this.jA_Input7.Size = new System.Drawing.Size(201, 49);
+            this.jA_Input7.TabIndex = 0;
+            this.jA_Input7.Text = "帳號";
+            this.jA_Input7.輸入塊字串 = "";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::UI_JA_Members.img.icons8_secured_letter_24;
+            this.pictureBox5.Location = new System.Drawing.Point(15, 199);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::UI_JA_Members.img.icons8_customer_32;
+            this.pictureBox6.Location = new System.Drawing.Point(15, 134);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 8;
+            this.pictureBox6.TabStop = false;
+            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -463,26 +564,6 @@
             this.timer4.Interval = 10;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::UI_JA_Members.img.icons8_secured_letter_24;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 199);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::UI_JA_Members.img.icons8_customer_32;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 134);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -496,26 +577,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::UI_JA_Members.img.icons8_password_32;
-            this.pictureBox4.Location = new System.Drawing.Point(15, 199);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::UI_JA_Members.img.icons8_customer_32;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 134);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -528,67 +589,6 @@
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(300, 615);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::UI_JA_Members.img.boutique_clothes_indoors_264554;
-            this.pictureBox1.Location = new System.Drawing.Point(300, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(700, 565);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // jA_Input5
-            // 
-            this.jA_Input5.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input5.Location = new System.Drawing.Point(63, 122);
-            this.jA_Input5.Name = "jA_Input5";
-            this.jA_Input5.Size = new System.Drawing.Size(201, 49);
-            this.jA_Input5.TabIndex = 0;
-            this.jA_Input5.Text = "帳號";
-            this.jA_Input5.輸入塊字串 = "";
-            // 
-            // jA_Input6
-            // 
-            this.jA_Input6.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input6.Location = new System.Drawing.Point(63, 187);
-            this.jA_Input6.Name = "jA_Input6";
-            this.jA_Input6.Size = new System.Drawing.Size(201, 49);
-            this.jA_Input6.TabIndex = 1;
-            this.jA_Input6.Text = "密碼";
-            this.jA_Input6.輸入塊字串 = "";
-            // 
-            // jA_Input7
-            // 
-            this.jA_Input7.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input7.Location = new System.Drawing.Point(70, 122);
-            this.jA_Input7.Name = "jA_Input7";
-            this.jA_Input7.Size = new System.Drawing.Size(201, 49);
-            this.jA_Input7.TabIndex = 0;
-            this.jA_Input7.Text = "帳號";
-            this.jA_Input7.輸入塊字串 = "";
-            // 
-            // jA_Input8
-            // 
-            this.jA_Input8.BackColor = System.Drawing.Color.Transparent;
-            this.jA_Input8.Location = new System.Drawing.Point(70, 187);
-            this.jA_Input8.Name = "jA_Input8";
-            this.jA_Input8.Size = new System.Drawing.Size(201, 49);
-            this.jA_Input8.TabIndex = 1;
-            this.jA_Input8.Text = "信箱";
-            this.jA_Input8.輸入塊字串 = "";
             // 
             // JA_UserMain
             // 
@@ -607,20 +607,20 @@
             this.Name = "JA_UserMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Login_panel.ResumeLayout(false);
             this.Login_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.SingUp_panel.ResumeLayout(false);
             this.SingUp_panel.PerformLayout();
             this.fg_panel.ResumeLayout(false);
             this.fg_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

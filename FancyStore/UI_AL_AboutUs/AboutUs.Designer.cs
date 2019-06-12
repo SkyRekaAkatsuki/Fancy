@@ -40,7 +40,6 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.Location = new System.Drawing.Point(342, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -70,7 +69,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 450);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1051, 82);
+            this.panel2.Size = new System.Drawing.Size(1051, 80);
             this.panel2.TabIndex = 7;
             // 
             // label1
@@ -99,7 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1051, 532);
+            this.ClientSize = new System.Drawing.Size(1051, 530);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
